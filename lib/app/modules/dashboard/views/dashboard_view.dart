@@ -8,10 +8,6 @@ class DashboardView extends GetView<DashboardController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('DashboardView'),
-        centerTitle: true,
-      ),
       body: Center(
         child: Text(
           'DashboardView is working',

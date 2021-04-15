@@ -15,12 +15,11 @@ class LoginView extends GetView<LoginController> {
                     image: AssetImage("assets/bg-login-2.png"),
                     fit: BoxFit.cover)),
             child: Container(
-              margin: new EdgeInsets.all(20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Row(
-                    children: [
+                    children: <Widget>[
                       Image.asset(
                         'assets/logo-login.png',
                         width: MediaQuery.of(context).size.width * 0.5,
