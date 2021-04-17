@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Icons.stacked_bar_chart,
                 color: Colors.white,
               ),
-              title: Text("Statistik")),
+              title: Text("Hasil")),
           BubbleBottomBarItem(
               backgroundColor: Colors.white,
               icon: Icon(
@@ -176,13 +176,73 @@ class _MyHomePageState extends State<MyHomePage> {
                                         decoration: BoxDecoration(
                                           borderRadius: BorderRadius.circular(100.0),
                                           image: DecorationImage(
-                                            image: AssetImage("assets/bg-login-2.png")
+                                            image: AssetImage("assets/bg-login-2.png"),
+                                            fit: BoxFit.fill,
                                           ),
                                         ),
                                       )
                                     ]
                                   ),
-                                )
+                                ), //End Gambar profil
+
+                                //Nama & Button
+                                Container(
+                                  margin: EdgeInsets.symmetric(vertical: 10),
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        child: Text(
+                                          'Brian Dewangga',
+                                          style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        child: Row(
+                                          children: [
+                                            RaisedButton(
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius: new BorderRadius.circular(20)
+                                              ),
+                                              onPressed: () => true,
+                                              color: Colors.blue,
+                                              child: Text(
+                                                '10 SMA', 
+                                                style: TextStyle(
+                                                color: Colors.white
+                                                ),
+                                              ), 
+                                            ),
+                                            RaisedButton(
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius: new BorderRadius.circular(20)
+                                              ),
+                                              onPressed: () => true,
+                                              color: Colors.blue,
+                                              child: Text(
+                                                'Ganjil', 
+                                                style: TextStyle(
+                                                color: Colors.white
+                                                ),
+                                              ), 
+                                            ),
+                                          ]
+                                        ),
+                                      ),
+                                      
+                                    ],
+                                  ),
+                                ), //End Nama & Button
+
+                                Container(
+                                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+                                  child: IconButton(
+                                    icon: const Icon(Icons.more_vert),
+                                    onPressed: (){},
+                                  ),
+                                ),
                               ]
                             ),
                           ),

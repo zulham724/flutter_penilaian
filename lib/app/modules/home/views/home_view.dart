@@ -41,9 +41,8 @@ class HomeView extends GetView<HomeController> {
         centerTitle: true,
       ),
       body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+          child: ListView(
+          children: [
           RaisedButton(
             onPressed: () => Get.to(() => LoginView()),
             child: Text('Ke Halaman Login'),
