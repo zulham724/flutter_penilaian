@@ -9,7 +9,7 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //title: 'No Anggota : 1237462283',
+      title: 'Profil View',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -20,13 +20,16 @@ class ProfileView extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
+
   final String title;
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
   int currentIndex;
+
   @override
   void initState() {
     // TODO: implement initState
@@ -124,6 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         child: Column(
           children: [
+            //Atas
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -134,16 +138,35 @@ class _MyHomePageState extends State<MyHomePage> {
                 )
               ],
             ),
+            //Tengah
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
+                  margin: EdgeInsets.symmetric(horizontal: 10),
                   color: Colors.white,
                   height: 150,
                   width: 510,
+                  alignment: Alignment.topLeft,
+                  child: Column(
+                    children: [
+                      Text(
+                        '999',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30,
+                        ),
+                      ),
+                      Text(
+                        'Dikerjakan'
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
+
+            //Isi
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
@@ -161,96 +184,166 @@ class _MyHomePageState extends State<MyHomePage> {
                             color: Colors.white,
                             height: 190,
                             width: 450,
-                            child: Row(
+                            child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
 
                                 //Gambar Profil
-                                Container(
-                                  child: Column(
+                                Column(
                                     children: [
-                                      Container(
-                                        margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                                        width: 50,
-                                        height: 50,
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(100.0),
-                                          image: DecorationImage(
-                                            image: AssetImage("assets/bg-login-2.png"),
-                                            fit: BoxFit.fill,
+                                      Row(
+                                        children: [
+                                          Container(
+                                            margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                                            width: 50,
+                                            height: 50,
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(100.0),
+                                              image: DecorationImage(
+                                                image: AssetImage("assets/bg-login-2.png"),
+                                                fit: BoxFit.fill,
+                                              ),
+                                            ),
                                           ),
-                                        ),
+                                          Column(
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Text(
+                                                    'Brian Dewangga',
+                                                    style: TextStyle(fontWeight: FontWeight.bold),
+                                                    textAlign: TextAlign.left,
+                                                  ),
+
+                                                  Container(
+                                                    margin: EdgeInsets.symmetric(
+                                                      horizontal: 50
+                                                    ),
+                                                    child: IconButton(
+                                                      icon: const Icon(Icons.more_vert),
+                                                      onPressed: (){},
+                                                    ),
+                                                  )
+                                                ]
+                                                
+                                              ),
+                                              Column(
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                      RaisedButton(
+                                                        shape: RoundedRectangleBorder(
+                                                          borderRadius: new BorderRadius.circular(20)
+                                                        ),
+                                                        onPressed: () => true,
+                                                        color: Colors.blue,
+                                                        child: Text(
+                                                          '10 SMA', 
+                                                          style: TextStyle(
+                                                            color: Colors.white
+                                                          ),
+                                                        ), 
+                                                      ),
+                                                      RaisedButton(
+                                                        shape: RoundedRectangleBorder(
+                                                          borderRadius: new BorderRadius.circular(20)
+                                                        ),
+                                                        onPressed: () => true,
+                                                        color: Colors.blue,
+                                                        child: Text(
+                                                          'Ganjil', 
+                                                          style: TextStyle(
+                                                            color: Colors.white
+                                                          ),
+                                                        ), 
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  
+                                                ],
+                                              ),
+                                              
+                                            ]
+                                          ),
+                                        ],
                                       )
                                     ]
-                                  ),
                                 ), //End Gambar profil
 
-                                //Nama & Button
-                                Container(
-                                  margin: EdgeInsets.symmetric(vertical: 10),
-                                  child: Column(
-                                    children: [
-                                      Container(
-                                        child: Text(
-                                          'Brian Dewangga',
-                                          style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 20,
+                                Column(
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.symmetric(horizontal: 10),
+                                      child: Text(
+                                        'Penilaian Akhir Semester'
+                                      ),
+                                    )
+                                  ],
+                                ), 
+
+                                Column(
+                                  children: [
+                                    Container(
+                                      color: Colors.grey[200],
+                                      margin: EdgeInsets.symmetric(horizontal: 10),
+                                      width: 500,
+                                      height: 60,
+                                      child: Text(
+                                        'Arti Dari Kalimat Diatas',
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                        
+                                Column(
+                                  children: [
+                                    Row(
+                                      children:[
+                                        Container(
+                                          child: IconButton(
+                                            icon: const Icon(Icons.favorite),
+                                            color: Colors.pink,
+                                            onPressed: (){},
                                           ),
                                         ),
-                                      ),
-                                      Container(
-                                        child: Row(
-                                          children: [
-                                            RaisedButton(
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius: new BorderRadius.circular(20)
-                                              ),
-                                              onPressed: () => true,
-                                              color: Colors.blue,
-                                              child: Text(
-                                                '10 SMA', 
-                                                style: TextStyle(
-                                                color: Colors.white
-                                                ),
-                                              ), 
-                                            ),
-                                            RaisedButton(
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius: new BorderRadius.circular(20)
-                                              ),
-                                              onPressed: () => true,
-                                              color: Colors.blue,
-                                              child: Text(
-                                                'Ganjil', 
-                                                style: TextStyle(
-                                                color: Colors.white
-                                                ),
-                                              ), 
-                                            ),
-                                          ]
+                                        Text(
+                                          '10 Suka',
+                                          style: TextStyle(color: Colors.grey),
                                         ),
-                                      ),
-                                      
-                                    ],
-                                  ),
-                                ), //End Nama & Button
+                                        Container(
+                                          child: IconButton(
+                                            icon: const Icon(Icons.comment),
+                                            color: Colors.grey,
+                                            onPressed: (){},
+                                          )
+                                        ),
+                                        Text(
+                                          '10 Komentar',
+                                          style: TextStyle(color: Colors.grey),
+                                        ),
+                                        Container(
+                                          margin: EdgeInsets.symmetric(horizontal: 50),
+                                          child: Text(
+                                            '20 April 2020',
+                                            style: TextStyle(color: Colors.grey),
+                                          ),
+                                        ),
+                                      ]
+                                    )
+                                  ],
+                                )
 
-                                Container(
-                                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
-                                  child: IconButton(
-                                    icon: const Icon(Icons.more_vert),
-                                    onPressed: (){},
-                                  ),
-                                ),
+                                
                               ]
                             ),
                           ),
                         ]
+                      
                       )
                     ]
                   ),
-                )
+                ),
               ],
             )
           ]
