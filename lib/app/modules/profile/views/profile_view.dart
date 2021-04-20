@@ -148,18 +148,85 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 150,
                   width: 510,
                   alignment: Alignment.topLeft,
-                  child: Column(
+                  child: Row(
                     children: [
-                      Text(
-                        '999',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 30,
-                        ),
+                      Row(
+                        children: [
+                          Column(
+                            children:[
+                              Text(
+                                '999',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 30,
+                                ),
+                              ),
+                              Text(
+                                'Dikerjakan'
+                              ),
+                            ]
+                          ),
+                          Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 80),
+                                    width: 70,
+                                    height: 70,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100.0),
+                                      image: DecorationImage(
+                                        image: AssetImage("assets/bg-login-2.png"),
+                                        fit: BoxFit.fill,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children:[
+                                  Text(
+                                    'Jhon Due  SP.',
+                                    style: TextStyle(
+                                      color:Colors.blue,
+                                      fontWeight: FontWeight.bold
+                                    ),
+                                  ),
+                                ]
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Saya merupakan admin CV Ardata',
+                                    style: TextStyle(
+                                      color: Colors.grey,
+                                    ),
+                                  )
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Media.Visit: ',
+                                    style: TextStyle(
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  Text(
+                                    'ardata.co.id',
+                                    style: TextStyle(
+                                      color: Colors.blue,
+                                    ),
+                                  )
+                                ],
+                              )
+                              
+                            ],
+                          ),
+                        ],
                       ),
-                      Text(
-                        'Dikerjakan'
-                      ),
+                      
                     ],
                   ),
                 ),
