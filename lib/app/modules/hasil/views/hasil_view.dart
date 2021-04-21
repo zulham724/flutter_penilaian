@@ -42,6 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text(widget.title),
       ),
@@ -50,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
         //child: Icon(Icons.person),
         //backgroundColor: Colors.blue,
       //),
-       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       bottomNavigationBar: BubbleBottomBar(
         backgroundColor: Colors.blue,
         hasNotch: true,
@@ -109,28 +110,143 @@ class _MyHomePageState extends State<MyHomePage> {
               title: Text("Profil"))
         ],
       ),
-      body: Container(
-        padding: EdgeInsets.only(top: 10),
-        //alignment: Alignment.center,
-        color: Colors.white,
-        height: 1000,
-        width: 1000,
-        child: Column(
-          children:[
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
-                  width: 370,
-                  height: 170,
+      
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.only(top: 10),
+          color: Colors.white,
+          height: 1000,
+          width: 1000,
+          child: Column(
+            children:[
+              Container(                
+                child: Container(
+                  width: 350,
                   alignment: Alignment.topLeft,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(40),
+                      topRight: Radius.circular(40),
+                      bottomLeft: Radius.circular(60),
+                      bottomRight: Radius.circular(60)
+                    ),
                     image: DecorationImage(
                       image: AssetImage("assets/bg-card-hasil.png"),
-                      fit: BoxFit.fill,
-                    )
+                      fit: BoxFit.fill,  
+                    ),
                   ),
                   child: Container(
-                    margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                    margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children:[
+                          Row(
+                            children: [
+                              Text(
+                                'Penilaian Akhir Tahun',
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ],
+                          ),
+                        
+                          Row(
+                            children: [
+                              Text(
+                                'Kelas : 10 SMA'
+                              ),
+                            ],
+                          ),
+
+                          Row(
+                            children: [
+                              Text(
+                                'Mapel : PAI'
+                              ),
+                            ],
+                          ),
+
+                          Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.symmetric(vertical: 40),
+                                alignment: Alignment.topLeft,
+                                height: 40,
+                                width: 150,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: Colors.blue[100],
+                                ),
+                                child: Row(
+                                  children:[
+                                    Container(
+                                      margin: EdgeInsets.symmetric(horizontal: 10),
+                                      child: Row(
+                                        children:[
+                                          Row(
+                                            children: [
+                                              Column(
+                                                children: [
+                                                  Container(
+                                                    padding: EdgeInsets.only(top: 5),
+                                                    child: Text(
+                                                      'Kode Soal',
+                                                      style: TextStyle(
+                                                        fontWeight: FontWeight.bold,
+                                                        color: Colors.black,
+                                                      ),
+                                                    ) 
+                                                  ),
+                                                  Text(
+                                                    'aaaaa'
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                          
+                                          Container(
+                                            margin: EdgeInsets.symmetric(horizontal: 10),
+                                            child: IconButton(
+                                              icon: const Icon(Icons.copy),
+                                              color: Colors.grey[600],
+                                              onPressed: (){},
+                                            ),
+                                          ),
+                                        ] 
+                                      ),
+                                    ),
+                                  ]
+                                ),
+                              )
+                            ],
+                          )
+                        ]
+                      ),
+                    ),
+                  )
+                ), 
+              
+                Container(
+                  child: Container(
+                    width: 350,
+                    alignment: Alignment.topLeft,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40),
+                        bottomLeft: Radius.circular(60),
+                        bottomRight: Radius.circular(60)
+                      ),
+                      image: DecorationImage(
+                        image: AssetImage("assets/bg-card-hasil.png"),
+                        fit: BoxFit.fill,
+                      )
+                    ),
+                    child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children:[
@@ -153,6 +269,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ],
                         ),
+
                         Row(
                           children: [
                             Text(
@@ -160,6 +277,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ],
                         ),
+
                         Row(
                           children: [
                             Container(
@@ -171,29 +289,41 @@ class _MyHomePageState extends State<MyHomePage> {
                                 borderRadius: BorderRadius.circular(10),
                                 color: Colors.blue[100],
                               ),
-                              child: Column(
+                              child: Row(
                                 children:[
                                   Container(
                                     margin: EdgeInsets.symmetric(horizontal: 10),
-                                    child: Column(
+                                    child: Row(
                                       children:[
                                         Row(
                                           children: [
-                                            Text(
-                                              'Kode Soal',
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.black
-                                              ),
-                                            )
-                                          ],
-                                        ),
-                                        Row(
-                                          children: [
-                                            Text(
-                                              'adadwa'
+                                            Column(
+                                              children: [
+                                                Container(
+                                                  padding: EdgeInsets.only(top: 5),
+                                                  child: Text(
+                                                    'Kode Soal',
+                                                    style: TextStyle(
+                                                      fontWeight: FontWeight.bold,
+                                                      color: Colors.black
+                                                    ),
+                                                  )
+                                                ),
+                                                Text(
+                                                  'aaaaa'
+                                                ),
+                                              ],
                                             ),
                                           ],
+                                        ),
+
+                                        Container(
+                                          margin: EdgeInsets.symmetric(horizontal: 10),
+                                          child: IconButton(
+                                            icon: const Icon(Icons.copy),
+                                            color: Colors.grey[600],
+                                            onPressed: (){},
+                                          ),
                                         ),
                                       ] 
                                     ),
@@ -205,37 +335,121 @@ class _MyHomePageState extends State<MyHomePage> {
                         )
                       ]
                     ),
-                    
-                  ),
+                    ),
+                  ) 
                 ),
                 Container(
-                  width: 100,
-                  height: 100,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    image: DecorationImage(
-                      image: AssetImage("assets/bg-card-hasil.png"),
-                      fit: BoxFit.fill,
-                      alignment: Alignment.topCenter
-                    )
-                  ),
-                ),
-                Container(
-                  width: 100,
-                  height: 100,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    image: DecorationImage(
-                      image: AssetImage("assets/bg-card-hasil.png"),
-                      fit: BoxFit.fill,
-                      alignment: Alignment.topCenter
-                    )
-                  ),
-                ),
-              
-            
-          ]
-        ),
+                  child: Container(
+                    width: 350,
+                    alignment: Alignment.topLeft,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40),
+                        bottomLeft: Radius.circular(60),
+                        bottomRight: Radius.circular(60)
+                      ),
+                      image: DecorationImage(
+                        image: AssetImage("assets/bg-card-hasil.png"),
+                        fit: BoxFit.fill,
+                      )
+                    ),
+                    child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children:[
+                        Row(
+                          children: [
+                            Text(
+                              'Penilaian Akhir Tahun',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold
+                              ),
+                            ),
+                          ],
+                        ),
+                        
+                        Row(
+                          children: [
+                            Text(
+                              'Kelas : 10 SMA'
+                            ),
+                          ],
+                        ),
+
+                        Row(
+                          children: [
+                            Text(
+                              'Mapel : PAI'
+                            ),
+                          ],
+                        ),
+
+                        Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.symmetric(vertical: 40),
+                              alignment: Alignment.topLeft,
+                              height: 40,
+                              width: 150,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Colors.blue[100],
+                              ),
+                              child: Row(
+                                children:[
+                                  Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 10),
+                                    child: Row(
+                                      children:[
+                                        Row(
+                                          children: [
+                                            Column(
+                                              children: [
+                                                Container(
+                                                  padding: EdgeInsets.only(top: 5),
+                                                  child: Text(
+                                                    'Kode Soal',
+                                                    style: TextStyle(
+                                                      fontWeight: FontWeight.bold,
+                                                      color: Colors.black
+                                                    ),
+                                                  ),
+                                                ),
+                                                Text(
+                                                  'aaaaa'
+                                                ),
+                                              ],
+                                            ),
+                                            
+                                          ],
+                                        ),
+                                        Container(
+                                          margin: EdgeInsets.symmetric(horizontal: 10),
+                                          child: IconButton(
+                                            icon: const Icon(Icons.copy),
+                                            color: Colors.grey[600],
+                                            onPressed: (){},
+                                          ),
+                                        ),
+                                      ] 
+                                    ),
+                                  ),
+                                ]
+                              ),
+                            ),
+                          ],
+                        )
+                      ]
+                    ),
+                    ),
+                  ) 
+                ),  
+            ]
+          ),
+        )
       ),
     );
   }
