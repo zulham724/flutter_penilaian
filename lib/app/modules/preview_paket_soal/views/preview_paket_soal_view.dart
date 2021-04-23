@@ -25,7 +25,7 @@ class PreviewPaketSoalView extends GetView<PreviewPaketSoalController> {
                         height: 30,
                         width: 30,
                         alignment: Alignment.center,
-                        padding: EdgeInsets.only(bottom: 50),
+                        //padding: EdgeInsets.only(bottom: 50),
                         margin: EdgeInsets.symmetric(horizontal: 10),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
@@ -55,7 +55,7 @@ class PreviewPaketSoalView extends GetView<PreviewPaketSoalController> {
                         height: 30,
                         width: 30,
                         alignment: Alignment.center,
-                        margin: EdgeInsets.symmetric(vertical: 100, horizontal: 10),
+                        margin: EdgeInsets.symmetric(vertical: 50, horizontal: 10),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
                           color: Colors.blue,
@@ -86,7 +86,7 @@ class PreviewPaketSoalView extends GetView<PreviewPaketSoalController> {
 
                 //Jawaban A
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 20),
+                  margin: EdgeInsets.symmetric(vertical: 10),
                   padding: EdgeInsets.only(bottom: 20),
                   height: 50,
                   width: 330,
@@ -135,7 +135,7 @@ class PreviewPaketSoalView extends GetView<PreviewPaketSoalController> {
 
                 //Jawaban B
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 20),
+                  margin: EdgeInsets.symmetric(vertical: 10),
                   padding: EdgeInsets.only(bottom: 20),
                   height: 50,
                   width: 330,
@@ -184,7 +184,7 @@ class PreviewPaketSoalView extends GetView<PreviewPaketSoalController> {
                 
                 //Jawaban C
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 20),
+                  margin: EdgeInsets.symmetric(vertical: 10),
                   padding: EdgeInsets.only(bottom: 20),
                   height: 50,
                   width: 330,
@@ -233,7 +233,7 @@ class PreviewPaketSoalView extends GetView<PreviewPaketSoalController> {
 
                 //Jawaban D
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 20),
+                  margin: EdgeInsets.symmetric(vertical: 10),
                   padding: EdgeInsets.only(bottom: 20),
                   height: 50,
                   width: 330,
@@ -280,6 +280,112 @@ class PreviewPaketSoalView extends GetView<PreviewPaketSoalController> {
                     ],
                   ),
                 ),
+
+                //Bottom Bawah
+                
+                //Bottom Kemabali
+                Container(
+                  child: Row(
+                    children:[
+                      Container(
+                        margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                        height: 30,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(20),
+                            bottomRight: Radius.circular(20),
+                            topLeft: Radius.circular(20),
+                            topRight: Radius.circular(20)
+                          ),
+                          color: Colors.blue
+                        ),
+                        child: Row(
+                          children: [
+                            IconButton(
+                              icon: const Icon(Icons.arrow_back_ios_outlined, size: 15),
+                              color: Colors.white,
+                              onPressed: (){},
+                            ),
+                            Text(
+                              'Kembali',
+                              style: TextStyle(
+                                color: Colors.white
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+
+                      //Bottom 1/5
+                      Container(
+                        margin: EdgeInsets.symmetric(vertical: 20),
+                        height: 30,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.blue[200]),
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(20),
+                            bottomRight: Radius.circular(20),
+                            topLeft: Radius.circular(20),
+                            topRight: Radius.circular(20)
+                          ),
+                          color: Colors.white
+                        ),
+                        child: Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.symmetric(horizontal: 20),
+                            ),
+                            Text(
+                              '1/5',
+                              style: TextStyle(
+                                color: Colors.blue
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      
+
+                      //Bottom Lanjut
+                      Container(
+                        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                        height: 30,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(20),
+                            bottomRight: Radius.circular(20),
+                            topLeft: Radius.circular(20),
+                            topRight: Radius.circular(20)
+                          ),
+                          color: Colors.blue
+                        ),
+                         child: Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.symmetric(horizontal: 10),
+                            ),
+                            Text(
+                              'Lanjut',
+                              style: TextStyle(
+                                color: Colors.white
+                              ),
+                            ),
+                            IconButton(
+                              icon: const Icon(Icons.arrow_forward_ios_outlined, size: 15),
+                              color: Colors.white,
+                              onPressed: (){},
+                            ),
+                          ],
+                        ),
+                      )
+                    ]
+                  ),
+                )
               ]
             ),
           ]

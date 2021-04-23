@@ -9,13 +9,13 @@ class BagikanView extends GetView<BagikanController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BagikanView'),
-        centerTitle: true,
+        title: Text('Bagikan'),
+        centerTitle: false,
       ),
-      body: Center(
-        child: Text(
-          'BagikanView is working',
-          style: TextStyle(fontSize: 20),
+      body: Container(
+        margin: EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          
         ),
       ),
     );
