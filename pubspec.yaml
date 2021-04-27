@@ -47,6 +47,9 @@ flutter:
     - assets/bg-login-2.png
     - assets/logo-login.png
     - assets/bg-card-hasil.png
+    - assets/Rank1.png
+    - assets/Rank2.png
+    - assets/Rank3.png
   # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

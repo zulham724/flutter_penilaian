@@ -41,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Icon(Icons.add),
@@ -116,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
 
-      body: Container(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
@@ -459,12 +460,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
 
-                Row(
+                Column(
                   children: [
                     Container(
-                      margin: EdgeInsets.symmetric(horizontal: 250, vertical: 20),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
+                      margin: EdgeInsets.symmetric(vertical: 20),
+                      padding: EdgeInsets.only(right: 20),
+                      alignment: Alignment.bottomRight,
+                        child: Wrap(
+                          //mainAxisAlignment: MainAxisAlignment.end,
                           children: <Widget>[
                             RaisedButton(
                               shape: RoundedRectangleBorder(
