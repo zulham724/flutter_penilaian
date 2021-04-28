@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
-import '../controllers/buat_soal_isi_controller.dart';
+import '../controllers/Buat_soal_isi_controller.dart';
 
 void main() => runApp(BuatSoalIsiView());
 
@@ -41,10 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
       resizeToAvoidBottomInset: false,
-=======
->>>>>>> 0d7d10a5e1686527e24caedc6f9f05eb3da83563
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Icon(Icons.add),
@@ -120,11 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
 
-<<<<<<< HEAD
       body: SingleChildScrollView(
-=======
-      body: Container(
->>>>>>> 0d7d10a5e1686527e24caedc6f9f05eb3da83563
         child: Column(
           children: [
             Container(
@@ -256,11 +249,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.symmetric(horizontal: 120),
+                      margin: EdgeInsets.symmetric(vertical: 20, horizontal: 90),
                       child: Text(
                         'Tipe Soal'
-                      )
-                    )
+                      ),
+                    ),
                   ],
                 ),
 
@@ -301,12 +294,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             });
                           },
                         ),
-                      ),
-
+                      ), 
                       Container(
                         height: 50,
                         width: 100,
-                        margin: EdgeInsets.symmetric(horizontal: 55),
+                        margin: EdgeInsets.symmetric(horizontal: 20),
                         child: DropdownButton<String>(
                           focusColor: Colors.red,
                           style: TextStyle(
@@ -467,7 +459,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
 
-<<<<<<< HEAD
                 Column(
                   children: [
                     Container(
@@ -476,14 +467,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       alignment: Alignment.bottomRight,
                         child: Wrap(
                           //mainAxisAlignment: MainAxisAlignment.end,
-=======
-                Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 250, vertical: 20),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
->>>>>>> 0d7d10a5e1686527e24caedc6f9f05eb3da83563
                           children: <Widget>[
                             RaisedButton(
                               shape: RoundedRectangleBorder(

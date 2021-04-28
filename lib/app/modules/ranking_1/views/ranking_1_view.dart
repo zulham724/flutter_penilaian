@@ -11,10 +11,11 @@ class Ranking1View extends GetView<Ranking1Controller> {
       appBar: AppBar(
         title: Text('Ranking'),
         centerTitle: false,
+        elevation: 0,
       ),
-      body: Column(
+      body: Wrap(
         children: [
-          Column(
+          Wrap(
             children: [
               Container( 
                 width: 400,
@@ -46,41 +47,171 @@ class Ranking1View extends GetView<Ranking1Controller> {
                   ],
                 ),
               ),
-            ],
-          ),
-          
-          Column(
-            children: [
               Container(
-                //margin: EdgeInsets.symmetric(vertical: 15),
-                height: 1,
-                width: 400,
-                decoration: BoxDecoration(
-                  color: Colors.grey
-                ),
+                margin: EdgeInsets.symmetric(vertical: 10),
+                child: Column(
+                  children: [
+                    Divider(
+                      color: Colors.grey
+                    ),
+                    Row(
+                      children: [
+                        Image(
+                          image: AssetImage('assets/Rank1.png'),
+                          height: 50,
+                          width: 50,
+                        ),
+                        Container(
+                          child: Column(
+                            children: [
+                              Text(
+                                'Paket Soal 1',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                              Text(
+                                'John Due'
+                              )
+                            ],
+                          )
+                        ),
+                        Wrap(
+                            children:[
+                              Container(
+                                margin: EdgeInsets.symmetric(horizontal: 150),
+                                child: Row(
+                                  children:[
+                                     Icon(
+                                      Icons.star,
+                                      color: Colors.yellow[800]
+                                    ),
+                                    
+                                    Text(
+                                      '1234',
+                                    )
+                                  ]
+                                )
+                              )
+                            ]
+                          )
+                        
+                      ],
+                    )
+                  ],
+                )
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 10),
+                child: Column(
+                  children: [
+                    Divider(
+                      color: Colors.grey
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          width: 50,
+                          height: 50,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('assets/Rank2.png')
+                            )
+                          ),
+                        ),
+                        Container(
+                          child: Column(
+                            children: [
+                              Text(
+                                'Paket Soal 1',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                              Text(
+                                'John Due'
+                              )
+                            ],
+                          )
+                        ),
+                        
+                        Container(
+                          margin: EdgeInsets.symmetric(horizontal: 170),
+                          child: Row(
+                            children:[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[800]
+                              ),
+                              Text(
+                                '1234'
+                              )
+                            ]
+                          )
+                        ),
+                      ],
+                    )
+                  ],
+                )
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 10),
+                child: Column(
+                  children: [
+                    Divider(
+                      color: Colors.grey
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          width: 50,
+                          height: 50,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('assets/Rank3.png')
+                            )
+                          ),
+                        ),
+                        Container(
+                          
+                          child: Column(
+                            children: [
+                              Text(
+                                'Paket Soal 1',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                              Text(
+                                'John Due'
+                              )
+                            ],
+                          )
+                        ),
+                        
+                        Container(
+                          margin: EdgeInsets.symmetric(horizontal: 170),
+                          child: Row(
+                            children:[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[800]
+                              ),
+                              Text(
+                                '1234'
+                              )
+                            ]
+                          )
+                        ),
+                      ],
+                    )
+                  ],
+                )
               ),
             ],
           ),
-
-          Column(
-            children: [
-              Row(
-                children: [
-                  Container(
-                margin: EdgeInsets.symmetric(horizontal: 10),
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/Rank1.png"),
-                  )
-                ),
-              ),
-                ],
-              )
-            ],
-          )
-          
         ],
       ),
     );
