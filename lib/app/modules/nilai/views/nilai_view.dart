@@ -22,6 +22,7 @@ class NilaiView extends GetView<NilaiController> {
         backgroundColor: Colors.white,
         elevation: 0,
       ),
+      resizeToAvoidBottomInset: false,
       body: Container(
         color: Colors.white,
         child: Column(
@@ -131,7 +132,7 @@ class NilaiView extends GetView<NilaiController> {
                 Container(
                   color: Colors.white,
                   height: 550,
-                  width: 1000,
+                  width: 2000,
                   child: Row(
                     children:[
                       
@@ -242,7 +243,7 @@ class NilaiView extends GetView<NilaiController> {
 
                       //Kotak warna
                       Column(
-                        children: [
+                        children: <Widget>[
                           Container(
                             margin: EdgeInsets.symmetric(vertical: 20),
                             height: 30,
@@ -269,7 +270,16 @@ class NilaiView extends GetView<NilaiController> {
                                       Container(
                                         margin: EdgeInsets.symmetric(horizontal: 10),
                                         child: Text(
-                                          'aa',
+                                          'Soal 1',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: EdgeInsets.only(left:130),
+                                        child: Text(
+                                          'Belum Selesai',
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold
                                           ),
@@ -306,11 +316,20 @@ class NilaiView extends GetView<NilaiController> {
                                       Container(
                                         margin: EdgeInsets.symmetric(horizontal: 10),
                                         child: Text(
-                                          'aaa',
+                                          'Soal 2',
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold
                                           )
                                         )
+                                      ),
+                                      Container(
+                                        margin: EdgeInsets.only(left: 170),
+                                        child: Text(
+                                          '10 / 10',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold
+                                          ),
+                                        ),
                                       )
                                     ]
                                   ),
@@ -340,13 +359,29 @@ class NilaiView extends GetView<NilaiController> {
                               child: Column(
                                 children:[
                                   Row(
-                                    children: [
+                                    children: <Widget>[ 
                                       Text(
-                                        'aaa',
+                                        'Soal 3',
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold
                                         ),
+                                      ),
+                                      Expanded(
+                                        child: Container(
+                                          margin: EdgeInsets.only(left: 150),
+                                          child: Row(
+                                            children: [
+                                              Text(
+                                                'Belum Dinilai',
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                        )
                                       )
+                                      
                                     ],
                                   ),
                                   Row(
@@ -354,7 +389,7 @@ class NilaiView extends GetView<NilaiController> {
                                       Container(
                                         margin: EdgeInsets.symmetric(vertical: 10),
                                         child: Text(
-                                          'aaa'
+                                          'Arti dari kalimat diatas adalah'
                                         ),
                                       )
                                     ],
@@ -364,7 +399,7 @@ class NilaiView extends GetView<NilaiController> {
                                       Container(
                                         margin: EdgeInsets.symmetric(vertical: 10),
                                         child: Text(
-                                          'aaa',
+                                          'Kunci',
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold
                                           ),
@@ -389,7 +424,7 @@ class NilaiView extends GetView<NilaiController> {
                                       Container(
                                         margin: EdgeInsets.symmetric(vertical: 10),
                                         child: Text(
-                                          'hhhh',
+                                          'Jawaban',
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold
                                           ),
@@ -411,22 +446,74 @@ class NilaiView extends GetView<NilaiController> {
                                   ),
                                   Row(
                                     children: [
-                                      Container(
-                                        margin: EdgeInsets.symmetric(vertical: 30, horizontal: 50 ),
-                                        height: 30,
-                                        width: 50,
-                                        child: Container(
-                                          child: TextField(
-                                            maxLines: 1,
-                                            decoration: InputDecoration(
-                                              focusedBorder: OutlineInputBorder(
-                                                borderSide: BorderSide(color: Colors.grey, width: 2)
-                                              )
+                                      Row(
+                                        children: [
+                                          Container(
+                                            child: Container(
+                                              margin: EdgeInsets.only(left: 30, top: 40),
+                                              alignment: Alignment.topCenter,
+                                              height: 30,
+                                              width: 50,
+                                              child: TextField(
+                                                maxLines: 1,
+                                                decoration: InputDecoration(
+                                                  focusedBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide(color: Colors.grey, width: 2)
+                                                  ),
+                                                  border: OutlineInputBorder(
+                                                    borderRadius: BorderRadius.only(
+                                                      topLeft: Radius.circular(10),
+                                                      bottomLeft: Radius.circular(10)
+                                                    )
+                                                  )
+                                                )
+                                              ),
                                             )
                                           ),
-                                          
-                                        )
+                                          Row(
+                                            children: [
+                                              Container(
+                                                margin: EdgeInsets.only(top: 40),
+                                                height: 30,
+                                                width: 40,
+                                                decoration: BoxDecoration(
+                                                  color: Colors.grey,
+                                                  borderRadius: BorderRadius.only(
+                                                    topRight: Radius.circular(10),
+                                                    bottomRight: Radius.circular(10)
+                                                  )
+                                                ),
+                                                child: Container(
+                                                  margin: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+                                                  child: Text(
+                                                    '/10',
+                                                    style: TextStyle(
+                                                      fontWeight: FontWeight.bold
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Container(
+                                                margin: EdgeInsets.only(top: 40, left: 20),
+                                                child: RaisedButton(
+                                                  shape: RoundedRectangleBorder(
+                                                   borderRadius: new BorderRadius.circular(10)
+                                                  ),
+                                                  color: Colors.blue,
+                                                  onPressed: (){},
+                                                  child: Text(
+                                                    'Submit'
+                                                  ),
+                                                )
+                                              )
+                                              
+                                            ],
+                                          )
+                                        ],
+                                        
+                                       
                                       ),
+                                      
                                     ],
                                   )
                                   
