@@ -501,30 +501,28 @@ class _MyHomePageState extends State<MyHomePage> {
                         margin: EdgeInsets.only(top: 70, left: 20),
                         height: 40,
                         width: 135,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20)
+                        child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            side: BorderSide(color: Colors.blue)
                           ),
-                          border: Border.all(color: Colors.blue)
-                        ),
-                        child: Row(
-                          children: [
-                            IconButton(
-                              icon: const Icon(
+                          color: Colors.white,
+                          onPressed: (){},
+                          child: Row(
+                            children: [
+                              Icon(
                                 Icons.add,
                                 color: Colors.blue,
-                              ), 
-                              onPressed: (){},
-                            ),
-                            Text(
-                              'Tambah Soal',
-                              style: TextStyle(
-                                color:Colors.blue
                               ),
-                            )
-                          ],
-                        ),
+                              Text(
+                                'Tambah Soal',
+                                style: TextStyle(
+                                  color: Colors.blue
+                                ),
+                              )
+                            ],
+                          ),
+                        )
                       )
                     ]
                   )

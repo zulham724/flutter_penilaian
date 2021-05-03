@@ -210,12 +210,21 @@ class _State extends State<Bagikan2View> {
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey, width: 2)
                         ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10)
+                          )
+                        )
                       ),
                     )
                   ),
-                  Text(
-                    'Contoh: Silahkan dilihat jangan lupa like dan komentar'
+                  Container(
+                    margin: EdgeInsets.only(top: 5),
+                    child: Text(
+                      'Contoh: Silahkan dilihat jangan lupa like dan komentar'
+                    ),
                   ),
+                  
                   Container(
                     margin: EdgeInsets.only(left: 20, right: 10, top: 10),
                     height: 60,
@@ -227,6 +236,11 @@ class _State extends State<Bagikan2View> {
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey, width: 2)
                         ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10)
+                          )
+                        )
                       ),
                     )
                   ),
@@ -247,31 +261,30 @@ class _State extends State<Bagikan2View> {
                         Container(
                           height: 40,
                           width: 130,
-                          decoration: BoxDecoration(
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              side: BorderSide(color: Colors.blue)
+                            ),
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.remove_red_eye_rounded, color: Colors.blue
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(left: 5),
+                                  child: Text(
+                                    'Preview Soal',
+                                    style: TextStyle(
+                                      color: Colors.blue
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                             color: Colors.white,
-                            border: Border.all(color: Colors.blue[200]),
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(20)
-                            )
-                          ),
-                          child: Row(
-                            children: [
-                              IconButton(
-                                icon: const Icon(
-                                  Icons.remove_red_eye,
-                                  color: Colors.blue,
-                                ),
-                                onPressed: (){},
-                              ),
-                              Text(
-                                'Preview Soal',
-                                style: TextStyle(
-                                  color: Colors.blue
-                                ),
-                              )
-                            ],
-                            
-                          ),
+                            onPressed: (){},
+                          )
                         ),
                         Container(
                           margin: EdgeInsets.only(left: 10),
