@@ -95,7 +95,7 @@ class HomeView extends GetView<HomeController> {
           child: Text('Ke Halaman Soal Terkait (Error)'),
           ),
           RaisedButton(onPressed: ()=>Get.to(BagikanView()),
-          child: Text('Ke Halaman Bagikan'),
+          child: Text('Ke Halaman Bagikan ==> "Selesai"'),
           ),
           RaisedButton(onPressed: ()=>Get.to(PreviewPaketSoalView()),
           child: Text('Ke Halaman Preview Paket Soal 1 ==> "Selesai"'),

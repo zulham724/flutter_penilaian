@@ -204,7 +204,17 @@ class _State extends State<BagikanView> {
                                     width: 150,
                                     child: TextField(
                                       decoration: InputDecoration(
-                                        prefixIcon: Icon(Icons.calendar_today, size: 20),
+                                        prefixIcon: IconButton(
+                                          icon: Icon(Icons.calendar_today, size: 17,),
+                                          onPressed: (){
+                                            showDatePicker(
+                                              context: context, 
+                                              initialDate: DateTime.now(), 
+                                              firstDate: DateTime(2015, 8), 
+                                              lastDate: DateTime(2101),
+                                            );
+                                          },
+                                        ),
                                         hintText: "tanggal",
                                         contentPadding: EdgeInsets.all(10),
                                         focusedBorder: OutlineInputBorder(
