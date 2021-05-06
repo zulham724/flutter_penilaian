@@ -59,7 +59,7 @@ class HomeView extends GetView<HomeController> {
           child: Text('Ke Halaman Profile'),
           ),
           RaisedButton(onPressed: ()=>Get.to(PaketSoalView()),
-          child: Text('Ke Halaman Paket Soal'),
+          child: Text('Ke Halaman Paket Soal ==> "Selesai"'),
           ),
           RaisedButton(onPressed: ()=>Get.to(ButirSoalView()),
           child: Text('Ke Halaman Butir Soal ==> "Selesai"'),
