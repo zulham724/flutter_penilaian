@@ -27,6 +27,12 @@ class MyHomePage extends StatefulWidget {
 
 
 class _MyHomePageState extends State<MyHomePage> {
+  int _selection = 0;
+  selectJawab(int jawabSelected) {
+       setState(() {
+       _selection = jawabSelected;
+          });
+         }
   int currentIndex;
   @override
   void initState() {
@@ -456,104 +462,164 @@ class _MyHomePageState extends State<MyHomePage> {
                           children:[
                             Row(
                               children: <Widget>[
-                                Radio(
-                                  value: 0,
-                                  onChanged: (value){},
-                                ),
-                                Container(
-                                  height: 30,
-                                  width: 200,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: Colors.grey
-                                    ),
-                                    borderRadius: BorderRadius.all(
-                                      Radius.circular(5)
-                                    )
-                                  ),
-                                  child: Container(
-                                    margin: EdgeInsets.only(top: 5, left: 5),
-                                    child: Text(
-                                      'Kunci Jawaban 1',
-                                      style: TextStyle(
-                                        fontSize: 12
+                                InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      _selection = 1;
+                                    });
+                                  },
+                                  child: Stack(
+                                    children: <Widget>[
+                                      Container(
+                                        margin: EdgeInsets.only(right: 90),
+                                        height: 40,
+                                        width: 150,
                                       ),
-                                    ),
-                                  )
-                                ),
+                                      Row(
+                                        children: <Widget>[
+                                          Radio(
+                                            focusColor: Colors.white,
+                                            groupValue: _selection,
+                                            onChanged: selectJawab,
+                                            value: 1,
+                                          ),
+                                          Container(
+                                            height: 30,
+                                            width: 200,
+                                            decoration: BoxDecoration(
+                                              color: _selection == 1 ? Colors.green[300] : Colors.grey[50],
+                                              border: Border.all(color: Colors.grey),
+                                              borderRadius: BorderRadius.all(
+                                                Radius.circular(10)
+                                              )
+                                            ),
+                                            child: Container(
+                                              margin: EdgeInsets.only(top: 5, left: 10),
+                                              child: Text(
+                                                'Kunci Jawaban 1'
+                                              )
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ), 
                                 IconButton(
                                   icon: Icon(
-                                    Icons.clear
-                                  )
+                                    Icons.clear,
+                                    color: Colors.grey,
+                                  ),
+                                  onPressed: (){},
                                 )
                               ],
                             ),
                             Row(
                               children: <Widget>[
-                                Radio(
-                                  value: 0,
-                                  onChanged: (value){},
-                                ),
-                                Container(
-                                  height: 30,
-                                  width: 200,
-                                  decoration: BoxDecoration(
-                                    color: Colors.green[300],
-                                    border: Border.all(
-                                      color: Colors.grey
-                                    ),
-                                    borderRadius: BorderRadius.all(
-                                      Radius.circular(5)
-                                    )
-                                  ),
-                                  child: Container(
-                                    margin: EdgeInsets.only(top: 5, left: 5),
-                                    child: Text(
-                                      'Kunci Jawaban 1',
-                                      style: TextStyle(
-                                        fontSize: 12
+                                InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      _selection = 2;
+                                    });
+                                  },
+                                  child: Stack(
+                                    children: <Widget>[
+                                      Container(
+                                        margin: EdgeInsets.only(right: 90),
+                                        height: 40,
+                                        width: 150,
                                       ),
-                                    ),
-                                  )
-                                ),
+                                      Row(
+                                        children: <Widget>[
+                                          Radio(
+                                            focusColor: Colors.white,
+                                            groupValue: _selection,
+                                            onChanged: selectJawab,
+                                            value: 2,
+                                          ),
+                                          Container(
+                                            height: 30,
+                                            width: 200,
+                                            decoration: BoxDecoration(
+                                              color: _selection == 2 ? Colors.green[300] : Colors.grey[50],
+                                              border: Border.all(color: Colors.grey),
+                                              borderRadius: BorderRadius.all(
+                                                Radius.circular(10)
+                                              )
+                                            ),
+                                            child: Container(
+                                              margin: EdgeInsets.only(top: 5, left: 10),
+                                              child: Text(
+                                                'Kunci Jawaban 2'
+                                              )
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ), 
                                 IconButton(
                                   icon: Icon(
-                                    Icons.clear
-                                  )
+                                    Icons.clear,
+                                    color: Colors.grey,
+                                  ),
+                                  onPressed: (){},
                                 )
                               ],
                             ),
                             Row(
                               children: <Widget>[
-                                Radio(
-                                  value: 0,
-                                  onChanged: (value){},
-                                ),
-                                Container(
-                                  height: 30,
-                                  width: 200,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: Colors.grey
-                                    ),
-                                    borderRadius: BorderRadius.all(
-                                      Radius.circular(5)
-                                    )
-                                  ),
-                                  child: Container(
-                                    margin: EdgeInsets.only(top: 5, left: 5),
-                                    child: Text(
-                                      'Kunci Jawaban 1',
-                                      style: TextStyle(
-                                        fontSize: 12
+                                InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      _selection = 3;
+                                    });
+                                  },
+                                  child: Stack(
+                                    children: <Widget>[
+                                      Container(
+                                        margin: EdgeInsets.only(right: 90),
+                                        height: 40,
+                                        width: 150,
+                                        
                                       ),
-                                    ),
-                                  )
-                                ),
+                                      Row(
+                                        children: <Widget>[
+                                          Radio(
+                                            focusColor: Colors.white,
+                                            groupValue: _selection,
+                                            onChanged: selectJawab,
+                                            value: 3,
+                                          ),
+                                          Container(
+                                            height: 30,
+                                            width: 200,
+                                            decoration: BoxDecoration(
+                                              color: _selection == 3 ? Colors.green[300] : Colors.grey[50],
+                                              border: Border.all(color: Colors.grey),
+                                              borderRadius: BorderRadius.all(
+                                                Radius.circular(10)
+                                              )
+                                            ),
+                                            child: Container(
+                                              margin: EdgeInsets.only(top: 5, left: 10),
+                                              child: Text(
+                                                'Kunci Jawaban 3'
+                                              )
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ), 
                                 IconButton(
                                   icon: Icon(
-                                    Icons.clear
-                                  )
+                                    Icons.clear,
+                                    color: Colors.grey,
+                                  ),
+                                  onPressed: (){},
                                 )
                               ],
                             )

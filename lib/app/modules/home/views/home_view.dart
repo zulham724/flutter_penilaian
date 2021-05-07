@@ -77,7 +77,7 @@ class HomeView extends GetView<HomeController> {
           child: Text('Ke Halaman Buat Soal (Isi) ==> "Selesai"'),
           ),
           RaisedButton(onPressed: ()=>Get.to(BuatSoalBuatView()),
-          child: Text('Ke Halaman Buat Soal (Buat)'),
+          child: Text('Ke Halaman Buat Soal (Buat) ==> "Selesai"'),
           ),
           RaisedButton(onPressed: ()=>Get.to(BuatSoalSelesaiView()),
           child: Text('Ke Halaman Buat Soal (Selesai) ==> "Selesai"'),
