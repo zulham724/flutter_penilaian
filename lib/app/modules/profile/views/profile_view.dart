@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+
+import 'package:get/get.dart';
+
+import '../controllers/profile_controller.dart';
+
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
-import 'package:flutter_application_1/app/modules/profil_2/views/profil_2_view.dart';
 
 void main() => runApp(ProfileView());
 
@@ -9,27 +13,20 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Profil View',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'No Anggota : 12376283'),
+      home: MyHomePage(title: ''),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
-
   final String title;
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
   int currentIndex;
-
   @override
   void initState() {
     // TODO: implement initState
@@ -47,13 +44,21 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(
+          'No Anggota :  1237462283',
+          style: TextStyle(
+            fontSize: 15
+          ),
+        ),
+        centerTitle: false,
+        elevation: 0,
       ),
-      //floatingActionButton: FloatingActionButton(
-        //onPressed: () {},
-        //child: Icon(Icons.add),
-        //backgroundColor: Colors.red,
-      //),
+      resizeToAvoidBottomInset: false,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+        backgroundColor: Colors.blue,
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       bottomNavigationBar: BubbleBottomBar(
         backgroundColor: Colors.blue,
@@ -63,8 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
         currentIndex: currentIndex,
         onTap: changePage,
         borderRadius: BorderRadius.vertical(
-            top: Radius.circular(
-                16)), //border radius doesn't work when the notch is enabled.
+          top: Radius.circular(6)),
         elevation: 8,
         items: <BubbleBottomBarItem>[
           BubbleBottomBarItem(
@@ -96,10 +100,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.black,
               ),
               activeIcon: Icon(
-                Icons.stacked_bar_chart,
+                Icons.menu,
                 color: Colors.white,
               ),
-              title: Text("Hasil")),
+              title: Text("Menu")),
           BubbleBottomBarItem(
               backgroundColor: Colors.white,
               icon: Icon(
@@ -107,10 +111,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.black,
               ),
               activeIcon: Icon(
-                Icons.menu,
+                Icons.stacked_bar_chart,
                 color: Colors.white,
               ),
-              title: Text("Menu")),
+              title: Text("Hasil")),
            BubbleBottomBarItem(
               backgroundColor: Colors.white,
               icon: Icon(
@@ -124,298 +128,447 @@ class _MyHomePageState extends State<MyHomePage> {
               title: Text("Profil"))
         ],
       ),
-      body: Container(
-        child: Column(
-          children: [
-            //Atas
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  color: Colors.blue,
-                  height: 100,
-                  width: 510,
-                )
-              ],
-            ),
-            //Tengah
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
-                  color: Colors.white,
-                  height: 150,
-                  width: 510,
-                  alignment: Alignment.topLeft,
-                  child: Row(
-                    children: [
-                      Row(
-                        children: [
-                          Column(
-                            children:[
-                              Text(
+      body: Column(
+        children: [
+          Row(
+            children: [
+              Container(
+                height: 100,
+                width: 375,
+                decoration: BoxDecoration(
+                  color: Colors.blue
+                ),
+              )
+            ],
+          ),
+          Row(
+            children: [
+              Container(
+                height: 150,
+                width: 375,
+                decoration: BoxDecoration(
+                  color: Colors.white
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Column(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(left: 10),
+                              child: Text(
                                 '999',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 30,
+                                  fontSize: 30
                                 ),
-                              ),
-                              Text(
-                                'Dikerjakan'
-                              ),
-                            ]
-                          ),
-                          Column(
-                            children: [
-                              Row(
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 80),
-                                    width: 70,
-                                    height: 70,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(100.0),
-                                      image: DecorationImage(
-                                        image: AssetImage("assets/bg-login-2.png"),
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                children:[
-                                  Text(
-                                    'Jhon Due  SP.',
-                                    style: TextStyle(
-                                      color:Colors.blue,
-                                      fontWeight: FontWeight.bold
-                                    ),
-                                  ),
-                                ]
-                              ),
-                              Row(
-                                children: [
-                                  Text(
-                                    'Saya merupakan admin CV Ardata',
-                                    style: TextStyle(
-                                      color: Colors.grey,
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Text(
-                                    'Media.Visit: ',
-                                    style: TextStyle(
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                  Text(
-                                    'ardata.co.id',
-                                    style: TextStyle(
-                                      color: Colors.blue,
-                                    ),
-                                  )
-                                ],
                               )
-                              
-                            ],
-                          ),
-                        ],
-                      ),
-                      
-                    ],
-                  ),
-                ),
-              ],
-            ),
-
-            //Isi
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Container(
-                  color: Colors.blue[100],
-                  height: 305,
-                  width: 510,
-                  child: Column(
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(left: 20),
+                              child: Text(
+                                'Dikerjakan',
+                              )
+                            )
+                          ],
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 70),
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                            image: DecorationImage(
+                              image: AssetImage('assets/bg-login-2.png'),
+                              fit: BoxFit.fill
+                            )
+                          )
+                        ),
+                      ],
+                    ),
+                    Center(
+                      child: Column(
                         children: [
-                          Container(
-                            margin: EdgeInsets.symmetric(vertical: 30),
-                            color: Colors.white,
-                            height: 190,
-                            width: 450,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-
-                                //Gambar Profil
-                                Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Container(
-                                            margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                                            width: 50,
-                                            height: 50,
-                                            decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.circular(100.0),
-                                              image: DecorationImage(
-                                                image: AssetImage("assets/bg-login-2.png"),
-                                                fit: BoxFit.fill,
-                                              ),
-                                            ),
-                                          ),
-                                          Column(
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Text(
-                                                    'Brian Dewangga',
-                                                    style: TextStyle(fontWeight: FontWeight.bold),
-                                                    textAlign: TextAlign.left,
-                                                  ),
-
-                                                  Container(
-                                                    margin: EdgeInsets.symmetric(
-                                                      horizontal: 50
-                                                    ),
-                                                    child: IconButton(
-                                                      icon: const Icon(Icons.more_vert),
-                                                      onPressed: (){},
-                                                    ),
-                                                  )
-                                                ]
-                                                
-                                              ),
-                                              Column(
-                                                children: [
-                                                  Row(
-                                                    children: [
-                                                      RaisedButton(
-                                                        shape: RoundedRectangleBorder(
-                                                          borderRadius: new BorderRadius.circular(20)
-                                                        ),
-                                                        onPressed: () => true,
-                                                        color: Colors.blue,
-                                                        child: Text(
-                                                          '10 SMA', 
-                                                          style: TextStyle(
-                                                            color: Colors.white
-                                                          ),
-                                                        ), 
-                                                      ),
-                                                      RaisedButton(
-                                                        shape: RoundedRectangleBorder(
-                                                          borderRadius: new BorderRadius.circular(20)
-                                                        ),
-                                                        onPressed: () => true,
-                                                        color: Colors.blue,
-                                                        child: Text(
-                                                          'Ganjil', 
-                                                          style: TextStyle(
-                                                            color: Colors.white
-                                                          ),
-                                                        ), 
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  
-                                                ],
-                                              ),
-                                              
-                                            ]
-                                          ),
-                                        ],
-                                      )
-                                    ]
-                                ), //End Gambar profil
-
-                                Column(
-                                  children: [
-                                    Container(
-                                      margin: EdgeInsets.symmetric(horizontal: 10),
-                                      child: Text(
-                                        'Penilaian Akhir Semester'
-                                      ),
-                                    )
-                                  ],
-                                ), 
-
-                                Column(
-                                  children: [
-                                    Container(
-                                      color: Colors.grey[200],
-                                      margin: EdgeInsets.symmetric(horizontal: 10),
-                                      width: 500,
-                                      height: 60,
-                                      child: Text(
-                                        'Arti Dari Kalimat Diatas',
-                                        textAlign: TextAlign.center,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                        
-                                Column(
-                                  children: [
-                                    Row(
-                                      children:[
-                                        Container(
-                                          child: IconButton(
-                                            icon: const Icon(Icons.favorite),
-                                            color: Colors.pink,
-                                            onPressed: (){},
-                                          ),
-                                        ),
-                                        Text(
-                                          '10 Suka',
-                                          style: TextStyle(color: Colors.grey),
-                                        ),
-                                        Container(
-                                          child: IconButton(
-                                            icon: const Icon(Icons.comment),
-                                            color: Colors.grey,
-                                            onPressed: (){},
-                                          )
-                                        ),
-                                        Text(
-                                          '10 Komentar',
-                                          style: TextStyle(color: Colors.grey),
-                                        ),
-                                        Container(
-                                          margin: EdgeInsets.symmetric(horizontal: 50),
-                                          child: Text(
-                                            '20 April 2020',
-                                            style: TextStyle(color: Colors.grey),
-                                          ),
-                                        ),
-                                      ]
-                                    )
-                                  ],
-                                )
-
-                                
-                              ]
+                          Text(
+                            'John Due SP.',
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20
                             ),
                           ),
-                        ]
-                      
+                          Container(
+                            margin: EdgeInsets.only(top: 5),
+                            child: Text(
+                              'Saya merupakan admin CV Ardata',
+                              style: TextStyle(
+                                color: Colors.grey[400],
+                                fontSize: 12
+                              )
+                            )
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(left: 120),
+                            child: Row(
+                              children:[
+                                Text(
+                                  'Media. Visit: ',
+                                  style: TextStyle(
+                                    color: Colors.grey[400],
+                                    fontSize: 12
+                                  )
+                                ),
+                                Text(
+                                  'ardata.co.id',
+                                  style: TextStyle(
+                                    color: Colors.blue,
+                                    fontSize: 12
+                                  ),
+                                )
+                              ]
+                            )
+                          ),
+                        ],
                       )
-                    ]
-                  ),
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 10, top: 5),
+                          child: Row(
+                            children:[
+                              Text(
+                                '9',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25
+                                )
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 5),
+                                child: Text(
+                                  'Paket Soal',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15
+                                  ),
+                                )
+                              )
+                            ]
+                          )
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 5, left: 150),
+                          child: Row(
+                            children:[
+                              Text(
+                                '76',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25
+                                )
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 5),
+                                child: Text(
+                                  'Butir Soal',
+                                  style: TextStyle(
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15
+                                  ),
+                                )
+                              )
+                            ]
+                          ),
+                        )
+                      ],
+                    )
+                  ],
                 ),
-              ],
-            )
-          ]
-        ),
-        
+              )
+            ],
+          ),
+          Row(
+            children: [
+              Container(
+                height: 305,
+                width: 375,
+                decoration: BoxDecoration(
+                  color: Colors.blue[200]
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(left: 13, bottom: 50),
+                      height: 210,
+                      width: 350,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10)
+                        )
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(left: 10, top: 10),
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(100),
+                                  image: DecorationImage(
+                                    image: AssetImage('assets/bg-login-2.png'),
+                                    fit: BoxFit.fill
+                                  )
+                                )
+                              ),
+                              Column(
+                                children: [
+                                  Container(
+                                    child: Text(
+                                      'Brian Dewangga',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 15
+                                      )
+                                    )
+                                  ),
+                                  Row(
+                                    children: [
+                                      Container(
+                                        margin: EdgeInsets.only(left: 5, top: 5),
+                                        height: 20,
+                                        width: 60,
+                                        decoration: BoxDecoration(
+                                          color: Colors.blue,
+                                          borderRadius: BorderRadius.all(
+                                            Radius.circular(10)
+                                          )
+                                        ),
+                                        child: Container(
+                                          margin: EdgeInsets.only(left: 5),
+                                          child: Text(
+                                            '10 SMA', 
+                                            style: TextStyle(
+                                              color: Colors.white
+                                            )
+                                          )
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: EdgeInsets.only(left: 5, top: 5),
+                                        height: 20,
+                                        width: 60,
+                                        decoration: BoxDecoration(
+                                          color: Colors.blue,
+                                          borderRadius: BorderRadius.all(
+                                            Radius.circular(10)
+                                          )
+                                        ),
+                                        child: Container(
+                                          margin: EdgeInsets.only(left: 10),
+                                          child: Text(
+                                            'Ganjil', 
+                                            style: TextStyle(
+                                              color: Colors.white
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 130),
+                                child: PopupMenuButton(
+                                  color: Colors.grey[350],
+                                  itemBuilder: (BuildContext bc) => [
+                                    PopupMenuItem(
+                                      child: Row(
+                                        children: [
+                                          Icon(
+                                            Icons.edit,
+                                            color: Colors.grey[600],
+                                          ),
+                                          Text(
+                                            'Sunting'
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    PopupMenuItem(
+                                      child: Row(
+                                        children:[
+                                          Icon(
+                                            Icons.delete,
+                                            color: Colors.grey[600],
+                                          ),
+                                          Text(
+                                            'Hapus'
+                                          )
+                                        ]
+                                      )
+                                    ),
+                                    PopupMenuItem(
+                                      child: Row(
+                                        children:[
+                                          Icon(
+                                            Icons.share,
+                                            color: Colors.grey[600],
+                                          ),
+                                          Text(
+                                            'Bagikan Ke Siswa'
+                                          )
+                                        ]
+                                      )
+                                    ),
+                                    PopupMenuItem(
+                                      child: Row(
+                                        children:[
+                                          Icon(
+                                            Icons.share,
+                                            color: Colors.grey[600],
+                                          ),
+                                          Row(
+                                            children: [
+                                              Column(
+                                                children: [
+                                                  Text(
+                                                    'Bagikan Ke'
+                                                  ),
+                                                  Text(
+                                                    'Latihan Mandiri'
+                                                  )
+                                                ],
+                                              )
+
+                                            ],
+                                          )
+                                        ]
+                                      )
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(left: 10, top: 5),
+                                child: Text(
+                                  'Penilaian Semester Akhir'
+                                )
+                              )
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(left: 10, top: 5),
+                                height: 100,
+                                width: 330,
+                                decoration: BoxDecoration(
+                                  color: Colors.grey[200],
+                                ),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Container(
+                                          height: 40,
+                                          width: 40,
+                                          decoration: BoxDecoration(
+                                            color: Colors.blue,
+                                            borderRadius: BorderRadius.only(
+                                              bottomRight: Radius.circular(40)
+                                            )
+                                          ),
+                                          child: Container(
+                                            margin: EdgeInsets.only(left: 7, top: 3),
+                                            child: Text(
+                                              '1',
+                                              style: TextStyle(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.bold
+                                              ),
+                                            )
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    Center(
+                                      child: Text(
+                                        'Arti dari kalimat diatas adalah ...'
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(left: 10, top: 5),
+                                child: Icon(
+                                  Icons.favorite,
+                                  color: Colors.red,
+                                  size: 15,
+                                )
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 5),
+                                child: Text(
+                                  '10 Suka',
+                                  style: TextStyle(
+                                    fontSize: 12
+                                  ),
+                                )
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 5, left: 10),
+                                child: Icon(
+                                  Icons.comment,
+                                  color: Colors.grey,
+                                  size: 15
+                                )
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 5),
+                                child: Text(
+                                  '10 Komentar',
+                                  style: TextStyle(
+                                    fontSize: 12
+                                  )
+                                )
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 5, left: 100),
+                                child: Text(
+                                  '20 April 2020',
+                                  style: TextStyle(
+                                    fontSize: 12
+                                  ),
+                                )
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          )
+        ],
       ),
     );
   }

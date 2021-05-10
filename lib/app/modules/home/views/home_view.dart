@@ -116,7 +116,7 @@ class HomeView extends GetView<HomeController> {
           child: Text('Ke Halaman Profil 2'),
           ),
           RaisedButton(onPressed: ()=>Get.to(Ranking1View()),
-          child: Text('Ke Halaman Ranking 1'),
+          child: Text('Ke Halaman Ranking ==> "Selesai"'),
           ),
           RaisedButton(onPressed: ()=>Get.to(Ranking2View()),
           child: Text('Ke Halaman Statistik'),
