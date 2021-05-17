@@ -155,8 +155,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.only(bottom: 35, left: 153),
-                    height: 65,
+                    margin: EdgeInsets.only(left: 167),
+                    height: 60,
                     width: 90,
                     decoration: BoxDecoration(
                       color: Colors.blue,
@@ -273,14 +273,14 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              height: 460,
+              height: 550,
               width: 400,
               color: Colors.white,
               child: Column(
                 children: [
                   Container(
                     margin: EdgeInsets.only(top: 10),
-                    height: 210,
+                    height: 220,
                     width: 330,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -372,7 +372,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             Row(
                               children: [
                                 Container(
-                                  margin: EdgeInsets.only(left: 70, bottom: 20),
+                                  margin: EdgeInsets.only(left: 50, bottom: 20),
                                   child: PopupMenuButton(
                                     color: Colors.grey[350],
                                     itemBuilder: (BuildContext bc) => [

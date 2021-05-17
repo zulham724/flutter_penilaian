@@ -118,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              margin: EdgeInsets.only(left: 15, top: 30),
               child: Row(
                 children:[
                   Text(
@@ -132,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 70),
+              margin: EdgeInsets.only(left: 70, top: 10),
               child: Row(
                 children:[
                   Container(
@@ -236,8 +236,7 @@ class _MyHomePageState extends State<MyHomePage> {
             //Kolom 1
             Container(
               margin: EdgeInsets.only(top: 20),
-              height: 110,
-              width: 350,
+              width: 370,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.all(
@@ -341,7 +340,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               margin: EdgeInsets.only(top: 20),
               height: 210,
-              width: 350,
+              width: 370,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.all(
@@ -476,31 +475,30 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Container(
                   margin: EdgeInsets.only(left: 20, top: 70),
-                  child: ButtonTheme(
-                    minWidth: 90,
-                    height: 50,
-                    child: RaisedButton(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(20),
+                  height: 40,
+                  width: 100,
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                    color: Colors.blue,
+                    onPressed: (){},
+                    child: Text(
+                      'Back',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17
                       ),
-                      color: Colors.blue,
-                      onPressed: (){},
-                      child: Text(
-                        'Back',
-                        style: TextStyle(
-                          color: Colors.white
-                        ),
-                      ),
-                    )
+                    ),
                   )
                 ),
                 Container(
                   child: Row(
                     children:[
                       Container(
-                        margin: EdgeInsets.only(top: 70, left: 20),
+                        margin: EdgeInsets.only(top: 70, left: 10),
                         height: 40,
-                        width: 135,
+                        width: 140,
                         child: RaisedButton(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20),
@@ -528,24 +526,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   )
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 20, top: 70),
-                  child: ButtonTheme(
-                    minWidth: 90,
-                    height: 50,
-                    child: RaisedButton(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(20),
+                  margin: EdgeInsets.only(left: 10, top: 70),
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                    onPressed: (){},
+                    color: Colors.blue,
+                    child: Text(
+                      'Lanjut',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17
                       ),
-                      color: Colors.blue,
-                      onPressed: (){},
-                      child: Text(
-                        'Lanjut',
-                        style: TextStyle(
-                          color: Colors.white
-                        ),
-                      ),
-                    )
-                  )
+                    ),
+                  ),
                 ),
               ],
             ) 

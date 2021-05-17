@@ -118,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              margin: EdgeInsets.only(left: 15, top: 30),
               child: Row(
                 children:[
                   Text(
@@ -132,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 70),
+              margin: EdgeInsets.only(left: 70, top: 10),
               child: Row(
                 children:[
                   Container(
@@ -253,80 +253,54 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
 
             //Button Terbitkan
-            Row(
-              children: [
-                Container(
-                  child: Row(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.symmetric(horizontal: 120),
-                        height: 50,
-                        width: 130,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.blue[200]),
-                          borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(20),
-                            bottomRight: Radius.circular(20),
-                            topLeft: Radius.circular(20),
-                            topRight: Radius.circular(20)
-                          ),
-                          color: Colors.white
-                        ),
-                        child: Row(
-                          children: [
-                            IconButton(
-                              icon: const Icon(Icons.file_upload),
-                              color: Colors.blue,
-                              onPressed: (){},
-                            ),
-                            Container(
-                              margin: EdgeInsets.symmetric(vertical: 15),
-                              child: Column(
-                                children:[
-                                  Text(
-                                    'TERBITKAN',
-                                    style: TextStyle(
-                                      color: Colors.blue
-                                    ),
-                                  ),
-                                ]
-                              ),
-                            )
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
+            Container(
+              height: 50,
+              width: 150,
+              child: RaisedButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                  side: BorderSide(color: Colors.blue)
                 ),
-                //End Button Terbitkan
-              ],
+                onPressed: (){},
+                color: Colors.white,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.upload_rounded,
+                      color: Colors.blue,
+                      size: 30,
+                    ),
+                    Text(
+                      'Terbitkan',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.blue
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ),
 
             //Button Back
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 15),
-              child: Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.symmetric(vertical: 50),
-                    height: 30,
-                    width: 70,
-                    decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.all(Radius.circular(20))
-                    ),
-                    child: Container(
-                      margin: EdgeInsets.symmetric(horizontal: 17, vertical: 5),
-                      child: Text(
-                        'Back',
-                        style: TextStyle(
-                          color: Colors.white
-                        ),
-                      )
-                    ),
-                  ), 
-                ],
-              )
+              margin: EdgeInsets.only(right: 250, top: 20),
+              height: 40,
+              width: 100,
+              child: RaisedButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                onPressed: (){},
+                color: Colors.blue,
+                child: Text(
+                  'Back',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20
+                  ),
+                ),
+              ),
             ),
             //End Button Back
           ],

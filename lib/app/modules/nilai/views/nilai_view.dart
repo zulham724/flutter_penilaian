@@ -415,6 +415,9 @@ class NilaiView extends GetView<NilaiController> {
                                         hintText: "Jawab",
                                         focusedBorder: OutlineInputBorder(
                                           borderSide: BorderSide(color: Colors.grey, width: 2)
+                                        ),
+                                        border: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(10)
                                         )
                                       ),
                                     ),
@@ -440,6 +443,9 @@ class NilaiView extends GetView<NilaiController> {
                                         hintText: "Jawab",
                                         focusedBorder: OutlineInputBorder(
                                           borderSide: BorderSide(color: Colors.grey, width: 2)
+                                        ),
+                                        border: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(10)
                                         )
                                       )
                                     )
@@ -505,20 +511,13 @@ class NilaiView extends GetView<NilaiController> {
                                                     'Submit'
                                                   ),
                                                 )
-                                              )
-                                              
+                                              ) 
                                             ],
                                           )
                                         ],
-                                        
-                                       
                                       ),
-                                      
                                     ],
                                   )
-                                  
-                                    
-                                  
                                 ]
                               ),
                             ),

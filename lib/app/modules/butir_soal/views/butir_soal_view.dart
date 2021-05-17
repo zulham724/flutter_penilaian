@@ -155,7 +155,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.only(bottom: 35, left: 153),
+                    margin: EdgeInsets.only(left: 167),
                     height: 65,
                     width: 90,
                     decoration: BoxDecoration(
@@ -274,14 +274,14 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              height: 455,
+              height: 550,
               width: 400,
               color: Colors.white,
               child: Column(
                 children: [
                   Container(
                     margin: EdgeInsets.only(top: 10),
-                    height: 120,
+                    height: 130,
                     width: 330,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -401,31 +401,22 @@ class _MyHomePageState extends State<MyHomePage> {
                             )
                           ],
                         ),
-                        Row(
-                          children: [
-                            Container(
-                              margin: EdgeInsets.only(left: 150, top: 5),
-                              child: IconButton(
-                                icon: Icon(
-                                  Icons.keyboard_arrow_down_outlined,
-                                  color: Colors.blue,
-                                  size: 30,
-                                ),
-                                onPressed: (){}
-                              )
-                            )
-                          ],
+                        Container(
+                          child: Theme(
+                            data: ThemeData().copyWith(dividerColor: Colors.transparent),
+                            child: ExpansionTile(
+
+                            ),
+                          )
                         )
                       ],
                     ),
                   ),
 
                   Container(
-                    margin: EdgeInsets.only(top: 10),
-                    height: 290,
-                    width: 330,
+                    margin: EdgeInsets.only(top: 10, left: 30, right: 30),
                     decoration: BoxDecoration(
-                      color: Colors.grey[200],
+                      color: Colors.white,
                       border: Border.all(
                         color: Colors.blue
                       ),
@@ -434,284 +425,276 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     child: Column(
-                      children:[
-                        Container(
-                          height: 120,
-                          width: 330,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(20)
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(top: 10, left: 10),
+                              height: 40,
+                              width: 40,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(100),
+                                image: DecorationImage(
+                                  image: AssetImage('assets/bg-login-2.png'),
+                                  fit: BoxFit.fill
+                                )
+                              ),
                             ),
-                          ),
-                          child: Column(
-                            children: [
-                              Row(
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(top: 10, left: 10),
-                                    height: 40,
-                                    width: 40,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(100),
-                                      image: DecorationImage(
-                                        image: AssetImage('assets/bg-login-2.png'),
-                                        fit: BoxFit.fill
-                                      )
+                            Column(
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(right: 70),
+                                  child: Text(
+                                    'Brian Dewangga',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold
                                     ),
                                   ),
-                                  Column(
-                                    children: [
-                                      Container(
-                                        margin: EdgeInsets.only(right: 70),
+                                ),
+                                Row(
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.only(left: 5, top: 5),
+                                      height: 20,
+                                      width: 60,
+                                      decoration: BoxDecoration(
+                                        color: Colors.blue,
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(30)
+                                        )
+                                      ),
+                                      child: Container(
+                                        margin: EdgeInsets.only(left: 5),
                                         child: Text(
-                                          'Brian Dewangga',
+                                          '10 SMA',
                                           style: TextStyle(
-                                            fontWeight: FontWeight.bold
+                                            color: Colors.black
                                           ),
-                                        ),
+                                        )
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(left: 5, top: 5),
+                                      height: 20,
+                                      width: 60,
+                                      decoration: BoxDecoration(
+                                        color: Colors.blue,
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(30)
+                                        )
+                                      ),
+                                      child: Container(
+                                        margin: EdgeInsets.only(left: 10),
+                                        child: Text(
+                                          'Uraian',
+                                          style: TextStyle(
+                                            color: Colors.black
+                                          ),
+                                        )
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(left: 5, top: 5),
+                                      height: 20,
+                                      width: 60,
+                                      decoration: BoxDecoration(
+                                        color: Colors.blue,
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(30)
+                                        )
+                                      ),
+                                      child: Container(
+                                        margin: EdgeInsets.only(left: 10),
+                                        child: Text(
+                                          'LOTS',
+                                          style: TextStyle(
+                                            color: Colors.black
+                                          ),
+                                        )
+                                      ),
+                                    )
+                                  ],
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(left: 10, top: 5),
+                              child: Text(
+                                'Kiamat Sugro dan Kiamat Kubro',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey[600]
+                                ),
+                              )
+                            )
+                          ],
+                        ),
+                        Container(
+                          child: Theme(
+                            data: ThemeData().copyWith(dividerColor: Colors.transparent),
+                            child: ExpansionTile(
+                              children: [
+                                Container(
+                                  height: 200,
+                                  width: 900,
+                                  decoration: BoxDecoration(
+                                    color: Colors.grey[300],
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(20)
+                                    )
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Container(
+                                            margin: EdgeInsets.only(left: 10, top: 10),
+                                            height: 30,
+                                            width: 30,
+                                            decoration: BoxDecoration(
+                                              color: Colors.blue[300],
+                                              borderRadius: BorderRadius.all(
+                                                Radius.circular(5)
+                                              )
+                                            ),
+                                            child: Container(
+                                              margin: EdgeInsets.only(left: 7),
+                                              child: Text(
+                                                '1',
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20
+                                                ),
+                                              ),
+                                            )
+                                          ),
+                                          Container(
+                                            margin: EdgeInsets.only(left: 10),
+                                            child: Text(
+                                              'Surat At Tin merupakann surat yang ke ...',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold
+                                              ),
+                                            )
+                                          )
+                                        ]
                                       ),
                                       Row(
                                         children: [
                                           Container(
-                                            margin: EdgeInsets.only(left: 5, top: 5),
-                                            height: 20,
-                                            width: 60,
+                                            margin: EdgeInsets.only(left: 10, top: 10),
+                                            height: 30,
+                                            width: 30,
                                             decoration: BoxDecoration(
-                                              color: Colors.blue,
+                                              color: Colors.blue[300],
                                               borderRadius: BorderRadius.all(
-                                                Radius.circular(30)
+                                                Radius.circular(5)
                                               )
                                             ),
                                             child: Container(
-                                              margin: EdgeInsets.only(left: 5),
+                                              margin: EdgeInsets.only(left: 7),
                                               child: Text(
-                                                '10 SMA',
+                                                '1',
                                                 style: TextStyle(
-                                                  color: Colors.black
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20
                                                 ),
-                                              )
-                                            ),
+                                              ),
+                                            )
                                           ),
                                           Container(
-                                            margin: EdgeInsets.only(left: 5, top: 5),
-                                            height: 20,
-                                            width: 60,
-                                            decoration: BoxDecoration(
-                                              color: Colors.blue,
-                                              borderRadius: BorderRadius.all(
-                                                Radius.circular(30)
-                                              )
-                                            ),
-                                            child: Container(
-                                              margin: EdgeInsets.only(left: 10),
-                                              child: Text(
-                                                'Uraian',
-                                                style: TextStyle(
-                                                  color: Colors.black
-                                                ),
-                                              )
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 5, top: 5),
-                                            height: 20,
-                                            width: 60,
-                                            decoration: BoxDecoration(
-                                              color: Colors.blue,
-                                              borderRadius: BorderRadius.all(
-                                                Radius.circular(30)
-                                              )
-                                            ),
-                                            child: Container(
-                                              margin: EdgeInsets.only(left: 10),
-                                              child: Text(
-                                                'LOTS',
-                                                style: TextStyle(
-                                                  color: Colors.black
-                                                ),
-                                              )
-                                            ),
+                                            margin: EdgeInsets.only(left: 10),
+                                            child: Text(
+                                              'Surat At Tin merupakann surat yang ke ...',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold
+                                              ),
+                                            )
                                           )
-                                        ],
+                                        ]
+                                      ),
+                                      Row(
+                                        children: [
+                                          Container(
+                                            margin: EdgeInsets.only(left: 10, top: 10),
+                                            height: 30,
+                                            width: 30,
+                                            decoration: BoxDecoration(
+                                              color: Colors.blue[300],
+                                              borderRadius: BorderRadius.all(
+                                                Radius.circular(5)
+                                              )
+                                            ),
+                                            child: Container(
+                                              margin: EdgeInsets.only(left: 7),
+                                              child: Text(
+                                                '1',
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20
+                                                ),
+                                              ),
+                                            )
+                                          ),
+                                          Container(
+                                            margin: EdgeInsets.only(left: 10),
+                                            child: Text(
+                                              'Surat At Tin merupakann surat yang ke ...',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold
+                                              ),
+                                            )
+                                          )
+                                        ]
+                                      ),
+                                      Row(
+                                        children: [
+                                          Container(
+                                            margin: EdgeInsets.only(left: 10, top: 10),
+                                            height: 30,
+                                            width: 30,
+                                            decoration: BoxDecoration(
+                                              color: Colors.blue[300],
+                                              borderRadius: BorderRadius.all(
+                                                Radius.circular(5)
+                                              )
+                                            ),
+                                            child: Container(
+                                              margin: EdgeInsets.only(left: 7),
+                                              child: Text(
+                                                '1',
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20
+                                                ),
+                                              ),
+                                            )
+                                          ),
+                                          Container(
+                                            margin: EdgeInsets.only(left: 10),
+                                            child: Text(
+                                              'Surat At Tin merupakann surat yang ke ...',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold
+                                              ),
+                                            )
+                                          )
+                                        ]
                                       )
-                                    ],
-                                  )
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(left: 10, top: 5),
-                                    child: Text(
-                                      'Kiamat Sugro dan Kiamat Kubro',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        color: Colors.grey[600]
-                                      ),
-                                    )
-                                  )
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(left: 150, top: 5),
-                                    child: IconButton(
-                                      icon: Icon(
-                                        Icons.keyboard_arrow_up_outlined,
-                                        color: Colors.blue,
-                                        size: 30,
-                                      ),
-                                      onPressed: (){}
-                                    )
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          child: Column(
-                            children: [
-                              Row(
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(left: 10, top: 10),
-                                    height: 20,
-                                    width: 20,
-                                    decoration: BoxDecoration(
-                                      color: Colors.blue[200],
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(5)
-                                      )
-                                    ),
-                                    child: Container(
-                                      margin: EdgeInsets.only(left: 5),
-                                      child: Text(
-                                        '1',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold
-                                        ),
-                                      ),
-                                    ),
+                                    ]
                                   ),
-                                  Container(
-                                    margin: EdgeInsets.only(left: 5, top: 5),
-                                    child: Text(
-                                      'Surat At Tin merupakan surat yang ke ...',
-                                      style: TextStyle(
-                                        fontSize: 12
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(left: 10, top: 10),
-                                    height: 20,
-                                    width: 20,
-                                    decoration: BoxDecoration(
-                                      color: Colors.blue[200],
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(5)
-                                      )
-                                    ),
-                                    child: Container(
-                                      margin: EdgeInsets.only(left: 5),
-                                      child: Text(
-                                        '1',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.only(left: 5, top: 5),
-                                    child: Text(
-                                      'Surat At Tin merupakan surat yang ke ...',
-                                      style: TextStyle(
-                                        fontSize: 12
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(left: 10, top: 10),
-                                    height: 20,
-                                    width: 20,
-                                    decoration: BoxDecoration(
-                                      color: Colors.blue[200],
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(5)
-                                      )
-                                    ),
-                                    child: Container(
-                                      margin: EdgeInsets.only(left: 5),
-                                      child: Text(
-                                        '1',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.only(left: 5, top: 5),
-                                    child: Text(
-                                      'Surat At Tin merupakan surat yang ke ...',
-                                      style: TextStyle(
-                                        fontSize: 12
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(left: 10, top: 10),
-                                    height: 20,
-                                    width: 20,
-                                    decoration: BoxDecoration(
-                                      color: Colors.blue[200],
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(5)
-                                      )
-                                    ),
-                                    child: Container(
-                                      margin: EdgeInsets.only(left: 5),
-                                      child: Text(
-                                        '1',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.only(left: 5, top: 5),
-                                    child: Text(
-                                      'Surat At Tin merupakan surat yang ke ...',
-                                      style: TextStyle(
-                                        fontSize: 12
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              )
-                            ],
+                                )
+                              ],
+                            ),
                           )
                         )
-                      ]
+                      ],
                     ),
-                  )
+                  ),
                 ],
               ),
             )

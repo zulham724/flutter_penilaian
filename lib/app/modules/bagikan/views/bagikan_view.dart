@@ -272,7 +272,17 @@ class _State extends State<BagikanView> {
                                     width: 150,
                                     child: TextField(
                                       decoration: InputDecoration(
-                                        prefixIcon: Icon(Icons.calendar_today, size: 20),
+                                        prefixIcon: IconButton(
+                                          icon: Icon(Icons.calendar_today, size: 17,),
+                                          onPressed: (){
+                                            showDatePicker(
+                                              context: context, 
+                                              initialDate: DateTime.now(), 
+                                              firstDate: DateTime(2015, 8), 
+                                              lastDate: DateTime(2101),
+                                            );
+                                          },
+                                        ),
                                         hintText: "14/01/2021",
                                         contentPadding: EdgeInsets.all(10),
                                         focusedBorder: OutlineInputBorder(
@@ -283,7 +293,7 @@ class _State extends State<BagikanView> {
                                             Radius.circular(10)
                                           )
                                         )
-                                      )
+                                      ),
                                     ),
                                   ),
                                   Container(
@@ -496,7 +506,7 @@ class _State extends State<BagikanView> {
                   children: [
                     Container(
                       height: 30,
-                      width: 130,
+                      width: 140,
                       margin: EdgeInsets.only(top: 20, left: 80, bottom: 20),
                       child: RaisedButton(
                         shape: RoundedRectangleBorder(
@@ -526,7 +536,7 @@ class _State extends State<BagikanView> {
                     Container(
                       margin: EdgeInsets.only(left: 10),
                       height: 30,
-                      width: 80,
+                      width: 90,
                       child: RaisedButton(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),

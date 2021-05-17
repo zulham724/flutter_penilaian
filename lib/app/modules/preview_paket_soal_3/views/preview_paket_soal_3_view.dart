@@ -93,7 +93,10 @@ class PreviewPaketSoal3View extends GetView<PreviewPaketSoal3Controller> {
                       hintText: "Jawaban",
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.blue, width: 2)
-                      )     
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10)
+                      ) 
                     ),
                   ),
                 ),
@@ -106,97 +109,97 @@ class PreviewPaketSoal3View extends GetView<PreviewPaketSoal3Controller> {
                   child: Row(
                     children:[
                       Container(
-                        margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                        margin: EdgeInsets.only(left: 30, top: 20),
                         height: 30,
-                        width: 100,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(20),
-                            bottomRight: Radius.circular(20),
-                            topLeft: Radius.circular(20),
-                            topRight: Radius.circular(20)
+                        width: 110,
+                        child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)
                           ),
-                          color: Colors.blue
-                        ),
-                        child: Row(
-                          children: [
-                            IconButton(
-                              icon: const Icon(Icons.arrow_back_ios_outlined, size: 15),
-                              color: Colors.white,
-                              onPressed: (){},
-                            ),
-                            Text(
-                              'Kembali',
-                              style: TextStyle(
-                                color: Colors.white
+                          onPressed: (){},
+                          color: Colors.blue,
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.arrow_back_ios_outlined,
+                                color: Colors.white,
                               ),
-                            ),
-                          ],
+                              Text(
+                                'Kembali',
+                                style: TextStyle(
+                                  color: Colors.white
+                                ),
+                              )
+                            ],
+                          )
                         ),
                       ),
 
 
                       //Bottom 1/5
                       Container(
-                        margin: EdgeInsets.symmetric(vertical: 20),
+                        margin: EdgeInsets.only(left: 10, top: 20),
                         height: 30,
-                        width: 100,
+                        width: 90,
                         decoration: BoxDecoration(
-                          border: Border.all(color: Colors.blue[200]),
-                          borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(20),
-                            bottomRight: Radius.circular(20),
-                            topLeft: Radius.circular(20),
-                            topRight: Radius.circular(20)
-                          ),
-                          color: Colors.white
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(color: Colors.blue),
+                          color: Colors.white,
                         ),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Container(
-                              margin: EdgeInsets.symmetric(horizontal: 20),
-                            ),
                             Text(
-                              '1/5',
+                              '1',
                               style: TextStyle(
-                                color: Colors.blue
+                                color: Colors.blue,
+                                fontSize: 17
                               ),
                             ),
+                            Text(
+                              '/',
+                              style: TextStyle(
+                                color: Colors.blue,
+                                fontSize: 17
+                              ),
+                            ),
+                            Text(
+                              '5',
+                              style: TextStyle(
+                                color: Colors.blue,
+                                fontSize: 20
+                              ),
+                            )
                           ],
                         ),
                       ),
 
                       //Bottom Lanjut
                       Container(
-                        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                        margin: EdgeInsets.only(left: 10, top: 20),
                         height: 30,
-                        width: 100,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(20),
-                            bottomRight: Radius.circular(20),
-                            topLeft: Radius.circular(20),
-                            topRight: Radius.circular(20)
+                        width: 110,
+                        child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)
                           ),
-                          color: Colors.blue
-                        ),
-                         child: Row(
-                          children: [
-                            Container(
-                              margin: EdgeInsets.symmetric(horizontal: 10),
-                            ),
-                            Text(
-                              'Lanjut',
-                              style: TextStyle(
-                                color: Colors.white
+                          onPressed: (){},
+                          color: Colors.blue,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Lanjut',
+                                style: TextStyle(
+                                  color: Colors.white
+                                ),
                               ),
-                            ),
-                            IconButton(
-                              icon: const Icon(Icons.arrow_forward_ios_outlined, size: 15),
-                              color: Colors.white,
-                              onPressed: (){},
-                            ),
-                          ],
+                              Icon(
+                                Icons.arrow_forward_ios_sharp,
+                                color: Colors.white,
+                              ),
+                            ],
+                          )
                         ),
                       )
                     ]

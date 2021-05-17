@@ -110,7 +110,6 @@ class _MyHomePageState extends State<MyHomePage> {
               title: Text("Profil"))
         ],
       ),
-      
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.only(top: 10),
@@ -119,338 +118,530 @@ class _MyHomePageState extends State<MyHomePage> {
           width: 1000,
           child: Column(
             children:[
-              Container(                
-                child: Container(
-                  width: 350,
-                  alignment: Alignment.topLeft,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(40),
-                      topRight: Radius.circular(40),
-                      bottomLeft: Radius.circular(60),
-                      bottomRight: Radius.circular(60)
-                    ),
-                    image: DecorationImage(
-                      image: AssetImage("assets/bg-card-hasil.png"),
-                      fit: BoxFit.fill,  
-                    ),
+              Container(
+                width: 350,
+                height: 150,
+                alignment: Alignment.topLeft,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(30)
                   ),
-                  child: Container(
-                    margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children:[
-                          Row(
-                            children: [
-                              Text(
-                                'Penilaian Akhir Tahun',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold
-                                ),
-                              ),
-                            ],
+                  image: DecorationImage(
+                    image: AssetImage("assets/bg-card-hasil.png"),
+                    fit: BoxFit.fill,  
+                  ),
+                ),
+                child: Container(
+                  margin: EdgeInsets.only(left: 20, top: 20),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children:[
+                      Row(
+                        children: [
+                          Text(
+                            'Penilaian Akhir Tahun',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold
+                            ),
                           ),
-                        
-                          Row(
-                            children: [
-                              Text(
-                                'Kelas : 10 SMA'
-                              ),
-                            ],
+                        ],
+                      ), 
+                      Row(
+                        children: [
+                          Text(
+                            'Kelas : 10 SMA'
                           ),
-
-                          Row(
-                            children: [
-                              Text(
-                                'Mapel : PAI'
-                              ),
-                            ],
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            'Mapel : PAI'
                           ),
-
-                          Row(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.symmetric(vertical: 40),
-                                alignment: Alignment.topLeft,
-                                height: 40,
-                                width: 150,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Colors.blue[100],
-                                ),
-                                child: Row(
-                                  children:[
-                                    Container(
-                                      margin: EdgeInsets.symmetric(horizontal: 10),
-                                      child: Row(
-                                        children:[
-                                          Row(
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(top: 20),
+                            alignment: Alignment.topLeft,
+                            height: 40,
+                            width: 150,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.blue[100],
+                            ),
+                            child: Row(
+                              children:[
+                                Container(
+                                  margin: EdgeInsets.only(left: 10),
+                                  child: Row(
+                                    children:[
+                                      Row(
+                                        children: [
+                                          Column(
                                             children: [
-                                              Column(
-                                                children: [
-                                                  Container(
-                                                    padding: EdgeInsets.only(top: 5),
-                                                    child: Text(
-                                                      'Kode Soal',
-                                                      style: TextStyle(
-                                                        fontWeight: FontWeight.bold,
-                                                        color: Colors.black,
-                                                      ),
-                                                    ) 
+                                              Container(
+                                                padding: EdgeInsets.only(top: 5),
+                                                child: Text(
+                                                  'Kode Soal',
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.black,
                                                   ),
-                                                  Text(
-                                                    'aaaaa'
-                                                  ),
-                                                ],
+                                                ) 
+                                              ),
+                                              Text(
+                                                'aaaaa'
                                               ),
                                             ],
                                           ),
-                                          
-                                          Container(
-                                            margin: EdgeInsets.symmetric(horizontal: 10),
-                                            child: IconButton(
-                                              icon: const Icon(Icons.copy),
-                                              color: Colors.grey[600],
-                                              onPressed: (){},
-                                            ),
-                                          ),
-                                        ] 
+                                        ],
+                                      ),  
+                                      Container(
+                                        margin: EdgeInsets.symmetric(horizontal: 10),
+                                        child: IconButton(
+                                          icon: const Icon(Icons.copy),
+                                          color: Colors.grey[600],
+                                          onPressed: (){},
+                                        ),
                                       ),
-                                    ),
-                                  ]
+                                    ] 
+                                  ),
                                 ),
-                              )
-                            ],
+                              ]
+                            ),
                           )
-                        ]
-                      ),
-                    ),
-                  )
-                ), 
-              
-                Container(
-                  child: Container(
-                    width: 350,
-                    alignment: Alignment.topLeft,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(40),
-                        topRight: Radius.circular(40),
-                        bottomLeft: Radius.circular(60),
-                        bottomRight: Radius.circular(60)
-                      ),
-                      image: DecorationImage(
-                        image: AssetImage("assets/bg-card-hasil.png"),
-                        fit: BoxFit.fill,
+                        ],
                       )
-                    ),
-                    child: Container(
-                    margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children:[
-                        Row(
-                          children: [
-                            Text(
-                              'Penilaian Akhir Tahun',
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold
-                              ),
-                            ),
-                          ],
-                        ),
-                        
-                        Row(
-                          children: [
-                            Text(
-                              'Kelas : 10 SMA'
-                            ),
-                          ],
-                        ),
-
-                        Row(
-                          children: [
-                            Text(
-                              'Mapel : PAI'
-                            ),
-                          ],
-                        ),
-
-                        Row(
-                          children: [
-                            Container(
-                              margin: EdgeInsets.symmetric(vertical: 40),
-                              alignment: Alignment.topLeft,
-                              height: 40,
-                              width: 150,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.blue[100],
-                              ),
-                              child: Row(
-                                children:[
-                                  Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 10),
-                                    child: Row(
-                                      children:[
-                                        Row(
-                                          children: [
-                                            Column(
-                                              children: [
-                                                Container(
-                                                  padding: EdgeInsets.only(top: 5),
-                                                  child: Text(
-                                                    'Kode Soal',
-                                                    style: TextStyle(
-                                                      fontWeight: FontWeight.bold,
-                                                      color: Colors.black
-                                                    ),
-                                                  )
-                                                ),
-                                                Text(
-                                                  'aaaaa'
-                                                ),
-                                              ],
-                                            ),
-                                          ],
-                                        ),
-
-                                        Container(
-                                          margin: EdgeInsets.symmetric(horizontal: 10),
-                                          child: IconButton(
-                                            icon: const Icon(Icons.copy),
-                                            color: Colors.grey[600],
-                                            onPressed: (){},
-                                          ),
-                                        ),
-                                      ] 
-                                    ),
-                                  ),
-                                ]
-                              ),
-                            )
-                          ],
-                        )
-                      ]
-                    ),
-                    ),
-                  ) 
+                    ]
+                  ),
                 ),
-                Container(
-                  child: Container(
-                    width: 350,
-                    alignment: Alignment.topLeft,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(40),
-                        topRight: Radius.circular(40),
-                        bottomLeft: Radius.circular(60),
-                        bottomRight: Radius.circular(60)
+              ),
+              Container(
+                width: 350,
+                height: 150,
+                alignment: Alignment.topLeft,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(30)
+                  ),
+                  image: DecorationImage(
+                    image: AssetImage("assets/bg-card-hasil.png"),
+                    fit: BoxFit.fill,  
+                  ),
+                ),
+                child: Container(
+                  margin: EdgeInsets.only(left: 20, top: 20),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children:[
+                      Row(
+                        children: [
+                          Text(
+                            'Penilaian Akhir Tahun',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                        ],
+                      ), 
+                      Row(
+                        children: [
+                          Text(
+                            'Kelas : 10 SMA'
+                          ),
+                        ],
                       ),
-                      image: DecorationImage(
-                        image: AssetImage("assets/bg-card-hasil.png"),
-                        fit: BoxFit.fill,
-                      )
-                    ),
-                    child: Container(
-                    margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children:[
-                        Row(
-                          children: [
-                            Text(
-                              'Penilaian Akhir Tahun',
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold
-                              ),
+                      Row(
+                        children: [
+                          Text(
+                            'Mapel : PAI'
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(top: 20),
+                            alignment: Alignment.topLeft,
+                            height: 40,
+                            width: 150,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.blue[100],
                             ),
-                          ],
-                        ),
-                        
-                        Row(
-                          children: [
-                            Text(
-                              'Kelas : 10 SMA'
-                            ),
-                          ],
-                        ),
-
-                        Row(
-                          children: [
-                            Text(
-                              'Mapel : PAI'
-                            ),
-                          ],
-                        ),
-
-                        Row(
-                          children: [
-                            Container(
-                              margin: EdgeInsets.symmetric(vertical: 40),
-                              alignment: Alignment.topLeft,
-                              height: 40,
-                              width: 150,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.blue[100],
-                              ),
-                              child: Row(
-                                children:[
-                                  Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 10),
-                                    child: Row(
-                                      children:[
-                                        Row(
-                                          children: [
-                                            Column(
-                                              children: [
-                                                Container(
-                                                  padding: EdgeInsets.only(top: 5),
-                                                  child: Text(
-                                                    'Kode Soal',
-                                                    style: TextStyle(
-                                                      fontWeight: FontWeight.bold,
-                                                      color: Colors.black
-                                                    ),
+                            child: Row(
+                              children:[
+                                Container(
+                                  margin: EdgeInsets.only(left: 10),
+                                  child: Row(
+                                    children:[
+                                      Row(
+                                        children: [
+                                          Column(
+                                            children: [
+                                              Container(
+                                                padding: EdgeInsets.only(top: 5),
+                                                child: Text(
+                                                  'Kode Soal',
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.black,
                                                   ),
-                                                ),
-                                                Text(
-                                                  'aaaaa'
-                                                ),
-                                              ],
-                                            ),
-                                            
-                                          ],
-                                        ),
-                                        Container(
-                                          margin: EdgeInsets.symmetric(horizontal: 10),
-                                          child: IconButton(
-                                            icon: const Icon(Icons.copy),
-                                            color: Colors.grey[600],
-                                            onPressed: (){},
+                                                ) 
+                                              ),
+                                              Text(
+                                                'aaaaa'
+                                              ),
+                                            ],
                                           ),
+                                        ],
+                                      ),  
+                                      Container(
+                                        margin: EdgeInsets.symmetric(horizontal: 10),
+                                        child: IconButton(
+                                          icon: const Icon(Icons.copy),
+                                          color: Colors.grey[600],
+                                          onPressed: (){},
                                         ),
-                                      ] 
-                                    ),
+                                      ),
+                                    ] 
                                   ),
-                                ]
-                              ),
+                                ),
+                              ]
                             ),
-                          ],
-                        )
-                      ]
-                    ),
-                    ),
-                  ) 
-                ),  
+                          )
+                        ],
+                      )
+                    ]
+                  ),
+                ),
+              ),
+              Container(
+                width: 350,
+                height: 150,
+                alignment: Alignment.topLeft,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(30)
+                  ),
+                  image: DecorationImage(
+                    image: AssetImage("assets/bg-card-hasil.png"),
+                    fit: BoxFit.fill,  
+                  ),
+                ),
+                child: Container(
+                  margin: EdgeInsets.only(left: 20, top: 20),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children:[
+                      Row(
+                        children: [
+                          Text(
+                            'Penilaian Akhir Tahun',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                        ],
+                      ), 
+                      Row(
+                        children: [
+                          Text(
+                            'Kelas : 10 SMA'
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            'Mapel : PAI'
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(top: 20),
+                            alignment: Alignment.topLeft,
+                            height: 40,
+                            width: 150,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.blue[100],
+                            ),
+                            child: Row(
+                              children:[
+                                Container(
+                                  margin: EdgeInsets.only(left: 10),
+                                  child: Row(
+                                    children:[
+                                      Row(
+                                        children: [
+                                          Column(
+                                            children: [
+                                              Container(
+                                                padding: EdgeInsets.only(top: 5),
+                                                child: Text(
+                                                  'Kode Soal',
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.black,
+                                                  ),
+                                                ) 
+                                              ),
+                                              Text(
+                                                'aaaaa'
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),  
+                                      Container(
+                                        margin: EdgeInsets.symmetric(horizontal: 10),
+                                        child: IconButton(
+                                          icon: const Icon(Icons.copy),
+                                          color: Colors.grey[600],
+                                          onPressed: (){},
+                                        ),
+                                      ),
+                                    ] 
+                                  ),
+                                ),
+                              ]
+                            ),
+                          )
+                        ],
+                      )
+                    ]
+                  ),
+                ),
+              ),
+              Container(
+                width: 350,
+                height: 150,
+                alignment: Alignment.topLeft,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(30)
+                  ),
+                  image: DecorationImage(
+                    image: AssetImage("assets/bg-card-hasil.png"),
+                    fit: BoxFit.fill,  
+                  ),
+                ),
+                child: Container(
+                  margin: EdgeInsets.only(left: 20, top: 20),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children:[
+                      Row(
+                        children: [
+                          Text(
+                            'Penilaian Akhir Tahun',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                        ],
+                      ), 
+                      Row(
+                        children: [
+                          Text(
+                            'Kelas : 10 SMA'
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            'Mapel : PAI'
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(top: 20),
+                            alignment: Alignment.topLeft,
+                            height: 40,
+                            width: 150,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.blue[100],
+                            ),
+                            child: Row(
+                              children:[
+                                Container(
+                                  margin: EdgeInsets.only(left: 10),
+                                  child: Row(
+                                    children:[
+                                      Row(
+                                        children: [
+                                          Column(
+                                            children: [
+                                              Container(
+                                                padding: EdgeInsets.only(top: 5),
+                                                child: Text(
+                                                  'Kode Soal',
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.black,
+                                                  ),
+                                                ) 
+                                              ),
+                                              Text(
+                                                'aaaaa'
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),  
+                                      Container(
+                                        margin: EdgeInsets.symmetric(horizontal: 10),
+                                        child: IconButton(
+                                          icon: const Icon(Icons.copy),
+                                          color: Colors.grey[600],
+                                          onPressed: (){},
+                                        ),
+                                      ),
+                                    ] 
+                                  ),
+                                ),
+                              ]
+                            ),
+                          )
+                        ],
+                      )
+                    ]
+                  ),
+                ),
+              ),
+              Container(
+                width: 350,
+                height: 150,
+                alignment: Alignment.topLeft,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(30)
+                  ),
+                  image: DecorationImage(
+                    image: AssetImage("assets/bg-card-hasil.png"),
+                    fit: BoxFit.fill,  
+                  ),
+                ),
+                child: Container(
+                  margin: EdgeInsets.only(left: 20, top: 20),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children:[
+                      Row(
+                        children: [
+                          Text(
+                            'Penilaian Akhir Tahun',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                        ],
+                      ), 
+                      Row(
+                        children: [
+                          Text(
+                            'Kelas : 10 SMA'
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            'Mapel : PAI'
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(top: 20),
+                            alignment: Alignment.topLeft,
+                            height: 40,
+                            width: 150,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.blue[100],
+                            ),
+                            child: Row(
+                              children:[
+                                Container(
+                                  margin: EdgeInsets.only(left: 10),
+                                  child: Row(
+                                    children:[
+                                      Row(
+                                        children: [
+                                          Column(
+                                            children: [
+                                              Container(
+                                                padding: EdgeInsets.only(top: 5),
+                                                child: Text(
+                                                  'Kode Soal',
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.black,
+                                                  ),
+                                                ) 
+                                              ),
+                                              Text(
+                                                'aaaaa'
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),  
+                                      Container(
+                                        margin: EdgeInsets.symmetric(horizontal: 10),
+                                        child: IconButton(
+                                          icon: const Icon(Icons.copy),
+                                          color: Colors.grey[600],
+                                          onPressed: (){},
+                                        ),
+                                      ),
+                                    ] 
+                                  ),
+                                ),
+                              ]
+                            ),
+                          )
+                        ],
+                      )
+                    ]
+                  ),
+                ),
+              ),
             ]
           ),
-        )
+        )      
       ),
-    );
+    );  
   }
 }

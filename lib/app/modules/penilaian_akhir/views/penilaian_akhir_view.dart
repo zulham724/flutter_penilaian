@@ -133,8 +133,9 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               children: [
                 Container(
+                  margin: EdgeInsets.only(top: 24),
                   height: 50,
-                  width: 375,
+                  width: 392.5,
                   color: Colors.blue,
                   child: Row(
                     children: [
@@ -202,7 +203,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   color: Colors.blue,
                   height: 80,
-                  width: 375,
+                  width: 392.5,
                   child: Column(
                     children: [
                       Row(
@@ -259,7 +260,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Container(
                       height: 70,
-                      width: 270,
+                      width: 287,
                       decoration: BoxDecoration(
                         color: Colors.blue[200],
                         borderRadius: BorderRadius.only(
@@ -368,13 +369,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Column(
                         children: [
                           Container(
-                            margin: EdgeInsets.only(top: 10),
-                            child: Icon(
-                              Icons.copy
+                            child: IconButton(
+                              icon: Icon(Icons.copy),
+                              onPressed: (){},
                             ),
                           ),
                           Container(
-                            margin: EdgeInsets.only(top: 5),
                             child: Text(
                               'asfd213d'
                             ),

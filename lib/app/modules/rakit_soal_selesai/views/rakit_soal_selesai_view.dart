@@ -118,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              margin: EdgeInsets.only(left: 15, top: 30),
               child: Row(
                 children:[
                   Text(
@@ -132,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 70),
+              margin: EdgeInsets.only(left: 70, top: 10),
               child: Row(
                 children:[
                   Container(
@@ -256,52 +256,46 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               children: [
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 40),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 50,
-                        width: 130,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.blue[200]),
-                          borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(20),
-                            bottomRight: Radius.circular(20),
-                            topLeft: Radius.circular(20),
-                            topRight: Radius.circular(20)
-                          ),
-                          color: Colors.white
+                  height: 50,
+                  margin: EdgeInsets.only(left: 40),
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      side: BorderSide(
+                        color: Colors.blue
+                      )
+                    ),
+                    onPressed: (){},
+                    color: Colors.white,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.remove_red_eye_rounded,
+                          color: Colors.blue,
+                          size: 30,
                         ),
-                        child: Row(
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            IconButton(
-                              icon: const Icon(Icons.remove_red_eye_rounded),
-                              color: Colors.blue,
-                              onPressed: (){},
+                            Text(
+                              'PREVIEW',
+                              style: TextStyle(
+                                color: Colors.blue,
+                                fontSize: 17
+                              ),
                             ),
-                            Container(
-                              margin: EdgeInsets.symmetric(vertical: 5),
-                              child: Column(
-                                children:[
-                                  Text(
-                                    'PREVIEW',
-                                    style: TextStyle(
-                                      color: Colors.blue
-                                    ),
-                                  ),
-                                  Text(
-                                    'PAKET SOAL',
-                                    style: TextStyle(
-                                      color: Colors.blue
-                                    ),
-                                  )
-                                ]
+                            Text(
+                              'PAKET SOAL',
+                              style: TextStyle(
+                                color: Colors.blue,
+                                fontSize: 17
                               ),
                             )
                           ],
-                        ),
-                      )
-                    ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 //End Button Preview Paket Soal
@@ -311,40 +305,32 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Row(
                     children: [
                       Container(
+                        margin: EdgeInsets.only(left: 10),
                         height: 50,
-                        width: 130,
-                        decoration: BoxDecoration(
-                          //border: Border.all(color: Colors.blue[200]),
-                          borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(20),
-                            bottomRight: Radius.circular(20),
-                            topLeft: Radius.circular(20),
-                            topRight: Radius.circular(20)
+                        child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)
                           ),
-                          color: Colors.blue
-                        ),
-                        child: Row(
-                          children: [
-                            IconButton(
-                              icon: const Icon(Icons.file_upload),
-                              color: Colors.white,
-                              onPressed: (){},
-                            ),
-                            Container(
-                              margin: EdgeInsets.symmetric(vertical: 15),
-                              child: Column(
-                                children:[
-                                  Text(
-                                    'TERBITKAN',
-                                    style: TextStyle(
-                                      color: Colors.white
-                                    ),
-                                  ),
-                                ]
+                          onPressed: (){},
+                          color: Colors.blue,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.upload_rounded,
+                                color: Colors.white,
+                                size: 30
                               ),
-                            )
-                          ],
-                        ),
+                              Text(
+                                'TERBITKAN',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 17
+                                ),
+                              )
+                            ],
+                          ),
+                        )
                       )
                     ],
                   ),
@@ -355,25 +341,24 @@ class _MyHomePageState extends State<MyHomePage> {
 
             //Button Back
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 15),
+              margin: EdgeInsets.only(left: 15),
               child: Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 50),
-                    height: 30,
-                    width: 70,
-                    decoration: BoxDecoration(
+                    margin: EdgeInsets.only(top: 50),
+                    child: RaisedButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)
+                      ),
+                      onPressed: (){},
                       color: Colors.blue,
-                      borderRadius: BorderRadius.all(Radius.circular(20))
-                    ),
-                    child: Container(
-                      margin: EdgeInsets.symmetric(horizontal: 17, vertical: 5),
                       child: Text(
                         'Back',
                         style: TextStyle(
-                          color: Colors.white
+                          color: Colors.white,
+                          fontSize: 17
                         ),
-                      )
+                      ),
                     ),
                   ), 
                 ],

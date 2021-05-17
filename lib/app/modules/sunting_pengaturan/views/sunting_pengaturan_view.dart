@@ -219,7 +219,17 @@ class _State extends State<SuntingPengaturanView> {
                                       width: 170,
                                       child: TextField(
                                         decoration: InputDecoration(
-                                          prefixIcon: Icon(Icons.calendar_today, size: 20,),
+                                          prefixIcon: IconButton(
+                                            icon: Icon(Icons.calendar_today, size: 17,),
+                                            onPressed: (){
+                                              showDatePicker(
+                                                context: context, 
+                                                initialDate: DateTime.now(), 
+                                                firstDate: DateTime(2015, 8), 
+                                                lastDate: DateTime(2101),
+                                              );
+                                            },
+                                          ),
                                           hintText: "tanggal",
                                           contentPadding: EdgeInsets.all(10),
                                           focusedBorder: OutlineInputBorder(
@@ -285,7 +295,17 @@ class _State extends State<SuntingPengaturanView> {
                                       width: 170,
                                       child: TextField(
                                         decoration: InputDecoration(
-                                          prefixIcon: Icon(Icons.calendar_today, size: 20,),
+                                          prefixIcon: IconButton(
+                                            icon: Icon(Icons.calendar_today, size: 17,),
+                                            onPressed: (){
+                                              showDatePicker(
+                                                context: context, 
+                                                initialDate: DateTime.now(), 
+                                                firstDate: DateTime(2015, 8), 
+                                                lastDate: DateTime(2101),
+                                              );
+                                            },
+                                          ),
                                           hintText: "14/01/2021",
                                           contentPadding: EdgeInsets.all(10),
                                           focusedBorder: OutlineInputBorder(
@@ -506,7 +526,6 @@ class _State extends State<SuntingPengaturanView> {
                       Container(
                         margin: EdgeInsets.only(top: 20, bottom: 20, left: 100),
                         height: 40,
-                        width: 105,
                         child: RaisedButton(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20),

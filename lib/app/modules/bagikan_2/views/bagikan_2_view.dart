@@ -260,7 +260,6 @@ class _State extends State<Bagikan2View> {
                       children:[
                         Container(
                           height: 40,
-                          width: 130,
                           child: RaisedButton(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20),

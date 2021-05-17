@@ -129,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              margin: EdgeInsets.only(left: 15, top: 30),
               child: Row(
                 children:[
                   Text(
@@ -143,7 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 70),
+              margin: EdgeInsets.only(left: 70, top: 10),
               child: Row(
                 children:[
                   Container(
@@ -245,7 +245,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               margin: EdgeInsets.only(top: 10),
               height: 170,
-              width: 360,
+              width: 380,
               decoration: BoxDecoration(
                 color: Colors.grey[50],
                 boxShadow: [
@@ -367,8 +367,8 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Container(
               margin: EdgeInsets.only(top: 20),
-              height: 220,
-              width: 360,
+              height: 250,
+              width: 380,
               decoration: BoxDecoration(
                 color: Colors.grey[50],
                 boxShadow: [
@@ -645,7 +645,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   margin: EdgeInsets.only(top: 30, left: 40),
                   height: 30,
-                  width: 70,
+                  width: 75,
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)
@@ -663,7 +663,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   margin: EdgeInsets.only(top: 30, left: 10),
                   height: 30,
-                  width: 130,
+                  width: 145,
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -690,7 +690,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   margin: EdgeInsets.only(top: 30, left: 10),
                   height: 30,
-                  width: 70,
+                  width: 75,
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)

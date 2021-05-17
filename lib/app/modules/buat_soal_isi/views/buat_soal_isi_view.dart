@@ -121,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              margin: EdgeInsets.only(left: 15, top: 30),
               child: Row(
                 children:[
                   Text(
@@ -135,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 70),
+              margin: EdgeInsets.only(left: 70, top: 10),
               child: Row(
                 children:[
                   Container(
@@ -243,15 +243,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 Row(
                   children: [
                     Container(
-                      margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                      margin: EdgeInsets.only(top: 20, left: 20),
                       child: Text(
-                        'Kelas'
+                        'Kelas',
+                        style: TextStyle(
+                          fontSize: 20
+                        ),
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.symmetric(vertical: 20, horizontal: 90),
+                      margin: EdgeInsets.only(top: 20, left: 130),
                       child: Text(
-                        'Tipe Soal'
+                        'Tipe Soal',
+                        style: TextStyle(
+                          fontSize: 20
+                        ),
                       ),
                     ),
                   ],
@@ -261,74 +267,183 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Row(  
                     children: [
                       Container(
-                        height: 50,
-                        width: 100,
+                        height: 40,
+                        width: 150,
                         margin: EdgeInsets.symmetric(horizontal: 20),
-                        child: DropdownButton<String>(
-                          focusColor: Colors.red,
-                          style: TextStyle(
-                            color: Colors.black
-                          ),
-                          iconEnabledColor: Colors.black,
-                          items: <String>[
-                            'aaaaa',
-                            'bbbbb',
-                            'ccccc'
-                          ]. map<DropdownMenuItem<String>>((String value) 
-                          {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child: Text(value,style:TextStyle(color:Colors.black),),
-                            );
-                          }). toList(),
-                          hint: Text(
-                            "10 SMA",
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500
+                        decoration: ShapeDecoration(
+                          shape: RoundedRectangleBorder(
+                            side: BorderSide(
+                              width: 1,
+                              color: Colors.grey
+                            ),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(5)
                             ),
                           ),
-                          onChanged: (String value){
-                            setState(() {
-                            });
-                          },
                         ),
+                        child: Container(
+                          margin: EdgeInsets.only(left: 10),
+                          child: DropdownButtonFormField<String>(
+                            decoration: InputDecoration.collapsed(hintText: ''),
+                            focusColor: Colors.red,
+                            style: TextStyle(
+                              color: Colors.black
+                            ),
+                            iconEnabledColor: Colors.black,
+                            items: <String>[
+                              'aaaaa',
+                              'bbbbb',
+                              'ccccc'
+                            ]. map<DropdownMenuItem<String>>((String value) 
+                            {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(value,style:TextStyle(color:Colors.black),),
+                              );
+                            }). toList(),
+                            hint: Container(
+                              margin: EdgeInsets.only(top: 7),
+                              child: Text(
+                                "10 SMA",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w500
+                                ),
+                              )
+                            ),
+                            onChanged: (String value){
+                              setState(() {
+                              });
+                            },
+                          ),
+                        )
                       ), 
                       Container(
-                        height: 50,
-                        width: 100,
-                        margin: EdgeInsets.symmetric(horizontal: 20),
-                        child: DropdownButton<String>(
-                          focusColor: Colors.red,
-                          style: TextStyle(
-                            color: Colors.black
-                          ),
-                          iconEnabledColor: Colors.black,
-                          items: <String>[
-                            'aaaaa',
-                            'bbbbb',
-                            'ccccc'
-                          ]. map<DropdownMenuItem<String>>((String value) 
-                          {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child: Text(value,style:TextStyle(color:Colors.black),),
-                            );
-                          }). toList(),
-                          hint: Text(
-                            "Uraian",
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500
+                        height: 40,
+                        width: 150,
+                        margin: EdgeInsets.only(left: 10),
+                        decoration: ShapeDecoration(
+                          shape: RoundedRectangleBorder(
+                            side: BorderSide(
+                              width: 1,
+                              color: Colors.grey
+                            ),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(5)
                             ),
                           ),
-                          onChanged: (String value){
-                            setState(() {
-                            });
-                          },
                         ),
+                        child: Container(
+                          margin: EdgeInsets.only(left: 10),
+                          child: DropdownButtonFormField<String>(
+                            decoration: InputDecoration.collapsed(hintText: ''),
+                            focusColor: Colors.red,
+                            style: TextStyle(
+                              color: Colors.black
+                            ),
+                            iconEnabledColor: Colors.black,
+                            items: <String>[
+                              'aaaaa',
+                              'bbbbb',
+                              'ccccc'
+                            ]. map<DropdownMenuItem<String>>((String value) 
+                            {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(value,style:TextStyle(color:Colors.black),),
+                              );
+                            }). toList(),
+                            hint: Container(
+                              margin: EdgeInsets.only(top: 7),
+                              child: Text(
+                                "Uraian",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w500
+                                ),
+                              )
+                            ),
+                            onChanged: (String value){
+                              setState(() {
+                              });
+                            },
+                          ),
+                        )
+                      ),     
+                    ],
+                  ),
+                ),
+                Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(top: 20, left: 20),
+                      child: Text(
+                        'Kompetensi Dasar',
+                        style: TextStyle(
+                          fontSize: 20
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 20),
+                  child: Row(  
+                    children: [
+                      Container(
+                        height: 40,
+                        width: 330,
+                        //margin: EdgeInsets.only(left: 10),
+                        decoration: ShapeDecoration(
+                          shape: RoundedRectangleBorder(
+                            side: BorderSide(
+                              width: 1,
+                              color: Colors.grey
+                            ),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(5)
+                            ),
+                          ),
+                        ),
+                        child: Container(
+                          margin: EdgeInsets.only(left: 10),
+                          child: DropdownButtonFormField<String>(
+                            decoration: InputDecoration.collapsed(hintText: ''),
+                            focusColor: Colors.red,
+                            style: TextStyle(
+                              color: Colors.black
+                            ),
+                            iconEnabledColor: Colors.black,
+                            items: <String>[
+                              'aaaaa',
+                              'bbbbb',
+                              'ccccc'
+                            ]. map<DropdownMenuItem<String>>((String value) 
+                            {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(value,style:TextStyle(color:Colors.black),),
+                              );
+                            }). toList(),
+                            hint: Container(
+                              margin: EdgeInsets.only(top: 7),
+                              child: Text(
+                                "Kompetensi",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w500
+                                ),
+                              )
+                            ),
+                            onChanged: (String value){
+                              setState(() {
+                              });
+                            },
+                          ),
+                        )
                       ),    
                     ],
                   ),
@@ -336,74 +451,35 @@ class _MyHomePageState extends State<MyHomePage> {
                 Row(
                   children: [
                     Container(
-                      margin: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                      margin: EdgeInsets.only(top: 20, left: 20),
                       child: Text(
-                        'Kompetensi Dasar'
-                      ),
-                    ),
-                  ],
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(  
-                    children: [
-                      Container(
-                        height: 50,
-                        width: 200,
-                        child: DropdownButton<String>(
-                          focusColor: Colors.red,
-                          style: TextStyle(
-                            color: Colors.red
-                          ),
-                          iconEnabledColor: Colors.black,
-                          items: <String>[
-                            'aaaaa',
-                            'bbbbb',
-                            'ccccc'
-                          ]. map<DropdownMenuItem<String>>((String value) 
-                          {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child: Text(value,style:TextStyle(color:Colors.black),),
-                            );
-                          }). toList(),
-                          hint: Text(
-                            "Kompetensi",
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500
-                            ),
-                          ),
-                          onChanged: (String value){
-                            setState(() {
-                            });
-                          },
+                        'Kompetensi',
+                        style: TextStyle(
+                          fontSize: 20
                         ),
-                      ),   
-                    ],
-                  ),
-                ),
-                Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
-                      child: Text(
-                        'Kompetensi'
                       ),
                     ),
                   ],
                 ),
 
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 20),
+                  margin: EdgeInsets.only(right: 20),
+                  height: 40,
+                  width: 330,
                   child: TextField(
                     //maxLines: 8,
-                    decoration: 
-                    InputDecoration(
+                    decoration: InputDecoration(
                       hintText: "Kompetensi Dasar",
+                      hintStyle: TextStyle(
+                        fontSize: 17
+                      ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey, width: 2)
+                        borderSide: BorderSide(color: Colors.grey, width: 2),
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10)
+                        )
                       )     
                     ),
                   ),
@@ -412,23 +488,35 @@ class _MyHomePageState extends State<MyHomePage> {
                 Row(
                   children: [
                     Container(
-                      margin: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                      margin: EdgeInsets.only(top: 20, left: 20),
                       child: Text(
-                        'Materi'
+                        'Materi',
+                        style: TextStyle(
+                          fontSize: 20
+                        ),
                       ),
                     ),
                   ],
                 ),
 
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 20),
+                  margin: EdgeInsets.only(right: 20),
+                  height: 40,
+                  width: 330,
                   child: TextField(
                     //maxLines: 8,
-                    decoration: 
-                    InputDecoration(
+                    decoration: InputDecoration(
                       hintText: "Kejujuran",
+                      hintStyle: TextStyle(
+                        fontSize: 17
+                      ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.blue, width: 2)
+                        borderSide: BorderSide(color: Colors.grey, width: 2),
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10)
+                        )
                       )     
                     ),
                   ),
@@ -437,23 +525,35 @@ class _MyHomePageState extends State<MyHomePage> {
                 Row(
                   children: [
                     Container(
-                      margin: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                      margin: EdgeInsets.only(top: 20, left: 20),
                       child: Text(
-                        'Indikator'
+                        'Indikator',
+                        style: TextStyle(
+                          fontSize: 20
+                        ),
                       ),
                     ),
                   ],
                 ),
 
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 20),
+                  margin: EdgeInsets.only(right: 20),
+                  height: 40,
+                  width: 330,
                   child: TextField(
                     //maxLines: 8,
-                    decoration: 
-                    InputDecoration(
+                    decoration: InputDecoration(
                       hintText: "Indikator",
+                      hintStyle: TextStyle(
+                        fontSize: 17
+                      ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey, width: 2)
+                        borderSide: BorderSide(color: Colors.grey, width: 2),
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10)
+                        )
                       )     
                     ),
                   ),

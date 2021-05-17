@@ -11,171 +11,167 @@ class Statistik1View extends GetView<Statistik1Controller> {
       appBar: AppBar(
         title: Text('Statistik & Ranking'),
         centerTitle: false,
+        elevation: 0,
       ),
       body: Center(
         child: Column(
           children: [
-            Column(
+            Row(
+              children: [
+                Container(
+                  height: 70,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    color: Colors.blue
+                  ),
+                  child: Container(
+                    margin: EdgeInsets.only(left: 50, top: 20),
+                    child: Text(
+                      'Ranking',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20
+                      )
+                    )
+                  ),
+                ),
+                Container(
+                  height: 70,
+                  width: 192,
+                  decoration: BoxDecoration(
+                    color: Colors.white
+                  ),
+                  child: Container(
+                    margin: EdgeInsets.only(left: 50, top: 20),
+                    child: Text(
+                      'Statistik',
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 20
+                      )
+                    )
+                  )
+                )
+              ]
+            ),
+            Row(
               children:[
-                Row(
-                  children: [
-                    Container(
-                      height: 70,
-                      width: 187,
-                      decoration: BoxDecoration(
-                        color: Colors.blue
+                Container(
+                  height: 120,
+                  width: 392.5,
+                  decoration: BoxDecoration(
+                    color: Colors.blue[300]
+                  ),
+                  child: Row(
+                    children:[
+                      Container(
+                        height: 80,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          color: Colors.blue[300],
+                          boxShadow: [
+                            BoxShadow(color: Colors.blue[700], spreadRadius: 20)
+                          ],
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(100),
+                            bottomRight: Radius.circular(100)
+                          )
+                        ),
                       ),
-                      child: Container(
-                        margin: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                      Container(
+                        margin: EdgeInsets.only(left: 30),
                         child: Text(
-                          'Ranking',
+                          'Butir Soal Paling Banyak Dikerjakan',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20
+                            fontSize: 18
                           ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      height: 70,
-                      width: 187,
-                      decoration: BoxDecoration(
-                        color: Colors.white
-                      ),
-                      child: Container(
-                        margin: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-                        child: Text(
-                          'Statistik',
-                          style: TextStyle(
-                            color: Colors.blue,
-                            fontSize: 20
-                          ),
-                        ),
-                      ),
-                    )
-                  ]
-                ),
-                Row(
-                  children: [
-                    Container(
-                      color: Colors.blue[300],
-                      height: 90,
-                      width: 375,
-                      child: Row(
-                        children: [
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            height: 90,
-                            width: 50,
-                            decoration: BoxDecoration(
-                              color: Colors.blue[300],
-                              shape: BoxShape.rectangle,
-                              borderRadius: BorderRadius.horizontal(
-                                right: Radius.circular(50)
-                              ),
-                              border: Border.all(
-                                color: Colors.blue[700],
-                                width: 5
-                              )
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.symmetric(horizontal: 20),
-                            child: Text(
-                              'Butir Soal Paling Banyak Dikerjakan',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 17
-                              )
-                            )
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    Container(
-                      color: Colors.blue[700],
-                      height: 90,
-                      width: 375,
-                      child: Row(
-                        children: [
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            height: 90,
-                            width: 50,
-                            decoration: BoxDecoration(
-                              color: Colors.blue[700],
-                              shape: BoxShape.rectangle,
-                              borderRadius: BorderRadius.horizontal(
-                                right: Radius.circular(50)
-                              ),
-                              border: Border.all(
-                                color: Colors.blue[300],
-                                width: 5
-                              )
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.symmetric(horizontal: 20),
-                            child: Text(
-                              'Butir Soal Paling Banyak Dipakai',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 17
-                              )
-                            )
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    Container(
-                      color: Colors.blue[300],
-                      height: 90,
-                      width: 375,
-                      child: Row(
-                        children: [
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            height: 90,
-                            width: 50,
-                            decoration: BoxDecoration(
-                              color: Colors.blue[300],
-                              shape: BoxShape.rectangle,
-                              borderRadius: BorderRadius.horizontal(
-                                right: Radius.circular(50)
-                              ),
-                              border: Border.all(
-                                color: Colors.blue[700],
-                                width: 5
-                              )
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.symmetric(horizontal: 20),
-                            child: Text(
-                              'Butir Soal Paling Banyak Dikerjakan',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 17
-                              )
-                            )
-                          )
-                        ],
-                      ),
-                    )
-                  ],
+                        )
+                      )
+                    ]
+                  ),
                 )
-
-              ] 
+              ]
+            ),
+            Row(
+              children: [
+                Container(
+                  height: 120,
+                  width: 392.5,
+                  decoration: BoxDecoration(
+                    color: Colors.blue[700]
+                  ),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          color: Colors.blue[700],
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(100),
+                            bottomRight: Radius.circular(100)
+                          ),
+                          boxShadow: [
+                            BoxShadow(color: Colors.blue[300], spreadRadius: 20)
+                          ]
+                        )
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 30),
+                        child: Text(
+                          'Butir Soal Paling Banyak Dipakai',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18
+                          )
+                        )
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+            Row(
+              children: [
+                Container(
+                  height: 120,
+                  width: 392.5,
+                  decoration: BoxDecoration(
+                    color: Colors.blue[300],
+                  ),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          color: Colors.blue[300],
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(100),
+                            bottomRight: Radius.circular(100)
+                          ),
+                          boxShadow: [
+                            BoxShadow(color: Colors.blue[700], spreadRadius: 20)
+                          ]
+                        )
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 30),
+                        child: Text(
+                          'Paket Soal Paling Banyak Dikerjakan',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18
+                          )
+                        )
+                      )
+                    ],
+                  ),
+                )
+              ],
             )
-          ],
+          ]
         ),
       ),
     );

@@ -134,7 +134,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Container(
                 height: 100,
-                width: 375,
+                width: 392.7,
                 decoration: BoxDecoration(
                   color: Colors.blue
                 ),
@@ -145,7 +145,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Container(
                 height: 150,
-                width: 375,
+                width: 392.7,
                 decoration: BoxDecoration(
                   color: Colors.white
                 ),
@@ -294,17 +294,17 @@ class _MyHomePageState extends State<MyHomePage> {
           Row(
             children: [
               Container(
-                height: 305,
-                width: 375,
+                height: 373,
+                width: 392.7,
                 decoration: BoxDecoration(
                   color: Colors.blue[200]
                 ),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      margin: EdgeInsets.only(left: 13, bottom: 50),
+                      margin: EdgeInsets.only(bottom: 90),
                       height: 210,
-                      width: 350,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.all(

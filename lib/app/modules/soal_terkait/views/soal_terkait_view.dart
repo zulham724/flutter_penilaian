@@ -26,12 +26,12 @@ class _State extends State<SoalTerkaitView> {
         child: Column(
           children: [
             Container(
-              height: 667,
+              height: 700,
               width: 400,
               color: Colors.grey[350],
               child: Container(
                 margin: EdgeInsets.only(top: 100),
-                height: 300,
+                height: 900,
                 width: 400,
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -101,7 +101,7 @@ class _State extends State<SoalTerkaitView> {
                               Container(
                                 margin: EdgeInsets.only(left: 30),
                                 height: 25,
-                                width: 80,
+                                width: 90,
                                 child: RaisedButton(
                                   color: Colors.black,
                                   shape: RoundedRectangleBorder(
@@ -423,8 +423,9 @@ class _State extends State<SoalTerkaitView> {
                                                           ),
                                                         ),
                                                         Container(
-                                                          margin: EdgeInsets.only(top: 5, left: 170),
+                                                          margin: EdgeInsets.only(top: 5, left: 150),
                                                           height: 20,
+                                                          width: 110,
                                                           child: RaisedButton(
                                                             color: Colors.blue,
                                                             shape: RoundedRectangleBorder(
@@ -498,8 +499,9 @@ class _State extends State<SoalTerkaitView> {
                                                           ),
                                                         ),
                                                         Container(
-                                                          margin: EdgeInsets.only(top: 5, left: 170),
+                                                          margin: EdgeInsets.only(top: 5, left: 150),
                                                           height: 20,
+                                                          width: 110,
                                                           child: RaisedButton(
                                                             color: Colors.blue,
                                                             shape: RoundedRectangleBorder(
@@ -725,8 +727,9 @@ class _State extends State<SoalTerkaitView> {
                                                           ),
                                                         ),
                                                         Container(
-                                                          margin: EdgeInsets.only(top: 5, left: 170),
+                                                          margin: EdgeInsets.only(top: 5, left: 150),
                                                           height: 20,
+                                                          width: 110,
                                                           child: RaisedButton(
                                                             color: Colors.blue,
                                                             shape: RoundedRectangleBorder(
@@ -800,8 +803,9 @@ class _State extends State<SoalTerkaitView> {
                                                           ),
                                                         ),
                                                         Container(
-                                                          margin: EdgeInsets.only(top: 5, left: 170),
+                                                          margin: EdgeInsets.only(top: 5, left: 150),
                                                           height: 20,
+                                                          width: 110,
                                                           child: RaisedButton(
                                                             color: Colors.blue,
                                                             shape: RoundedRectangleBorder(
@@ -1026,8 +1030,9 @@ class _State extends State<SoalTerkaitView> {
                                                           ),
                                                         ),
                                                         Container(
-                                                          margin: EdgeInsets.only(top: 5, left: 170),
+                                                          margin: EdgeInsets.only(top: 5, left: 150),
                                                           height: 20,
+                                                          width: 110,
                                                           child: RaisedButton(
                                                             color: Colors.blue,
                                                             shape: RoundedRectangleBorder(
@@ -1101,8 +1106,9 @@ class _State extends State<SoalTerkaitView> {
                                                           ),
                                                         ),
                                                         Container(
-                                                          margin: EdgeInsets.only(top: 5, left: 170),
+                                                          margin: EdgeInsets.only(top: 5, left: 150),
                                                           height: 20,
+                                                          width: 110,
                                                           child: RaisedButton(
                                                             color: Colors.blue,
                                                             shape: RoundedRectangleBorder(
