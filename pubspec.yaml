@@ -23,6 +23,8 @@ environment:
 dependencies:
   get: 4.1.4
   flutter_switch: ^0.0.2
+  fl_chart: ^0.36.1
+  fcharts: ^0.0.11
   bubble_bottom_bar: ^1.2.0
   bottom_navy_bar: ^5.6.0
   flutter:

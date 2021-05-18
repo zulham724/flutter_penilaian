@@ -59,10 +59,12 @@ class Ranking1View extends GetView<Ranking1Controller> {
             children: [
               Container(
                 margin: EdgeInsets.only(left: 10),
-                child: Image.asset(
-                  'assets/Rank1.png',
-                  height: 50,
-                  width: 50,
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/Rank1.png')
+                  )
                 ),
               ),
               Column(
@@ -108,11 +110,13 @@ class Ranking1View extends GetView<Ranking1Controller> {
             children: [
               Container(
                 margin: EdgeInsets.only(left: 10),
-                child: Image.asset(
-                  'assets/rank2.png',
-                  height: 50,
-                  width: 50
-                )
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/Rank2.png')
+                  )
+                ),
               ),
               Column(
                 children: [
@@ -157,11 +161,13 @@ class Ranking1View extends GetView<Ranking1Controller> {
             children: [
               Container(
                 margin: EdgeInsets.only(left: 10),
-                child: Image.asset(
-                  'assets/Rank3.png',
-                  height: 50,
-                  width: 50,
-                )
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/Rank3.png'),
+                  )
+                ),
               ),
               Column(
                 children: [

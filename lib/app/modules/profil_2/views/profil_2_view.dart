@@ -43,8 +43,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100),
+        child: AppBar(
+          title: Text(
           'No Anggota :  1237462283',
           style: TextStyle(
             fontSize: 15
@@ -52,14 +54,30 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         centerTitle: false,
         elevation: 0,
+        ),
       ),
       resizeToAvoidBottomInset: false,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
-        backgroundColor: Colors.blue,
+      floatingActionButton: Container(
+        height: 70,
+        width: 70,
+        child: FloatingActionButton(
+          onPressed: () {},
+          child: Container(
+            height: 60,
+            width: 60,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/bg-login-2.png'),
+                fit: BoxFit.fill
+              ),
+              borderRadius: BorderRadius.circular(100)
+            )
+          ),
+          backgroundColor: Colors.white,
+          elevation: 0,
+        )
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerTop,
       bottomNavigationBar: BubbleBottomBar(
         backgroundColor: Colors.blue,
         hasNotch: true,
@@ -130,17 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: [
-          Row(
-            children: [
-              Container(
-                height: 100,
-                width: 392.7,
-                decoration: BoxDecoration(
-                  color: Colors.blue
-                ),
-              )
-            ],
-          ),
+          
           Row(
             children: [
               Container(
@@ -176,20 +184,6 @@ class _MyHomePageState extends State<MyHomePage> {
                             )
                           ],
                         ),
-                        Container(
-                          margin: EdgeInsets.only(left: 100),
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            image: DecorationImage(
-                              image: AssetImage(
-                                'assets/bg-login-2.png'
-                              ),
-                              fit: BoxFit.fill
-                            )
-                          )
-                        )
                       ]
                     ),
                     Center(
@@ -213,6 +207,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             )
                           ),
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
                                 'Media. Visit : ',
@@ -242,9 +237,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         )
                       ],
                     )
-
-
-
                   ]
                 ),
               )

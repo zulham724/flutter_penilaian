@@ -43,8 +43,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100),
+        child: AppBar(
+          title: Text(
           'No Anggota :  1237462283',
           style: TextStyle(
             fontSize: 15
@@ -52,14 +54,30 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         centerTitle: false,
         elevation: 0,
+        ),
       ),
       resizeToAvoidBottomInset: false,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
-        backgroundColor: Colors.blue,
+      floatingActionButton: Container(
+        height: 70,
+        width: 70,
+        child: FloatingActionButton(
+          onPressed: () {},
+          child: Container(
+            height: 60,
+            width: 60,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/bg-login-2.png'),
+                fit: BoxFit.fill
+              ),
+              borderRadius: BorderRadius.circular(100)
+            )
+          ),
+          backgroundColor: Colors.white,
+          elevation: 0,
+        )
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerTop,
       bottomNavigationBar: BubbleBottomBar(
         backgroundColor: Colors.blue,
         hasNotch: true,
@@ -133,17 +151,6 @@ class _MyHomePageState extends State<MyHomePage> {
           Row(
             children: [
               Container(
-                height: 100,
-                width: 392.7,
-                decoration: BoxDecoration(
-                  color: Colors.blue
-                ),
-              )
-            ],
-          ),
-          Row(
-            children: [
-              Container(
                 height: 150,
                 width: 392.7,
                 decoration: BoxDecoration(
@@ -172,18 +179,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               )
                             )
                           ],
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(left: 70),
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            image: DecorationImage(
-                              image: AssetImage('assets/bg-login-2.png'),
-                              fit: BoxFit.fill
-                            )
-                          )
                         ),
                       ],
                     ),
@@ -294,7 +289,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Row(
             children: [
               Container(
-                height: 373,
+                height: 429,
                 width: 392.7,
                 decoration: BoxDecoration(
                   color: Colors.blue[200]
@@ -390,41 +385,82 @@ class _MyHomePageState extends State<MyHomePage> {
                                   color: Colors.grey[350],
                                   itemBuilder: (BuildContext bc) => [
                                     PopupMenuItem(
-                                      child: Row(
+                                      child: Column(
                                         children: [
-                                          Icon(
-                                            Icons.edit,
-                                            color: Colors.grey[600],
+                                          Row(
+                                            children: [
+                                              Icon(
+                                                Icons.edit,
+                                                color: Colors.grey[600],
+                                              ),
+                                              Text(
+                                              'Sunting'
+                                              )
+                                            ],
                                           ),
-                                          Text(
-                                            'Sunting'
-                                          )
-                                        ],
+                                          Container(
+                                            margin: EdgeInsets.only(top: 5),
+                                            height: 1,
+                                            width: 500,
+                                            decoration: BoxDecoration(
+                                              color: Colors.grey
+                                            ),
+                                          ),
+                                        ] 
                                       ),
                                     ),
                                     PopupMenuItem(
-                                      child: Row(
+                                      child: Column(
                                         children:[
-                                          Icon(
-                                            Icons.delete,
-                                            color: Colors.grey[600],
+                                          Container(
+                                            //margin: EdgeInsets.only(bottom: 20),
+                                            child: Row(
+                                              children:[
+                                                Icon(
+                                                  Icons.delete,
+                                                  color: Colors.grey[600],
+                                                ),
+                                                Text(
+                                                  'Hapus'
+                                                )
+                                              ]
+                                            )
                                           ),
-                                          Text(
-                                            'Hapus'
-                                          )
+                                          Container(
+                                            margin: EdgeInsets.only(top: 5),
+                                            height: 1,
+                                            width: 500,
+                                            decoration: BoxDecoration(
+                                              color: Colors.grey
+                                            ),
+                                          ),
                                         ]
                                       )
                                     ),
                                     PopupMenuItem(
-                                      child: Row(
+                                      child: Column(
                                         children:[
-                                          Icon(
-                                            Icons.share,
-                                            color: Colors.grey[600],
+                                          Container(
+                                            child: Row(
+                                              children:[
+                                                Icon(
+                                                  Icons.share,
+                                                  color: Colors.grey[600],
+                                                ),
+                                                Text(
+                                                  'Bagikan Ke Siswa'
+                                                )
+                                              ]
+                                            )
                                           ),
-                                          Text(
-                                            'Bagikan Ke Siswa'
-                                          )
+                                          Container(
+                                            margin: EdgeInsets.only(top: 5),
+                                            height: 1,
+                                            width: 500,
+                                            decoration: BoxDecoration(
+                                              color: Colors.grey
+                                            ),
+                                          ),
                                         ]
                                       )
                                     ),
