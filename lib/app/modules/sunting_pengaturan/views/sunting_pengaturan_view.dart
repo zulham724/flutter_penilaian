@@ -451,6 +451,9 @@ class _State extends State<SuntingPengaturanView> {
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(color: Colors.grey, width: 2)
                             ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10)
+                            )
                           ),
                         )
                       )
@@ -482,6 +485,9 @@ class _State extends State<SuntingPengaturanView> {
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(color: Colors.grey, width: 2)
                             ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10)
+                            )
                           ),
                         )
                       )

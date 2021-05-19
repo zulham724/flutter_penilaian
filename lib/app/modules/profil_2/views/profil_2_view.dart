@@ -6,6 +6,8 @@ import '../controllers/profil_2_controller.dart';
 
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+
 void main() => runApp(Profil2View());
 
 class Profil2View extends StatelessWidget {
@@ -27,6 +29,14 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int currentIndex;
+  int _currentIndex = 0;
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
   @override
   void initState() {
     // TODO: implement initState
@@ -44,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(100),
+        preferredSize: Size.fromHeight(150),
         child: AppBar(
           title: Text(
           'No Anggota :  1237462283',
@@ -58,13 +68,13 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       resizeToAvoidBottomInset: false,
       floatingActionButton: Container(
-        height: 70,
-        width: 70,
+        height: 110,
+        width: 110,
         child: FloatingActionButton(
           onPressed: () {},
           child: Container(
-            height: 60,
-            width: 60,
+            height: 100,
+            width: 100,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/bg-login-2.png'),
@@ -78,72 +88,38 @@ class _MyHomePageState extends State<MyHomePage> {
         )
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerTop,
-      bottomNavigationBar: BubbleBottomBar(
+      bottomNavigationBar: BottomNavyBar(
         backgroundColor: Colors.blue,
-        hasNotch: true,
-        fabLocation: BubbleBottomBarFabLocation.end,
-        opacity: .2,
-        currentIndex: currentIndex,
-        onTap: changePage,
-        borderRadius: BorderRadius.vertical(
-          top: Radius.circular(6)),
-        elevation: 8,
-        items: <BubbleBottomBarItem>[
-          BubbleBottomBarItem(
-              backgroundColor: Colors.white,
-              icon: Icon(
-                Icons.home,
-                color: Colors.black,
-              ),
-              activeIcon: Icon(
-                Icons.home,
-                color: Colors.white,
-              ),
-              title: Text("Home")),
-          BubbleBottomBarItem(
-              backgroundColor: Colors.white,
-              icon: Icon(
-                Icons.add,
-                color: Colors.black,
-              ),
-              activeIcon: Icon(
-                Icons.add,
-                color: Colors.white,
-              ),
-              title: Text("Add")),
-          BubbleBottomBarItem(
-              backgroundColor: Colors.white,
-              icon: Icon(
-                Icons.stacked_bar_chart,
-                color: Colors.black,
-              ),
-              activeIcon: Icon(
-                Icons.menu,
-                color: Colors.white,
-              ),
-              title: Text("Menu")),
-          BubbleBottomBarItem(
-              backgroundColor: Colors.white,
-              icon: Icon(
-                Icons.menu,
-                color: Colors.black,
-              ),
-              activeIcon: Icon(
-                Icons.stacked_bar_chart,
-                color: Colors.white,
-              ),
-              title: Text("Hasil")),
-           BubbleBottomBarItem(
-              backgroundColor: Colors.white,
-              icon: Icon(
-                Icons.person,
-                color: Colors.black,
-              ),
-              activeIcon: Icon(
-                Icons.person,
-                color: Colors.white,
-              ),
-              title: Text("Profil"))
+        selectedIndex: _currentIndex,
+        showElevation: true,
+        itemCornerRadius: 24,
+        curve: Curves.easeIn,
+        onItemSelected: (index) => setState(() => _currentIndex = index),
+        items: <BottomNavyBarItem>[
+          BottomNavyBarItem(
+            icon: Icon(Icons.home),
+            title: Text('Home'),
+            activeColor: Colors.white,
+            textAlign: TextAlign.center,
+          ),
+          BottomNavyBarItem(
+            icon: Icon(Icons.add),
+            title: Text('Add'),
+            activeColor: Colors.white,
+            textAlign: TextAlign.center,
+          ),
+          BottomNavyBarItem(
+            icon: Icon(Icons.bar_chart),
+            title: Text('Statistik'),
+            activeColor: Colors.white,
+            textAlign: TextAlign.center,
+          ),
+          BottomNavyBarItem(
+            icon: Icon(Icons.person),
+            title: Text('Profil'),
+            activeColor: Colors.white,
+            textAlign: TextAlign.center,
+          ),
         ],
       ),
       body: Column(
@@ -228,11 +204,54 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     Row(
                       children: [
-                        Text(
-                          '9',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold
+                        Container(
+                          margin: EdgeInsets.only(left: 10, top: 5),
+                          child: Row(
+                            children:[
+                              Text(
+                                '9',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25
+                                )
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 5),
+                                child: Text(
+                                  'Paket Soal',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15
+                                  ),
+                                )
+                              )
+                            ]
+                          )
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 5, left: 150),
+                          child: Row(
+                            children:[
+                              Text(
+                                '76',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25
+                                )
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 5),
+                                child: Text(
+                                  'Butir Soal',
+                                  style: TextStyle(
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15
+                                  ),
+                                )
+                              )
+                            ]
                           ),
                         )
                       ],
@@ -245,7 +264,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Row(
             children: [
               Container(
-                height: 373,
+                height: 451,
                 width: 392.7,
                 decoration: BoxDecoration(
                   color: Colors.blue[200]

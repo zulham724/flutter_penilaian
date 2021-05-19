@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 
 void main() => runApp(HasilView());
 
@@ -26,6 +26,9 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int currentIndex;
+  int _currentIndex = 0;
+  int _counter = 0;
+
   @override
   void initState() {
     // TODO: implement initState
@@ -46,68 +49,38 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      //floatingActionButton: FloatingActionButton(
-        //onPressed: () {},
-        //child: Icon(Icons.person),
-        //backgroundColor: Colors.blue,
-      //),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
-      bottomNavigationBar: BubbleBottomBar(
+      bottomNavigationBar: BottomNavyBar(
         backgroundColor: Colors.blue,
-        hasNotch: true,
-        fabLocation: BubbleBottomBarFabLocation.end,
-        opacity: .2,
-        currentIndex: currentIndex,
-        onTap: changePage,
-        borderRadius: BorderRadius.vertical(
-            top: Radius.circular(
-                16)), //border radius doesn't work when the notch is enabled.
-        elevation: 8,
-        items: <BubbleBottomBarItem>[
-          BubbleBottomBarItem(
-              backgroundColor: Colors.white,
-              icon: Icon(
-                Icons.home,
-                color: Colors.black,
-              ),
-              activeIcon: Icon(
-                Icons.home,
-                color: Colors.white,
-              ),
-              title: Text("Home")),
-          BubbleBottomBarItem(
-              backgroundColor: Colors.white,
-              icon: Icon(
-                Icons.add,
-                color: Colors.black,
-              ),
-              activeIcon: Icon(
-                Icons.add,
-                color: Colors.white,
-              ),
-              title: Text("Add")),
-          BubbleBottomBarItem(
-              backgroundColor: Colors.white,
-              icon: Icon(
-                Icons.bar_chart,
-                color: Colors.black,
-              ),
-              activeIcon: Icon(
-                Icons.bar_chart,
-                color: Colors.white,
-              ),
-              title: Text("Hasil")),
-           BubbleBottomBarItem(
-              backgroundColor: Colors.white,
-              icon: Icon(
-                Icons.person,
-                color: Colors.black,
-              ),
-              activeIcon: Icon(
-                Icons.person,
-                color: Colors.white,
-              ),
-              title: Text("Profil"))
+        selectedIndex: _currentIndex,
+        showElevation: true,
+        itemCornerRadius: 24,
+        curve: Curves.easeIn,
+        onItemSelected: (index) => setState(() => _currentIndex = index),
+        items: <BottomNavyBarItem>[
+          BottomNavyBarItem(
+            icon: Icon(Icons.home),
+            title: Text('Home'),
+            activeColor: Colors.white,
+            textAlign: TextAlign.center,
+          ),
+          BottomNavyBarItem(
+            icon: Icon(Icons.add),
+            title: Text('Add'),
+            activeColor: Colors.white,
+            textAlign: TextAlign.center,
+          ),
+          BottomNavyBarItem(
+            icon: Icon(Icons.bar_chart),
+            title: Text('Statistik'),
+            activeColor: Colors.white,
+            textAlign: TextAlign.center,
+          ),
+          BottomNavyBarItem(
+            icon: Icon(Icons.person),
+            title: Text('Profil'),
+            activeColor: Colors.white,
+            textAlign: TextAlign.center,
+          ),
         ],
       ),
       body: SingleChildScrollView(

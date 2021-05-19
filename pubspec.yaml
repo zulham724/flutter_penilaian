@@ -27,6 +27,7 @@ dependencies:
   fcharts: ^0.0.11
   bubble_bottom_bar: ^1.2.0
   bottom_navy_bar: ^5.6.0
+  syncfusion_flutter_charts: ^19.1.64
   flutter:
     sdk: flutter
 

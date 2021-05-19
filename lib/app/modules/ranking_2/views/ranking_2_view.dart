@@ -6,20 +6,52 @@ import '../controllers/ranking_2_controller.dart';
 
 import 'package:fl_chart/fl_chart.dart';
 
+import 'package:syncfusion_flutter_charts/charts.dart';
 
+class Statistik{
+  Statistik(this.year, this.sales);
+  final String year;
+  final double sales;
+}
+    
 class Ranking2View extends GetView<Ranking2Controller> {
   @override  
   Widget build(BuildContext context) {
+
+    final List<Statistik> chartData = [
+      Statistik('Feb, 12', 0.5),
+      Statistik('Apr, 12', 1.5),
+      Statistik('Jun, 12', 0.5),
+      Statistik('Aug, 12', 1),
+      Statistik('Oct, 12', 1.5),
+      Statistik('Dec, 12', 1),
+      Statistik('Feb, 13', 2.5)
+    ];
+
+    final List<Color> color = <Color>[];
+        color.add(Colors.blue[50]);
+        color.add(Colors.blue[200]);
+        color.add(Colors.blue);
+
+    final List<double> stops = <double>[];
+        stops.add(0.0);
+        stops.add(0.5);
+        stops.add(1.0);
+
+    final LinearGradient gradientColors =
+            LinearGradient(colors: color, stops: stops);
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Statistik'),
         centerTitle: false,
+        elevation: 0,
       ),
       body: Center(
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.only(top: 10),
+              margin: EdgeInsets.only(top: 20),
               child: Text(
                 'Statistik',
                 style: TextStyle(
@@ -82,10 +114,20 @@ class Ranking2View extends GetView<Ranking2Controller> {
             ),
 
             //Line Chart
-            
-
-
-
+            Container(
+              margin: EdgeInsets.only(top: 20),
+              child: SfCartesianChart(
+                primaryXAxis: CategoryAxis(),
+                series: <ChartSeries>[
+                  AreaSeries<Statistik, String>(
+                    dataSource: chartData,
+                    xValueMapper: (Statistik sales, _) => sales.year,
+                    yValueMapper: (Statistik sales, _) => sales.sales,
+                    gradient: gradientColors,
+                  )
+                ]
+              )
+            ),
           ],
         ),
       ),

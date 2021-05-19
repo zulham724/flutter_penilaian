@@ -12,12 +12,10 @@ class SoalTerkaitErrorView extends GetView<SoalTerkaitErrorController> {
         child: Column(
           children: [
             Container(
-              height: 667,
-              width: 400,
               color: Colors.grey[350],
               child: Container(
                 margin: EdgeInsets.only(top: 100),
-                height: 300,
+                height: 655,
                 width: 400,
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -53,25 +51,87 @@ class SoalTerkaitErrorView extends GetView<SoalTerkaitErrorController> {
                         )
                       ],
                     ),
-                    Row(
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          
-                        )
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(left: 100),
-                          child: Text(
-                            'MAAF',
-                            style: TextStyle(
+                          margin: EdgeInsets.only(top: 70, bottom: 20),
+                          height: 100,
+                          width: 100,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                            color: Colors.white,
+                            border: Border.all(
                               color: Colors.blue,
-                              fontWeight: FontWeight.bold
+                              width: 5
+                            )
+                          ),
+                          child: Container(
+                            margin: EdgeInsets.only(top: 25),
+                            child: Column(
+                              children:[
+                                Row(
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.only(left: 20),
+                                      height: 10,
+                                      width: 10,
+                                      decoration: BoxDecoration(
+                                        color: Colors.blue,
+                                        borderRadius: BorderRadius.circular(100)
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(left: 30),
+                                      height: 10,
+                                      width: 10,
+                                      decoration: BoxDecoration(
+                                        color: Colors.blue,
+                                        borderRadius: BorderRadius.circular(100)
+                                      )
+                                    ),
+                                  ]
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(left: 5),
+                                  child: RotationTransition(
+                                    turns: AlwaysStoppedAnimation(90 / 360),
+                                    child: Text(
+                                      '(',
+                                      style: TextStyle(
+                                        fontSize: 47,
+                                        color: Colors.blue,
+                                        fontWeight: FontWeight.bold
+                                      ),
+                                    )
+                                  )
+                                )
+                              ]
                             )
                           )
                         ),
+                        Text(
+                          'MAAF',
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30
+                          )
+                        ),
+                        Text(
+                          'Belum ada soal yang berkaitan dengan',
+                          style: TextStyle(
+                            color: Colors.grey[400],
+                            fontWeight: FontWeight.bold
+                          ),
+                        ),
+                        Text(
+                          'kompetensi dan kelas yang anda inginkan',
+                          style: TextStyle(
+                            color: Colors.grey[400],
+                            fontWeight: FontWeight.bold
+                          ),
+                        )
                       ],
                     )
                   ],
