@@ -91,9 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             Container(
-              color: Colors.white,
-              height: 100,
-              width: 400,
+              margin: EdgeInsets.only(top: 10),
               child: Row(
                 children: [
                   Column(
@@ -110,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(left: 30),
+                        margin: EdgeInsets.only(left: 30, bottom: 10),
                         child: Text(
                           'Penilaian',
                           style: TextStyle(
@@ -156,94 +154,88 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-            Container(
-              color: Colors.white,
-              height: 50,
-              width: 400,
-              child: Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(left: 20),
-                    height: 40,
-                    width: 200,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(
-                        color: Colors.grey[200],
-                        width: 2
-                      ),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(30)
-                      )
+            Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(left: 20),
+                  height: 40,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      color: Colors.grey[200],
+                      width: 2
                     ),
-                    child: Row(
-                      children: [
-                        Container(
-                          height: 40,
-                          width: 100,
-                          decoration: BoxDecoration(
-                            color: Colors.blue,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(30)
-                            )
-                          ),
-                          child: Container(
-                            margin: EdgeInsets.only(top: 10, left: 20),
-                            child: Text(
-                              'Paket Soal',
-                              style: TextStyle(
-                                color: Colors.white
-                              ),
-                            ),
-                          ),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(30)
+                    )
+                  ),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 40,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(30)
+                          )
                         ),
-                        Container(
-                          margin: EdgeInsets.only(left: 15),
+                        child: Container(
+                          margin: EdgeInsets.only(top: 10, left: 20),
                           child: Text(
-                            'Butir Soal',
+                            'Paket Soal',
                             style: TextStyle(
-                              color: Colors.blue
+                              color: Colors.white
                             ),
                           ),
-                        )
-                      ],
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(left: 30),
-                    height: 40,
-                    width: 80,
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(20)
+                        ),
                       ),
-                    ),
-                    child: Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(left: 10),
-                          child: Icon(
-                            Icons.filter_alt,
-                            color: Colors.white
+                      Container(
+                        margin: EdgeInsets.only(left: 15),
+                        child: Text(
+                          'Butir Soal',
+                          style: TextStyle(
+                            color: Colors.blue
                           ),
                         ),
-                        Text(
-                          'Filter',
-                          style: TextStyle(
-                            color: Colors.white
-                          ),
-                        )
-                      ],
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 30),
+                  height: 40,
+                  width: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20)
                     ),
                   ),
-                ],
-              ),
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(left: 10),
+                        child: Icon(
+                          Icons.filter_alt,
+                          color: Colors.white
+                        ),
+                      ),
+                      Text(
+                        'Filter',
+                        style: TextStyle(
+                          color: Colors.white
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ],
             ),
+            
             Container(
-              height: 600,
-              width: 400,
-              color: Colors.white,
+              margin: EdgeInsets.only(top: 10),
               child: Column(
                 children: [
                   Container(

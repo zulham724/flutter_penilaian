@@ -4,6 +4,10 @@ import 'package:get/get.dart';
 
 import '../controllers/sunting_pengaturan_controller.dart';
 
+import 'package:intl/intl.dart';
+
+import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
+
 void main() {
   runApp(MaterialApp(
     home: SuntingPengaturanView(),
@@ -34,7 +38,6 @@ class _State extends State<SuntingPengaturanView> {
                   Row(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(left: 20),
                         child: Switch(
                           value: isSwitched,
                           onChanged: (value) {
@@ -58,7 +61,6 @@ class _State extends State<SuntingPengaturanView> {
                   Column(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(left: 60),
                         child: Text(
                           'Aktifkan untuk menetapkan waktu pengerjaan soal',
                           style: TextStyle(
@@ -73,7 +75,7 @@ class _State extends State<SuntingPengaturanView> {
                       Row(
                         children: [
                           Container(
-                            margin: EdgeInsets.only(left: 80, top: 10),
+                            margin: EdgeInsets.only(left: 60, top: 10),
                             height: 30,
                             width: 110,
                             child: TextField(
@@ -103,10 +105,13 @@ class _State extends State<SuntingPengaturanView> {
                           )
                         ],
                       ),
-                      Divider(
-                        color: Colors.grey,
-                        indent: 15,
-                        endIndent: 15,
+                      Container(
+                        margin: EdgeInsets.only(top: 5),
+                        child: Divider(
+                          color: Colors.grey,
+                          indent: 15,
+                          endIndent: 15,
+                        )
                       )
                     ],
                   ),
@@ -120,7 +125,6 @@ class _State extends State<SuntingPengaturanView> {
                   Row(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(left: 20),
                         child: Switch(
                           value: isSwitched,
                           onChanged: (value) {
@@ -144,7 +148,7 @@ class _State extends State<SuntingPengaturanView> {
                   Column(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(left: 60),
+                        margin: EdgeInsets.only(left: 35),
                         child: Column(
                           children: [
                             Column(
@@ -214,55 +218,44 @@ class _State extends State<SuntingPengaturanView> {
                                 Row(
                                   children: [
                                     Container(
-                                      margin: EdgeInsets.only(left: 20, top: 5),
-                                      height: 30,
-                                      width: 170,
-                                      child: TextField(
+                                      margin: EdgeInsets.only(top: 5),
+                                      //height: 30,
+                                      width: 177,
+                                      child: DateTimeField(
                                         decoration: InputDecoration(
-                                          prefixIcon: IconButton(
-                                            icon: Icon(Icons.calendar_today, size: 17,),
-                                            onPressed: (){
-                                              showDatePicker(
-                                                context: context, 
-                                                initialDate: DateTime.now(), 
-                                                firstDate: DateTime(2015, 8), 
-                                                lastDate: DateTime(2101),
-                                              );
-                                            },
-                                          ),
-                                          hintText: "tanggal",
-                                          contentPadding: EdgeInsets.all(10),
-                                          focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(color: Colors.blue, width: 2)
-                                          ),
-                                          border: OutlineInputBorder(
-                                            borderRadius: BorderRadius.all(
-                                              Radius.circular(10)
-                                            )
-                                          )
+                                          prefixIcon: Icon(Icons.calendar_today, size: 20,),
+                                          hintText: 'tanggal',
                                         ),
-                                      ),
+                                        format: DateFormat('yyyy-MM-dd'),
+                                        onShowPicker: (context, currentValue) {
+                                          return showDatePicker(
+                                            context: context,
+                                            firstDate: DateTime(1900),
+                                            initialDate: currentValue ?? DateTime.now(),
+                                            lastDate: DateTime(2100)
+                                          );
+                                        },
+                                      )
                                     ),
                                     Container(
-                                      margin: EdgeInsets.only(left: 10),
-                                      height: 30,
-                                      width: 100,
-                                      child: TextField(
+                                      margin: EdgeInsets.only(top: 5, left: 10),
+                                      //height: 30,
+                                      width: 165,
+                                      child: DateTimeField(
                                         decoration: InputDecoration(
                                           prefixIcon: Icon(Icons.timer_sharp, size: 20),
-                                          hintText: "00:00",
-                                          contentPadding: EdgeInsets.all(10),
-                                          focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(color: Colors.blue, width: 2)
-                                          ),
-                                          border: OutlineInputBorder(
-                                            borderRadius: BorderRadius.all(
-                                              Radius.circular(10)
-                                            )
-                                          )
-                                        )
+                                          hintText: '00:00'
+                                        ),
+                                        format: DateFormat('hh:mm a'),
+                                        onShowPicker: (context, currentValue) async {
+                                          final TimeOfDay time = await showTimePicker(
+                                            context: context,
+                                            initialTime: TimeOfDay.fromDateTime(currentValue ?? DateTime.now()),
+                                          );
+                                          return time == null ? null : DateTimeField.convert(time);
+                                        },
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ],
@@ -290,53 +283,42 @@ class _State extends State<SuntingPengaturanView> {
                                 Row(
                                   children: [
                                     Container(
-                                      margin: EdgeInsets.only(left: 20, top: 5),
-                                      height: 30,
-                                      width: 170,
-                                      child: TextField(
+                                      margin: EdgeInsets.only(top: 5),
+                                      //height: 30,
+                                      width: 177,
+                                      child: DateTimeField(
                                         decoration: InputDecoration(
-                                          prefixIcon: IconButton(
-                                            icon: Icon(Icons.calendar_today, size: 17,),
-                                            onPressed: (){
-                                              showDatePicker(
-                                                context: context, 
-                                                initialDate: DateTime.now(), 
-                                                firstDate: DateTime(2015, 8), 
-                                                lastDate: DateTime(2101),
-                                              );
-                                            },
-                                          ),
-                                          hintText: "14/01/2021",
-                                          contentPadding: EdgeInsets.all(10),
-                                          focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(color: Colors.blue, width: 2)
-                                          ),
-                                          border: OutlineInputBorder(
-                                            borderRadius: BorderRadius.all(
-                                              Radius.circular(10)
-                                            )
-                                          )
+                                          prefixIcon: Icon(Icons.calendar_today, size: 20,),
+                                          hintText: 'tanggal',
                                         ),
-                                      ),
+                                        format: DateFormat('yyyy-MM-dd'),
+                                        onShowPicker: (context, currentValue) {
+                                          return showDatePicker(
+                                            context: context,
+                                            firstDate: DateTime(1900),
+                                            initialDate: currentValue ?? DateTime.now(),
+                                            lastDate: DateTime(2100)
+                                          );
+                                        },
+                                      )
                                     ),
                                     Container(
-                                      margin: EdgeInsets.only(left: 10),
-                                      height: 30,
-                                      width: 100,
-                                      child: TextField(
+                                      margin: EdgeInsets.only(top: 5, left: 10),
+                                      //height: 30,
+                                      width: 165,
+                                      child: DateTimeField(
                                         decoration: InputDecoration(
                                           prefixIcon: Icon(Icons.timer_sharp, size: 20),
-                                          hintText: "00:00",
-                                          contentPadding: EdgeInsets.all(10),
-                                          focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(color: Colors.blue, width: 2)
-                                          ),
-                                          border: OutlineInputBorder(
-                                            borderRadius: BorderRadius.all(
-                                              Radius.circular(10)
-                                            )
-                                          )
-                                        )
+                                          hintText: '00:00'
+                                        ),
+                                        format: DateFormat('hh:mm a'),
+                                        onShowPicker: (context, currentValue) async {
+                                          final TimeOfDay time = await showTimePicker(
+                                            context: context,
+                                            initialTime: TimeOfDay.fromDateTime(currentValue ?? DateTime.now()),
+                                          );
+                                          return time == null ? null : DateTimeField.convert(time);
+                                        },
                                       ),
                                     ),
                                   ],
@@ -349,10 +331,13 @@ class _State extends State<SuntingPengaturanView> {
                       ),
                     ],
                   ),
-                  Divider(
-                    color: Colors.grey,
-                    indent: 15,
-                    endIndent: 15,
+                  Container(
+                    margin: EdgeInsets.only(top: 10),
+                    child: Divider(
+                      color: Colors.grey,
+                      indent: 15,
+                      endIndent: 15,
+                    )
                   )
                 ],
               ),
@@ -364,7 +349,6 @@ class _State extends State<SuntingPengaturanView> {
                   Row(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(left: 20),
                         child: Switch(
                           value: isSwitched,
                           onChanged: (value) {
@@ -388,7 +372,7 @@ class _State extends State<SuntingPengaturanView> {
                   Column(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(left: 80),
+                        margin: EdgeInsets.only(left: 60),
                         child: Row(
                           children: [
                             Text(
@@ -403,7 +387,7 @@ class _State extends State<SuntingPengaturanView> {
                       Row(
                         children: [
                           Container(
-                            margin: EdgeInsets.only(left: 80, top: 5),
+                            margin: EdgeInsets.only(left: 60, top: 5),
                             height: 30,
                             width: 200,
                             child: TextField(
@@ -424,10 +408,13 @@ class _State extends State<SuntingPengaturanView> {
                           ),
                         ],
                       ),
-                      Divider(
-                        color: Colors.grey,
-                        indent: 15,
-                        endIndent: 15,
+                      Container(
+                        margin: EdgeInsets.only(top: 5),
+                        child: Divider(
+                          color: Colors.grey,
+                          indent: 15,
+                          endIndent: 15,
+                        )
                       )
                     ],
                   )
@@ -441,7 +428,7 @@ class _State extends State<SuntingPengaturanView> {
                   Row(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(left: 20, right: 10),
+                        margin: EdgeInsets.only(left: 20, right: 10, top: 5),
                         height: 60,
                         width: 330,
                         child: TextField(

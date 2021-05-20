@@ -29,8 +29,7 @@ class _State extends State<SoalTerkaitView> {
               color: Colors.grey[350],
               child: Container(
                 margin: EdgeInsets.only(top: 100),
-                height: 700,
-                width: 400,
+                height: 655,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -1152,16 +1151,7 @@ class _State extends State<SoalTerkaitView> {
                             ), 
                           ],
                         )  
-                      ),
-                      Checkbox(
-                        activeColor: Colors.green,
-                        value: uraian,
-                        onChanged: (bool value){
-                          setState(() {
-                            uraian=value;
-                          });
-                        },
-                      ),   
+                      ), 
                     ],
                   ),
                 ),

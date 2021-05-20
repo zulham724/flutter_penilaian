@@ -264,7 +264,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Row(
             children: [
               Container(
-                height: 451,
+                height: 379,
                 width: 392.7,
                 decoration: BoxDecoration(
                   color: Colors.blue[200]

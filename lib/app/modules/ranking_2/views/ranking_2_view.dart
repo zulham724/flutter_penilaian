@@ -4,8 +4,6 @@ import 'package:get/get.dart';
 
 import '../controllers/ranking_2_controller.dart';
 
-import 'package:fl_chart/fl_chart.dart';
-
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 class Statistik{
@@ -19,18 +17,18 @@ class Ranking2View extends GetView<Ranking2Controller> {
   Widget build(BuildContext context) {
 
     final List<Statistik> chartData = [
-      Statistik('Feb, 12', 0.5),
+      Statistik('Feb, 12', 2),
       Statistik('Apr, 12', 1.5),
-      Statistik('Jun, 12', 0.5),
-      Statistik('Aug, 12', 1),
-      Statistik('Oct, 12', 1.5),
-      Statistik('Dec, 12', 1),
-      Statistik('Feb, 13', 2.5)
+      Statistik('Jun, 12', 4),
+      Statistik('Aug, 12', 5.5),
+      Statistik('Oct, 12', 6),
+      Statistik('Dec, 12', 3.5),
+      Statistik('Feb, 13', 7)
     ];
 
     final List<Color> color = <Color>[];
-        color.add(Colors.blue[50]);
         color.add(Colors.blue[200]);
+        color.add(Colors.blue[400]);
         color.add(Colors.blue);
 
     final List<double> stops = <double>[];
@@ -113,6 +111,31 @@ class Ranking2View extends GetView<Ranking2Controller> {
               ),
             ),
 
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Icon(
+                    Icons.zoom_in,
+                    color: Colors.grey
+                  ),
+                  Icon(
+                    Icons.zoom_out,
+                    color: Colors.grey,
+                  ),
+                  Icon(
+                    Icons.home,
+                    color: Colors.grey,
+                  ),
+                  Icon(
+                    Icons.list_outlined,
+                    color: Colors.grey
+                  )
+                ],
+              )
+            ),
+            
             //Line Chart
             Container(
               margin: EdgeInsets.only(top: 20),
@@ -124,6 +147,7 @@ class Ranking2View extends GetView<Ranking2Controller> {
                     xValueMapper: (Statistik sales, _) => sales.year,
                     yValueMapper: (Statistik sales, _) => sales.sales,
                     gradient: gradientColors,
+                    dataLabelSettings: DataLabelSettings(isVisible: true)
                   )
                 ]
               )

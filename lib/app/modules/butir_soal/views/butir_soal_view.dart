@@ -86,9 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             Container(
-              color: Colors.white,
-              height: 100,
-              width: 400,
+              margin: EdgeInsets.only(top: 15),
               child: Row(
                 children: [
                   Column(
@@ -152,9 +150,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              color: Colors.white,
-              height: 50,
-              width: 400,
+              margin: EdgeInsets.only(top: 10),
               child: Row(
                 children: [
                   Container(
@@ -237,9 +233,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              height: 600,
-              width: 400,
-              color: Colors.white,
+              margin: EdgeInsets.only(top: 10),
               child: Column(
                 children: [
                   Container(
