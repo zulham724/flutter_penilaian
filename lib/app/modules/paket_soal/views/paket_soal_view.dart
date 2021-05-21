@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import 'package:flutter_toggle_tab/flutter_toggle_tab.dart';
+
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 
 import '../controllers/paket_soal_controller.dart';
@@ -157,50 +159,29 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               children: [
                 Container(
-                  margin: EdgeInsets.only(left: 20),
-                  height: 40,
-                  width: 200,
+                  margin: EdgeInsets.only(left: 30),
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                      color: Colors.grey[200],
-                      width: 2
-                    ),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(30)
-                    )
+                    border: Border.all(color: Colors.blue, width: 2),
+                    borderRadius: BorderRadius.circular(30)
                   ),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 40,
-                        width: 100,
-                        decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(30)
-                          )
-                        ),
-                        child: Container(
-                          margin: EdgeInsets.only(top: 10, left: 20),
-                          child: Text(
-                            'Paket Soal',
-                            style: TextStyle(
-                              color: Colors.white
-                            ),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(left: 15),
-                        child: Text(
-                          'Butir Soal',
-                          style: TextStyle(
-                            color: Colors.blue
-                          ),
-                        ),
-                      )
-                    ],
+                  child: FlutterToggleTab(
+                    width: 50,  
+                    borderRadius: 30,  
+                    height: 30,  
+                    selectedBackgroundColors: [Colors.blue], 
+                    unSelectedBackgroundColors: [Colors.white],
+                    selectedTextStyle: TextStyle(  
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700
+                    ),
+                    unSelectedTextStyle: TextStyle(  
+                      color: Colors.blue,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500
+                    ),
+                    labels: ["Paket Soal", "Butir Soal"],  
+                    selectedLabelIndex: (index){},  
                   ),
                 ),
                 Container(

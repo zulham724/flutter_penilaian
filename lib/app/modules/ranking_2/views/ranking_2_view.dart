@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import 'package:toggle_switch/toggle_switch.dart';
+
 import '../controllers/ranking_2_controller.dart';
+
+import 'package:flutter_toggle_tab/flutter_toggle_tab.dart';
 
 import 'package:syncfusion_flutter_charts/charts.dart';
 
@@ -11,6 +15,13 @@ class Statistik{
   final String year;
   final double sales;
 }
+
+const double width = 300.0;
+const double height = 60.0;
+const double loginAlign = -1;
+const double signInAlign = 1;
+const Color selectedColor = Colors.white;
+const Color normalColor = Colors.black54;
     
 class Ranking2View extends GetView<Ranking2Controller> {
   @override  
@@ -67,46 +78,35 @@ class Ranking2View extends GetView<Ranking2Controller> {
               )
             ),
             Container(
-              margin: EdgeInsets.only(top: 10, left: 200),
-              height: 30,
-              width: 140,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.blue,
-                  width: 2
-                ),
-                borderRadius: BorderRadius.circular(30)
-              ),
+              margin: EdgeInsets.only(top: 10),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Container(
-                    height: 30,
-                    width: 70,
                     decoration: BoxDecoration(
-                      color: Colors.blue,
+                      border: Border.all(color: Colors.blue, width: 2),
                       borderRadius: BorderRadius.circular(30)
                     ),
-                    child: Container(
-                      margin: EdgeInsets.only(left: 10, top: 3),
-                      child: Text(
-                        'Bulan',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 17
-                        ),
+                    child: FlutterToggleTab(
+                      width: 40,  
+                      borderRadius: 30,  
+                      height: 30,  
+                      selectedBackgroundColors: [Colors.blue], 
+                      unSelectedBackgroundColors: [Colors.white],
+                      selectedTextStyle: TextStyle(  
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700
                       ),
-                    )
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(left: 10),
-                    child: Text(
-                      'Hari',
-                      style: TextStyle(
+                      unSelectedTextStyle: TextStyle(  
                         color: Colors.blue,
-                        fontSize: 17
-                      )
-                    )
-                  )
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500
+                      ),
+                      labels: ["Bulan", "Hari"],  
+                      selectedLabelIndex: (index){},  
+                    ),
+                  ),
                 ],
               ),
             ),

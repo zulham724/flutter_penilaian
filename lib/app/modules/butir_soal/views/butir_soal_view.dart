@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 
+import 'package:flutter_toggle_tab/flutter_toggle_tab.dart';
+
 import '../controllers/butir_soal_controller.dart';
 
 void main() => runApp(ButirSoalView());
@@ -154,51 +156,29 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(left: 20),
-                    height: 40,
-                    width: 200,
+                    margin: EdgeInsets.only(left: 30),
                     decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(
-                        color: Colors.grey[200],
-                        width: 2
-                      ),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(30)
-                      )
+                      border: Border.all(color: Colors.blue, width: 2),
+                      borderRadius: BorderRadius.circular(30)
                     ),
-                    child: Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(top: 3, left: 20),
-                          child: Text(
-                            'Paket Soal',
-                            style: TextStyle(
-                              color: Colors.blue
-                            ),
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(left: 9),
-                          height: 40,
-                          width: 100,
-                          decoration: BoxDecoration(
-                            color: Colors.blue,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(30)
-                            )
-                          ),
-                          child: Container(
-                            margin: EdgeInsets.only(left: 20, top: 10),
-                            child: Text(
-                              'Butir Soal',
-                              style: TextStyle(
-                                color: Colors.white
-                              )
-                            )
-                          ),
-                        )
-                      ],
+                    child: FlutterToggleTab(
+                      width: 50,  
+                      borderRadius: 30,  
+                      height: 30,  
+                      selectedBackgroundColors: [Colors.blue], 
+                      unSelectedBackgroundColors: [Colors.white],
+                      selectedTextStyle: TextStyle(  
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700
+                      ),
+                      unSelectedTextStyle: TextStyle(  
+                        color: Colors.blue,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500
+                      ),
+                      labels: ["Paket Soal", "Butir Soal"],  
+                      selectedLabelIndex: (index){},  
                     ),
                   ),
                   Container(

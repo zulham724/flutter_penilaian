@@ -22,6 +22,8 @@ environment:
 
 dependencies:
   get: 4.1.4
+  flutter_toggle_tab: "^0.0.1+2"
+  toggle_switch: "^0.1.9"
   flutter_switch: ^0.0.2
   datetime_picker_formfield: ^2.0.0
   fl_chart: ^0.36.1
