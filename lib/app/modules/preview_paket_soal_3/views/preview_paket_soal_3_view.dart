@@ -100,8 +100,6 @@ class PreviewPaketSoal3View extends GetView<PreviewPaketSoal3Controller> {
                     ),
                   ),
                 ),
-                
-
                 //Bottom Bawah
                 
                 //Bottom Kemabali

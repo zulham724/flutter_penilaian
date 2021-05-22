@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import '../controllers/Buat_soal_isi_controller.dart';
+import 'package:flutter_application_1/app/modules/buat_soal_buat/views/buat_soal_buat_view.dart';
 
 void main() => runApp(BuatSoalIsiView());
 
@@ -536,7 +538,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 borderRadius: BorderRadius.circular(20)
                               ),
                               color: Colors.blue,
-                              onPressed: (){},
+                              onPressed: ()=>Get.to(BuatSoalBuatView()),
                               child: Text(
                                 'Lanjut',
                                 style: TextStyle(

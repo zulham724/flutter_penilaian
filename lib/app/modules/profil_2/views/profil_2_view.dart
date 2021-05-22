@@ -516,25 +516,29 @@ class _MyHomePageState extends State<MyHomePage> {
                               Row(
                                 children: [
                                   Container(
-                                    margin: EdgeInsets.only(left: 30),
+                                    margin: EdgeInsets.only(left: 50),
                                     child: PopupMenuButton(
                                       color: Colors.grey[350],
                                       itemBuilder: (BuildContext bc) => [
                                         PopupMenuItem(
-                                          child: Row(
+                                          child: Column(
                                             children: [
-                                              Icon(
-                                                Icons.edit,
-                                                color: Colors.grey[600],
+                                              Row(
+                                                children: [
+                                                  Icon(
+                                                    Icons.edit,
+                                                    color: Colors.grey[600],
+                                                  ),
+                                                  Text(
+                                                    'Sunting'
+                                                  )
+                                                ],
                                               ),
-                                              Text(
-                                                'Sunting',
-                                                style: TextStyle(
-                                                  color: Colors.grey[600]
-                                                ),
+                                              Divider(
+                                                thickness: 2,
                                               )
-                                            ],
-                                          )
+                                            ] 
+                                          ),
                                         ),
                                         PopupMenuItem(
                                           child: Row(

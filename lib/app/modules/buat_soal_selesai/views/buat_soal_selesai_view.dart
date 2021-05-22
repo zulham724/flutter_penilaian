@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import '../controllers/buat_soal_selesai_controller.dart';
+import 'package:flutter_application_1/app/modules/buat_soal_buat/views/buat_soal_buat_view.dart';
 
 void main() => runApp(BuatSoalSelesaiView());
 
@@ -253,7 +255,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
-                onPressed: (){},
+                onPressed: ()=>Get.to(BuatSoalBuatView()),
                 color: Colors.blue,
                 child: Text(
                   'Back',

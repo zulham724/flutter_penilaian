@@ -550,28 +550,28 @@ class _State extends State<BagikanView> {
                       ),
                       Container(
                         margin: EdgeInsets.only(bottom: 10, left: 5, top: 10),
-                          height: 40,
-                          child: RaisedButton(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)
-                            ),
-                            color: Colors.blue,
-                            onPressed: (){},
-                            child: Column(
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(top: 10),
-                                  child: Text(
-                                    'Bagikan',
-                                    style: TextStyle(
-                                      color: Colors.white
-                                    ),
-                                  ) 
-                                ),
-                              ],
-                            ),
-                          )
+                        height: 40,
+                        child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)
+                          ),
+                          color: Colors.blue,
+                          onPressed: (){},
+                          child: Column(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(top: 10),
+                                child: Text(
+                                  'Bagikan',
+                                  style: TextStyle(
+                                    color: Colors.white
+                                  ),
+                                ) 
+                              ),
+                            ],
+                          ),
                         )
+                      )
                     ],
                   )
                 ],

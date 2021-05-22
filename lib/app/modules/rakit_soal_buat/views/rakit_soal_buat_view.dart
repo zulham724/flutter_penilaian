@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import '../controllers/rakit_soal_buat_controller.dart';
+import 'package:get/get.dart';
+import 'package:flutter_application_1/app/modules/rakit_soal_selesai/views/rakit_soal_selesai_view.dart';
+import 'package:flutter_application_1/app/modules/rakit_soal_isi/views/rakit_soal_isi_view.dart';
 
 void main() => runApp(RakitSoalBuatView());
 
@@ -444,7 +447,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       borderRadius: BorderRadius.circular(20)
                     ),
                     color: Colors.blue,
-                    onPressed: (){},
+                    onPressed: ()=>Get.to(RakitSoalIsiView()),
                     child: Text(
                       'Back',
                       style: TextStyle(
@@ -493,7 +496,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)
                     ),
-                    onPressed: (){},
+                    onPressed: ()=>Get.to(RakitSoalSelesaiView()),
                     color: Colors.blue,
                     child: Text(
                       'Lanjut',

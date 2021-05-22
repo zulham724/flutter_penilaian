@@ -119,7 +119,7 @@ class HomeView extends GetView<HomeController> {
           child: Text('Ke Halaman Ranking ==> "Selesai"'),
           ),
           RaisedButton(onPressed: ()=>Get.to(Ranking2View()),
-          child: Text('Ke Halaman Statistik'),
+          child: Text('Ke Halaman Statistik ==> "Selesai"'),
           ),
           RaisedButton(onPressed: ()=>Get.to(Statistik1View()),
           child: Text('Ke Halaman Statistik Dan Ranking 1 ==> "Selesai"'),

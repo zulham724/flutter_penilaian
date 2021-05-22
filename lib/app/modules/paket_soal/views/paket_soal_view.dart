@@ -181,7 +181,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       fontWeight: FontWeight.w500
                     ),
                     labels: ["Paket Soal", "Butir Soal"],  
-                    selectedLabelIndex: (index){},  
+                    selectedLabelIndex: (index){}
                   ),
                 ),
                 Container(
@@ -313,41 +313,68 @@ class _MyHomePageState extends State<MyHomePage> {
                             Row(
                               children: [
                                 Container(
-                                  margin: EdgeInsets.only(left: 50, bottom: 20),
+                                  margin: EdgeInsets.only(left: 70, bottom: 20),
                                   child: PopupMenuButton(
                                     color: Colors.grey[350],
                                     itemBuilder: (BuildContext bc) => [
                                       PopupMenuItem(
-                                        child: Row(
+                                        child: Column(
                                           children: [
-                                            Icon(
-                                              Icons.edit,
-                                              color: Colors.grey[600],
+                                            Row(
+                                              children: [
+                                                Icon(
+                                                  Icons.edit,
+                                                  color: Colors.grey[600],
+                                                ),
+                                                Text(
+                                                  'Sunting',
+                                                  style: TextStyle(
+                                                    color: Colors.grey[600]
+                                                  ),
+                                                )
+                                              ],
                                             ),
-                                            Text(
-                                              'Sunting',
-                                              style: TextStyle(
-                                                color: Colors.grey[600]
+                                            Container(
+                                              margin: EdgeInsets.only(top: 5),
+                                              height: 1,
+                                              width: 500,
+                                              decoration: BoxDecoration(
+                                                color: Colors.grey
                                               ),
-                                            )
-                                          ],
+                                            ),
+                                          ]   
                                         )
                                       ),
                                       PopupMenuItem(
-                                        child: Row(
-                                          children: [
-                                            Icon(
-                                              Icons.delete,
-                                              color: Colors.grey[600]
+                                        child: Column(
+                                          children:[
+                                            Container(
+                                              //margin: EdgeInsets.only(bottom: 20),
+                                              child: Row(
+                                                children:[
+                                                  Icon(
+                                                    Icons.delete,
+                                                    color: Colors.grey[600],
+                                                  ),
+                                                  Text(
+                                                    'Hapus',
+                                                    style: TextStyle(
+                                                      color: Colors.grey[600]
+                                                    ),
+                                                  )
+                                                ]
+                                              )
                                             ),
-                                            Text(
-                                              'Hapus',
-                                              style: TextStyle(
-                                                color: Colors.grey[600]
+                                            Container(
+                                              margin: EdgeInsets.only(top: 5),
+                                              height: 1,
+                                              width: 500,
+                                              decoration: BoxDecoration(
+                                                color: Colors.grey
                                               ),
-                                            )
-                                          ],
-                                        ),
+                                            ),
+                                          ]
+                                        )
                                       ),
                                       PopupMenuItem(
                                         child: Row(
@@ -681,8 +708,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       ],
                     ),
                   ),
-
-
                 ],
               ),
             )

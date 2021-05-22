@@ -453,11 +453,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                               Column(
                                                 children: [
                                                   Text(
-                                                    'Bagikan Ke'
+                                                    'Bagikan Ke Latihan Mandiri'
                                                   ),
-                                                  Text(
-                                                    'Latihan Mandiri'
-                                                  )
                                                 ],
                                               )
 

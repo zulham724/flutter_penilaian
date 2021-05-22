@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 
 import '../controllers/statistik_1_controller.dart';
 
+import 'package:flutter_application_1/app/modules/statistik_2/views/statistik_2_view.dart';
+
 class Statistik1View extends GetView<Statistik1Controller> {
   @override
   Widget build(BuildContext context) {
@@ -38,19 +40,17 @@ class Statistik1View extends GetView<Statistik1Controller> {
                 Container(
                   height: 70,
                   width: 192,
-                  decoration: BoxDecoration(
-                    color: Colors.white
-                  ),
-                  child: Container(
-                    margin: EdgeInsets.only(left: 50, top: 20),
+                  child: RaisedButton(
                     child: Text(
                       'Statistik',
                       style: TextStyle(
                         color: Colors.blue,
                         fontSize: 20
-                      )
-                    )
-                  )
+                      ),
+                    ),
+                    color: Colors.white,
+                    onPressed: ()=>Get.to(Statistik2View()),
+                  ),
                 )
               ]
             ),

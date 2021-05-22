@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import 'package:flutter_application_1/app/modules/buat_soal_selesai/views/buat_soal_selesai_view.dart';
+
+import 'package:flutter_application_1/app/modules/buat_soal_isi/views/buat_soal_isi_view.dart';
+
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 
 import '../controllers/buat_soal_buat_controller.dart';
@@ -613,7 +617,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       borderRadius: BorderRadius.circular(20)
                     ),
                     color: Colors.blue,
-                    onPressed: (){},
+                    onPressed: ()=>Get.to(BuatSoalIsiView()),
                     child: Text(
                       'Back',
                       style: TextStyle(
@@ -658,7 +662,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       borderRadius: BorderRadius.circular(20)
                     ),
                     color: Colors.blue,
-                    onPressed: (){},
+                    onPressed: ()=>Get.to(BuatSoalSelesaiView()),
                     child: Text(
                       'Lanjut',
                       style: TextStyle(

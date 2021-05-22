@@ -119,20 +119,24 @@ class _MyHomePageState extends State<MyHomePage> {
                           color: Colors.grey[350],
                           itemBuilder: (BuildContext bc) => [
                             PopupMenuItem(
-                              child: Row(
+                              child: Column(
                                 children: [
-                                  Icon(
-                                    Icons.edit,
-                                    color: Colors.grey[600],
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.edit,
+                                        color: Colors.grey[600],
+                                      ),
+                                      Text(
+                                        'Sunting'
+                                      )
+                                    ],
                                   ),
-                                  Text(
-                                    'Sunting',
-                                    style: TextStyle(
-                                      color: Colors.grey[600]
-                                    ),
+                                  Divider(
+                                    thickness: 2,
                                   )
-                                ],
-                              )
+                                ] 
+                              ),
                             ),
                             PopupMenuItem(
                               child: Row(
