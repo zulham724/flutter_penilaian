@@ -180,7 +180,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       fontSize: 18,
                       fontWeight: FontWeight.w500
                     ),
-                    labels: ["Paket Soal", "Butir Soal"],  
+                    labels: ["Paket Soal", "Butir Soal"], 
                     selectedLabelIndex: (index){}
                   ),
                 ),
@@ -313,7 +313,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             Row(
                               children: [
                                 Container(
-                                  margin: EdgeInsets.only(left: 70, bottom: 20),
+                                  margin: EdgeInsets.only(left: 50, bottom: 20),
                                   child: PopupMenuButton(
                                     color: Colors.grey[350],
                                     itemBuilder: (BuildContext bc) => [
