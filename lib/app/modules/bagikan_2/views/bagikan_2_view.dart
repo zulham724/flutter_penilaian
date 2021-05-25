@@ -18,7 +18,9 @@ class Bagikan2View extends StatefulWidget {
 }
  
 class _State extends State<Bagikan2View> {
-  bool isSwitched = false;
+  bool isSwitched1 = false;
+  bool isSwitched2 = false;
+  bool isSwitched3 = false;
  
   @override
   Widget build(BuildContext context) {
@@ -36,11 +38,11 @@ class _State extends State<Bagikan2View> {
                       Container(
                         margin: EdgeInsets.only(left: 20),
                         child: Switch(
-                          value: isSwitched,
+                          value: isSwitched1,
                           onChanged: (value) {
                             setState(() {
-                              isSwitched = value;
-                              print(isSwitched);
+                              isSwitched1 = value;
+                              print(isSwitched1);
                             });
                           },
                           activeTrackColor: Colors.lightGreenAccent,
@@ -83,11 +85,11 @@ class _State extends State<Bagikan2View> {
                       Container(
                         margin: EdgeInsets.only(left: 20),
                         child: Switch(
-                          value: isSwitched,
+                          value: isSwitched2,
                           onChanged: (value) {
                             setState(() {
-                              isSwitched = value;
-                              print(isSwitched);
+                              isSwitched2 = value;
+                              print(isSwitched2);
                             });
                           },
                           activeTrackColor: Colors.lightGreenAccent,
@@ -157,11 +159,11 @@ class _State extends State<Bagikan2View> {
                       Container(
                         margin: EdgeInsets.only(left: 20),
                         child: Switch(
-                          value: isSwitched,
+                          value: isSwitched3,
                           onChanged: (value) {
                             setState(() {
-                              isSwitched = value;
-                              print(isSwitched);
+                              isSwitched3 = value;
+                              print(isSwitched3);
                             });
                           },
                           activeTrackColor: Colors.lightGreenAccent,

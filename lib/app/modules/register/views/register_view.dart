@@ -5,6 +5,8 @@ import 'package:get/get_connect/http/src/utils/utils.dart';
 
 import '../controllers/register_controller.dart';
 
+import 'package:flutter_application_1/app/modules/login/views/login_view.dart';
+
 class RegisterView extends GetView<RegisterController> {
   @override
   Widget build(BuildContext context) {
@@ -100,7 +102,7 @@ class RegisterView extends GetView<RegisterController> {
                           shape: RoundedRectangleBorder(
                             borderRadius: new BorderRadius.circular(20)),
                           color: Colors.blue[300],
-                          onPressed: () => true,
+                          onPressed: () => Get.to(LoginView()),
                           child: Text(
                             'login',
                             style: TextStyle(color: Colors.white),
