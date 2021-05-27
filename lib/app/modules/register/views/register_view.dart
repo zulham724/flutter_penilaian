@@ -14,9 +14,11 @@ class RegisterView extends GetView<RegisterController> {
         body: Container(
             width: double.infinity,
             decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/bg-login-2.png"),
-                    fit: BoxFit.cover)),
+              image: DecorationImage(
+                image: AssetImage("assets/bg-login-2.png"),
+                fit: BoxFit.cover
+              )
+            ),
             child: Container(
               margin: new EdgeInsets.all(20),
               child: Column(

@@ -530,24 +530,23 @@ class _MyHomePageState extends State<MyHomePage> {
                       margin: EdgeInsets.symmetric(vertical: 20),
                       padding: EdgeInsets.only(right: 20),
                       alignment: Alignment.bottomRight,
-                        child: Wrap(
-                          //mainAxisAlignment: MainAxisAlignment.end,
-                          children: <Widget>[
-                            RaisedButton(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)
-                              ),
-                              color: Colors.blue,
-                              onPressed: ()=>Get.to(BuatSoalBuatView()),
-                              child: Text(
-                                'Lanjut',
-                                style: TextStyle(
-                                  color: Colors.white
-                                ),
+                      child: Wrap(
+                        children: <Widget>[
+                          RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20)
+                            ),
+                            color: Colors.blue,
+                            onPressed: ()=>Get.to(BuatSoalBuatView()),
+                            child: Text(
+                              'Lanjut',
+                              style: TextStyle(
+                                color: Colors.white
                               ),
                             ),
-                          ]
-                        )
+                          ),
+                        ]
+                      )
                     )  
                   ],
                 )

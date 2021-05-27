@@ -22,6 +22,7 @@ class _State extends State<SoalTerkaitView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Center(
         child: Column(
           children: [

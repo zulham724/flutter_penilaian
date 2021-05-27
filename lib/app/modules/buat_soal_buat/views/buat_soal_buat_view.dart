@@ -29,14 +29,14 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-
 class _MyHomePageState extends State<MyHomePage> {
   int _selection = 0;
   selectJawab(int jawabSelected) {
-       setState(() {
-       _selection = jawabSelected;
-          });
-         }
+    setState(() {
+     _selection = jawabSelected;
+    });
+  }
+
   int currentIndex;
   int _currentIndex = 0;
   int _counter = 0;
@@ -673,8 +673,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             )
-
-
           ],
         ),
       ),

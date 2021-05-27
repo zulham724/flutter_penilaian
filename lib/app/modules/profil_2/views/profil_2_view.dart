@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
+
 import '../controllers/profil_2_controller.dart';
 
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
@@ -124,11 +126,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: [
-          
           Row(
             children: [
               Container(
-                height: 150,
                 width: 392.7,
                 decoration: BoxDecoration(
                   color: Colors.white
@@ -136,7 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Column(
                   children: [
                     Row(
-                      children:[
+                      children: [
                         Column(
                           children: [
                             Container(
@@ -144,454 +144,431 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: Text(
                                 '999',
                                 style: TextStyle(
-                                  fontSize: 30,
-                                )
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 30
+                                ),
                               )
                             ),
                             Container(
-                              margin: EdgeInsets.only(left: 10),
+                              margin: EdgeInsets.only(left: 20),
                               child: Text(
                                 'Dikerjakan',
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 12
-                                ),
                               )
                             )
                           ],
                         ),
-                      ]
+                      ],
                     ),
                     Center(
                       child: Column(
-                        children:[
+                        children: [
                           Text(
-                            'John Due',
+                            'John Due SP.',
                             style: TextStyle(
                               color: Colors.blue,
                               fontWeight: FontWeight.bold,
                               fontSize: 20
-                            )
+                            ),
                           ),
                           Container(
                             margin: EdgeInsets.only(top: 5),
                             child: Text(
                               'Saya merupakan admin CV Ardata',
                               style: TextStyle(
-                                color: Colors.grey
-                              ),
+                                color: Colors.grey[400],
+                                fontSize: 12
+                              )
                             )
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(left: 120),
+                            child: Row(
+                              children:[
+                                Text(
+                                  'Media. Visit: ',
+                                  style: TextStyle(
+                                    color: Colors.grey[400],
+                                    fontSize: 12
+                                  )
+                                ),
+                                Text(
+                                  'ardata.co.id',
+                                  style: TextStyle(
+                                    color: Colors.blue,
+                                    fontSize: 12
+                                  ),
+                                )
+                              ]
+                            )
+                          ),
+                        ],
+                      )
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 20),
+                      color: Colors.white,
+                      height: 402,
+                      width: 392.7,
+                      child: ContainedTabBarView(
+                        tabs: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                '9',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 30
+                                )
+                              ),
+                              Text(
+                                'Paket Soal',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20
+                                ),
+                              )
+                            ],
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                'Media. Visit : ',
+                                '76',
                                 style: TextStyle(
-                                  color: Colors.grey
-                                ),
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 30
+                                )
                               ),
                               Text(
-                                'ardata.co.id',
+                                'Butir Soal',
                                 style: TextStyle(
-                                  color: Colors.blue
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20
                                 ),
                               )
                             ],
-                          )
-                        ]
-                      )
-                    ),
-                    Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(left: 10, top: 5),
-                          child: Row(
-                            children:[
-                              Text(
-                                '9',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 25
-                                )
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 5),
-                                child: Text(
-                                  'Paket Soal',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 15
-                                  ),
-                                )
-                              )
-                            ]
-                          )
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(top: 5, left: 150),
-                          child: Row(
-                            children:[
-                              Text(
-                                '76',
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 25
-                                )
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 5),
-                                child: Text(
-                                  'Butir Soal',
-                                  style: TextStyle(
-                                    color: Colors.grey,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 15
-                                  ),
-                                )
-                              )
-                            ]
                           ),
-                        )
-                      ],
+                        ],
+                        views: [
+                          Container(
+                            color: Colors.blue[200],
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    border: Border.all(
+                                      color: Colors.blue
+                                    ),
+                                    borderRadius: BorderRadius.circular(10)
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Container(
+                                            margin: EdgeInsets.only(left: 10, top: 10),
+                                            height: 40,
+                                            width: 40,
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(100),
+                                              image: DecorationImage(
+                                                image: AssetImage('assets/bg-login-2.png'),
+                                                fit: BoxFit.fill
+                                              )
+                                            )
+                                          ),
+                                          Column(
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Container(
+                                                    margin: EdgeInsets.only(right: 75),
+                                                    child: Text(
+                                                      'Brian Dewangga',
+                                                      style: TextStyle(
+                                                        fontWeight: FontWeight.bold
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Container(
+                                                    margin: EdgeInsets.only(top: 3, left: 5),
+                                                    height: 20,
+                                                    width: 60,
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                    ),
+                                                    child: Container(
+                                                      margin: EdgeInsets.only(left: 5, top: 2),
+                                                      child: Text(
+                                                        '10 SMA',
+                                                        style: TextStyle(
+                                                          fontWeight: FontWeight.bold
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    margin: EdgeInsets.only(top: 3, left: 5),
+                                                    height: 20,
+                                                    width: 60,
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                    ),
+                                                    child: Container(
+                                                      margin: EdgeInsets.only(left: 8, top: 2),
+                                                      child: Text(
+                                                        'Uraian',
+                                                        style: TextStyle(
+                                                          fontWeight: FontWeight.bold
+                                                        )
+                                                      )
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    margin: EdgeInsets.only(top: 3, left: 5),
+                                                    height: 20,
+                                                    width: 60,
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                    ),
+                                                    child: Container(
+                                                      margin: EdgeInsets.only(left: 13, top: 2),
+                                                      child: Text(
+                                                        'LOTS',
+                                                        style: TextStyle(
+                                                          fontWeight: FontWeight.bold
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  )
+                                                ],
+                                              )
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            margin: EdgeInsets.only(top: 5),
+                                            child: Text(
+                                              'Kiamat Sugro dan Kiamat Kubro'
+                                            )
+                                          ),
+                                        ],
+                                      ),
+                                      Container(
+                                        child: Theme(
+                                          data: ThemeData().copyWith(dividerColor: Colors.transparent),
+                                          child: ExpansionTile(),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 30),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    border: Border.all(
+                                      color: Colors.blue
+                                    ),
+                                    borderRadius: BorderRadius.circular(10)
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Container(
+                                            margin: EdgeInsets.only(left: 10, top: 10),
+                                            height: 40,
+                                            width: 40,
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(100),
+                                              image: DecorationImage(
+                                                image: AssetImage('assets/bg-login-2.png'),
+                                                fit: BoxFit.fill
+                                              )
+                                            )
+                                          ),
+                                          Column(
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Container(
+                                                    margin: EdgeInsets.only(right: 75),
+                                                    child: Text(
+                                                      'Brian Dewangga',
+                                                      style: TextStyle(
+                                                        fontWeight: FontWeight.bold
+                                                      ),
+                                                    )
+                                                  )
+                                                ],
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Container(
+                                                    margin: EdgeInsets.only(top: 3, left: 5),
+                                                    height: 20,
+                                                    width: 60,
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                    ),
+                                                    child: Container(
+                                                      margin: EdgeInsets.only(left: 5, top: 2),
+                                                      child: Text(
+                                                        '10 SMA',
+                                                        style: TextStyle(
+                                                          fontWeight: FontWeight.bold
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    margin: EdgeInsets.only(top: 3, left: 5),
+                                                    height: 20,
+                                                    width: 60,
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                    ),
+                                                    child: Container(
+                                                      margin: EdgeInsets.only(left: 8, top: 2),
+                                                      child: Text(
+                                                        'Uraian',
+                                                        style: TextStyle(
+                                                          fontWeight: FontWeight.bold
+                                                        )
+                                                      )
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    margin: EdgeInsets.only(top: 3, left: 5),
+                                                    height: 20,
+                                                    width: 60,
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                    ),
+                                                    child: Container(
+                                                      margin: EdgeInsets.only(left: 13, top: 2),
+                                                      child: Text(
+                                                        'LOTS',
+                                                        style: TextStyle(
+                                                          fontWeight: FontWeight.bold
+                                                        )
+                                                      )
+                                                    ),
+                                                  )
+                                                ],
+                                              )
+                                            ],
+                                          ),
+                                          Row(
+                                            children: [
+                                              Container(
+                                                margin: EdgeInsets.only(left: 50),
+                                                child: PopupMenuButton(
+                                                  color: Colors.grey[350],
+                                                  itemBuilder: (BuildContext bc) => [
+                                                    PopupMenuItem(
+                                                      child: Column(
+                                                        children:[
+                                                          Row(
+                                                            children: [
+                                                              Icon(
+                                                                Icons.edit,
+                                                                color: Colors.grey[600],
+                                                              ),
+                                                              Text(
+                                                                'Sunting',
+                                                                style: TextStyle(
+                                                                  color: Colors.grey[600]
+                                                                ),
+                                                              )
+                                                            ],
+                                                          ),
+                                                          Divider(
+                                                            thickness: 2,
+                                                          )
+                                                        ]
+                                                      )
+                                                    ),
+                                                    PopupMenuItem(
+                                                      child: Row(
+                                                        children: [
+                                                          Icon(
+                                                            Icons.delete,
+                                                            color: Colors.grey[600],
+                                                          ),
+                                                          Text(
+                                                            'Hapus',
+                                                            style: TextStyle(
+                                                              color: Colors.grey[600]
+                                                            ),
+                                                          )
+                                                        ],
+                                                      )
+                                                    )
+                                                  ]
+                                                ),
+                                              )
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            margin: EdgeInsets.only(top: 5),
+                                            child: Text(
+                                              'Kiamat Sugro dan Kiamat Kubro'
+                                            )
+                                          )
+                                        ],
+                                      ),
+                                      Container(
+                                        child: Theme(
+                                          data: ThemeData().copyWith(dividerColor: Colors.transparent),
+                                          child: ExpansionTile()
+                                        )
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Container(
+                            color: Colors.blue[200]
+                          )
+                        ],
+                      ),
                     )
-                  ]
+                  ],
                 ),
               )
             ],
           ),
-          Row(
-            children: [
-              Container(
-                height: 379,
-                width: 392.7,
-                decoration: BoxDecoration(
-                  color: Colors.blue[200]
-                ),
-                child: Column(
-                  children:[
-                    Container(
-                      margin: EdgeInsets.only(left: 20, top: 20, right: 20),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: Border.all(
-                          color: Colors.blue
-                        ),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10)
-                        )
-                      ),
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(left: 10, top: 10),
-                                height: 40,
-                                width: 40,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(100),
-                                  image: DecorationImage(
-                                    image: AssetImage('assets/bg-login-2.png'),
-                                    fit: BoxFit.fill
-                                  )
-                                ),
-                              ),
-                              Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        margin: EdgeInsets.only(right: 75),
-                                        child: Text(
-                                          'Brian Dewangga',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold
-                                          ),
-                                        )
-                                      )
-                                    ],
-                                  ),
-                                  Row(
-                                    children: [
-                                      Container(
-                                        margin: EdgeInsets.only(top: 3, left: 5),
-                                        height: 20,
-                                        width: 60,
-                                        decoration: BoxDecoration(
-                                          color: Colors.blue,
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(20)
-                                          )
-                                        ),
-                                        child: Container(
-                                          margin: EdgeInsets.only(left: 5, top: 2),
-                                          child: Text(
-                                            '10 SMA',
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold
-                                            ),
-                                          ),
-                                        )
-                                      ),
-                                      Container(
-                                        margin: EdgeInsets.only(top: 3, left: 5),
-                                        height: 20,
-                                        width: 60,
-                                        decoration: BoxDecoration(
-                                          color: Colors.blue,
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(20)
-                                          )
-                                        ),
-                                        child: Container(
-                                          margin: EdgeInsets.only(left: 8, top: 2),
-                                          child: Text(
-                                            'Uraian',
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold
-                                            ),
-                                          ),
-                                        )
-                                      ),
-                                      Container(
-                                        margin: EdgeInsets.only(top: 3, left: 5),
-                                        height: 20,
-                                        width: 60,
-                                        decoration: BoxDecoration(
-                                          color: Colors.blue,
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(20)
-                                          )
-                                        ),
-                                        child: Container(
-                                          margin: EdgeInsets.only(left: 15, top: 2),
-                                          child: Text(
-                                            'LOTS',
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold
-                                            ),
-                                          ),
-                                        )
-                                      )
-                                    ],
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(left: 10, top: 5),
-                                child: Text(
-                                  'Kiamat Sugro dan Kiamat Kubro',
-                                  style: TextStyle(
-                                    fontSize: 12
-                                  ),
-                                )
-                              )
-                            ],
-                          ),
-                          Container(
-                            child: Theme(
-                              data: ThemeData().copyWith(dividerColor: Colors.transparent),
-                              child: ExpansionTile(),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-
-
-                    Container(
-                      margin: EdgeInsets.only(left: 20, top: 10, right: 20),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: Border.all(
-                          color: Colors.blue
-                        ),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10)
-                        )
-                      ),
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(left: 10, top: 10),
-                                height: 40,
-                                width: 40,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(100),
-                                  image: DecorationImage(
-                                    image: AssetImage('assets/bg-login-2.png'),
-                                    fit: BoxFit.fill
-                                  )
-                                ),
-                              ),
-                              Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        margin: EdgeInsets.only(right: 75),
-                                        child: Text(
-                                          'Brian Dewangga',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold
-                                          ),
-                                        )
-                                      )
-                                    ],
-                                  ),
-                                  Row(
-                                    children: [
-                                      Container(
-                                        margin: EdgeInsets.only(top: 3, left: 5),
-                                        height: 20,
-                                        width: 60,
-                                        decoration: BoxDecoration(
-                                          color: Colors.blue,
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(20)
-                                          )
-                                        ),
-                                        child: Container(
-                                          margin: EdgeInsets.only(left: 5, top: 2),
-                                          child: Text(
-                                            '10 SMA',
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold
-                                            ),
-                                          ),
-                                        )
-                                      ),
-                                      Container(
-                                        margin: EdgeInsets.only(top: 3, left: 5),
-                                        height: 20,
-                                        width: 60,
-                                        decoration: BoxDecoration(
-                                          color: Colors.blue,
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(20)
-                                          )
-                                        ),
-                                        child: Container(
-                                          margin: EdgeInsets.only(left: 8, top: 2),
-                                          child: Text(
-                                            'Uraian',
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold
-                                            ),
-                                          ),
-                                        )
-                                      ),
-                                      Container(
-                                        margin: EdgeInsets.only(top: 3, left: 5),
-                                        height: 20,
-                                        width: 60,
-                                        decoration: BoxDecoration(
-                                          color: Colors.blue,
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(20)
-                                          )
-                                        ),
-                                        child: Container(
-                                          margin: EdgeInsets.only(left: 15, top: 2),
-                                          child: Text(
-                                            'LOTS',
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold
-                                            ),
-                                          ),
-                                        )
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(left: 50),
-                                    child: PopupMenuButton(
-                                      color: Colors.grey[350],
-                                      itemBuilder: (BuildContext bc) => [
-                                        PopupMenuItem(
-                                          child: Column(
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Icon(
-                                                    Icons.edit,
-                                                    color: Colors.grey[600],
-                                                  ),
-                                                  Text(
-                                                    'Sunting'
-                                                  )
-                                                ],
-                                              ),
-                                              Divider(
-                                                thickness: 2,
-                                              )
-                                            ] 
-                                          ),
-                                        ),
-                                        PopupMenuItem(
-                                          child: Row(
-                                            children: [
-                                              Icon(
-                                                Icons.delete,
-                                                color: Colors.grey[600],
-                                              ),
-                                              Text(
-                                                'Hapus',
-                                                style: TextStyle(
-                                                  color: Colors.grey[600]
-                                                ),
-                                              )
-                                            ]
-                                          )
-                                        )
-                                      ]
-                                    ),
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(left: 10, top: 5),
-                                child: Text(
-                                  'Kiamat Sugro dan Kiamat Kubro',
-                                  style: TextStyle(
-                                    fontSize: 12
-                                  ),
-                                )
-                              )
-                            ],
-                          ),
-                          Container(
-                            child: Theme(
-                              data: ThemeData().copyWith(dividerColor: Colors.transparent),
-                              child: ExpansionTile(
-
-                              ),
-                            )
-                          )
-                        ],
-                      ),
-                    )
-                  ]
-                ),
-              )
-            ],
-          )
         ],
       ),
     );
